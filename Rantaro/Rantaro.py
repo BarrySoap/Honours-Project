@@ -6,9 +6,12 @@ print(9 % 6)    # Modulo
 
 string_one = 'Sentence "One"'
 string_two = "Sentence 'Two'"
-string_three = 'Sentence \'Three\''
+string_three = '    Sentence \'Three\'  '
 string_four = '''Sentence
 Four
 Is
 Longer'''
 
+print(string_one.upper())
+print(string_two.title())
+print(string_three.strip().upper())
