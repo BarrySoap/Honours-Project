@@ -15,3 +15,8 @@ Longer'''
 print(string_one.upper())
 print(string_two.title())
 print(string_three.strip().upper())
+
+astr = string_one + string_two
+astr = astr.replace("\"One\"", "Three ")
+astr = astr.replace("Sentence", "Sent")
+print(astr)
