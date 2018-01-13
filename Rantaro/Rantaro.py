@@ -31,3 +31,12 @@ last_name = last_name.capitalize()
 
 name_format = "{first} {middle:.1s} {last}"
 print(name_format.format(first=first_name, middle = middle_name, last = last_name))
+
+sentences = [string_one, string_two, string_three, string_four]
+
+alpha = ["a", "b", "c", "d"]
+alpha.append("e")
+alpha = alpha + ["f", "g"]
+d_index = alpha.index("d")
+del alpha[d_index]
+alpha.remove("f")
