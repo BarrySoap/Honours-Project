@@ -20,3 +20,14 @@ astr = string_one + string_two
 astr = astr.replace("\"One\"", "Three ")
 astr = astr.replace("Sentence", "Sent")
 print(astr)
+
+first_name = str(input("Enter your first name: "))
+middle_name = str(input("Enter your middle name: "))
+last_name = str(input("Enter your last name: "))
+
+first_name = first_name.capitalize()
+middle_name = middle_name.capitalize()
+last_name = last_name.capitalize()
+
+name_format = "{first} {middle:.1s} {last}"
+print(name_format.format(first=first_name, middle = middle_name, last = last_name))
