@@ -27,4 +27,12 @@ def Print_scaled_mean_dev():
     print("Mean =", data_scaled.mean(axis=0))
     print("Std deviation =", data_scaled.std(axis=0))
 
-Print_scaled_mean_dev()
+# Min max scaling (to avoid artificially large or small features)
+data_scaler_minmax = preprocessing.MinMaxScaler(feature_range=(0, 1))
+data_scaled_minmax = data_scaler_minmax.fit_transform(input_data)
+
+def Print_scaled_minmax():
+    # Each row is scaled so that the maximum value is 1 and all the other values
+    # are relative to this value
+    print("\nMin max scaled data:\n", data_scaled_minmax)
+    
