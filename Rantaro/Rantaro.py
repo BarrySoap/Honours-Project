@@ -1,5 +1,10 @@
-from Volumes import *
+import numpy as np
+from sklearn import preprocessing
 
-print("Sphere volume with radius 4: " + str(sphere_vol(4)))
-print("Cube volume with length 2, width 3 and height 4: " + str(cube_vol(2, 3, 4)))
-print("Cone volume with radius 3, and height 7: " + str(cone_vol(3, 7)))
+input_data = np.array([[5.1, -2.9, 3.3],
+                       [-1.2, 7.8, -6.1],
+                       [3.9, 0.4, 2.1],
+                       [7.3, -9.9, -4.5]])
+
+data_binarized = preprocessing.Binarizer(threshold=2.1).transform(input_data)
+print("\nBinarized data:\n", data_binarized)
