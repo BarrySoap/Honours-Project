@@ -36,3 +36,12 @@ def Print_scaled_minmax():
     # are relative to this value
     print("\nMin max scaled data:\n", data_scaled_minmax)
     
+# Normalise data using L1 Normalisation, which refers to 'Least Absolute Deviations'
+# this works by making sure that the sum of absolute values is 1 in each row.
+# L1 is robust as it is resistant to outliers in the data.
+data_normalised_l1 = preprocessing.normalize(input_data, norm='l1')
+data_normalised_l2 = preprocessing.normalize(input_data, norm='l2')
+
+def Print_normalised_data():
+    print("\nL1 Normalised data:\n", data_normalised_l1)
+    print("\nL2 Normalised data:\n", data_normalised_l2)
