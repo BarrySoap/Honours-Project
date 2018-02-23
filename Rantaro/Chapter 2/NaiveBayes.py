@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.Naïve_bayes import GaussianNB
+from sklearn.naive_bayes import GaussianNB
 from sklearn import cross_validation
 
 from utilities import visualize_classifier
@@ -13,7 +13,7 @@ data = np.loadtxt(input_file, delimiter=',')
 X, y = data[:, :-1], data[:, -1]
 
 # Create Naive Bayes classifier
-classifier = GuassianNB()
+classifier = GaussianNB()
 
 # Train the classifier
 classifier.fit(X, y)
@@ -31,7 +31,7 @@ visualize_classifier(classifier, X, y)
 # Split data into training and test data
 X_train, X_test, y_train, y_test = cross_validation.train_test_split(X, y,
 test_size=0.2, random_state=3)
-classifier_new = GuassianNB()
+classifier_new = GaussianNB()
 classifier_new.fit(X_train, y_train)
 y_test_pred = classifier_new.predict(X_test)
 
