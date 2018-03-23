@@ -1,4 +1,4 @@
-# Python AI Repo
+# Honours Project Repository
 
 Within this repository currently:
 * Classification and Regression files/models using supervised learning.
