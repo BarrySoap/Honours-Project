@@ -17,3 +17,11 @@ https://axelrod.readthedocs.io/en/stable/reference/description.html
 https://cs.stanford.edu/people/eroberts/courses/soco/projects/1998-99/game-theory/axelrod.html
 
 https://egtheory.wordpress.com/2015/03/02/ipd/
+
+https://www.britannica.com/topic/prisoners-dilemma
+
+https://en.wikipedia.org/wiki/Prisoner%27s_dilemma
+
+https://study.com/academy/lesson/payoff-matrix-in-economics-theory-examples.html
+
+http://policonomics.com/lp-game-theory2-prisoners-dilemma/
