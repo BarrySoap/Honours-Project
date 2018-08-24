@@ -2,6 +2,7 @@
 
 Within this repository currently:
 * Classification and Regression files/models using supervised learning.
+* Game Theory Literature Review (Unf.)
 
 What this repository aims to have:
 * Predictive Analytics with Ensemble Learning,
@@ -17,4 +18,4 @@ What this repository aims to have:
 * Reinforcement Learning Techniques,
 * Deep Learning with Convolutional Neural Networks.
 
-These will contribute towards an Honours project starting in Sept.
+These will contribute towards an Honours project starting in Sept 2018.
