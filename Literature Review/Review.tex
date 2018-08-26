@@ -3,6 +3,7 @@
 \usepackage{ragged2e}
 \usepackage[utf8x]{inputenc}
 \usepackage{amsmath}
+\usepackage{float}
 \usepackage{graphicx}
 \usepackage[font=small,labelfont=bf]{caption}
 \usepackage[top=2.0in, bottom=1.25in, left=1.20in, right=1.20in]{geometry}
@@ -36,7 +37,7 @@ The prisoner's dilemma is one of the fundamental games of game theory which show
 "\textit{Two prisoners are accused of a crime. If one confesses and the other does not, the one who confesses will be released immediately and the other will spend 20 years in prison. If neither confesses, each will be held only a few months. If both confess, they will each be jailed 15 years. They cannot communicate with one another. Given that neither prisoner knows whether the other has confessed, it is in the self-interest of each to confess himself. Paradoxically, when each prisoner pursues his self-interest, both end up worse off than they would have been had they acted otherwise.}" \\
 
 \noindent
-The first examples of the prisoner's dilemma being used in the context of game theory date back to the 1950s, by Merrill Flood and Melvin Dresher who devised puzzles and experiments using the structure of the dilemma. In this experiment, Flood and Dresher ran 100 games between two human players - in which player 1 cooperated 68 times, while player 2 cooperated 78 times. In game theory, if a strategic game exists with the possibility for a various number of possible outcomes, a payoff matrix can be used to visually represent the benefits and consequences of each outcome. For the prisoner's dilemma, a typical payoff matrix would look as such:
+The first examples of the prisoner's dilemma being used in the context of game theory date back to the 1950s, by Merrill Flood and Melvin Dresher who devised puzzles and experiments using the structure of the dilemma - mainly an attempt to verify the usefulness of a non-cooperative Nash equilibrium. In this experiment, Flood and Dresher ran 100 games between two human players - in which player 1 (economist Armen Alchian) cooperated 68 times, while player 2 (mathematician John Williams) cooperated 78 times. In game theory, if a strategic game exists with the possibility for a various number of possible outcomes, a payoff matrix can be used to visually represent the benefits and consequences of each outcome. For the prisoner's dilemma, a typical payoff matrix would look as such:
 
 \begin{figure}[h]
 	\centering
@@ -45,7 +46,16 @@ The first examples of the prisoner's dilemma being used in the context of game t
 \end{figure}
 
 \noindent
-As you can see, the prisoner's would achieve the best possible equal payoff if they consistently chose to confess, but a prisoner could achieve a higher payoff if they were to follow their own self interests. 
+As you can see, the prisoner's would achieve the best possible equal payoff if they consistently chose to confess, but a prisoner could achieve a higher payoff if they were to follow their own self interests. However, the payoff matrix in this experiment looked like this:
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.5\textwidth]{FloodDresherPayoff}
+		\caption{Flood-Dresher Experiment Payoff Matrix}
+\end{figure}
+
+\noindent
+In the Flood-Dresher experiment, the restraints can be thought of as 'unfair' as human players have a level of empathy and other emotion which may sway their decision for reasons an A.I. program would never follow. Such an example would be the comments which player 1 made in their log of comments. 
 
 \clearpage
 
