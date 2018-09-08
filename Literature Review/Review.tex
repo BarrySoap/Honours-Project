@@ -78,6 +78,25 @@ Most proofs of equilibria exist if a certain number of conditions are met. Given
 \noindent
 There are a few ways of proving the existence of a Nash equilibrium within games in a more detailed way - within Nash's dissertation, he chose to speak about the 'generalised' Kakutani fixed point theorem, and the Brouwer fixed point theorem.
 
+\subsubsection{Kakutani's Fixed Point Theorem}
+The Kakutani fixed point theorem states that a common fixed point exists within a collection of maps defined on non-empty, convex and compact subsets. Given the following scenario from San Jose State University: \\
+
+\noindent
+"\textit{Let M be a compact, convex subset of Euclidean n-space. \footnote{A Euclidean space is sometimes known as n-space, and is simply the space of all n-tuples of real numbers.} Let T be a continuous set-valued function on M; i.e., a mapping from M to the set of all subsets of M, T→P(M). If T is such that T(x) is convex for all x belonging to M then there exists a z such that T(z) contains z."} \\
+
+\noindent
+This theorem can be proven if the following conditions are satisfied:
+
+\begin{itemize}
+  \item M is a non-empty, convex and compact set.
+  \item T(x) is non-empty for all x ∈ M.
+  \item For all x ∈ M, T(x) is a convex set.
+  \item T(x) has a closed graph, i.e. if \{x\textsuperscript{n}, y\textsuperscript{n}\} → \{x, y\} with y\textsuperscript{n} ∈ T(x\textsuperscript{n}), then y ∈ T(x).
+\end{itemize}
+
+\noindent
+If satisfied, a fixed point exists within T.
+
 \clearpage
 
 \end{document}
