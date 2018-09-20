@@ -19,3 +19,5 @@ What this repository aims to have:
 * Deep Learning with Convolutional Neural Networks.
 
 These will contribute towards an Honours project starting in Sept 2018.
+
+# Honours Title: "Learning to Play: Nash Equilibria in Repeated Games Using Machine Learning and Neural Networks
