@@ -1,0 +1,9 @@
+This document is purely for containment of deleted portions of text which might be useful in the future.
+
+"To gather substantial or definitive proof of Folk theorem in repeated games, by identifying Nash equilibria at different points of the subgames. 
+This will be done by measuring the payoffs of weights in the final neural network, which will initially start as random."
+^ Might be useful for the introductory section of the dissertation.
+
+"To investigate the blending of multiple fields – in this case, game theory, machine learning and evolutionary algorithms. 
+This will lead on to questions regarding the findings being applied to more complex games."
+^ General Point
