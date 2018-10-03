@@ -1,1 +1,1 @@
-N/A
+What is a topology in relation to neural networks?
