@@ -22,4 +22,4 @@ These will contribute towards an Honours project starting in Sept 2018.
 
 THESE TITLES ARE SOMEWHAT UNOFFICIAL:
 Honours Title: "~~Learning to Play: Nash Equilibria in Repeated Games Using Machine Learning and Neural Networks~~" <br/>
-2nd Draft Title: "Learning to play: A comparison of effectiveness between different representation of agent cognitions using evolutionary algorithms and machine learning"
+2nd Draft Title: "Learning to play: A comparison of effectiveness between different representations of agent cognitions using evolutionary algorithms and machine learning"
