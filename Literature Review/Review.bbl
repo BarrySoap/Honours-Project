@@ -101,6 +101,11 @@ Levine, D.
 Lutter, B. and Huntsinger, R.
 \newblock Engineering appllications of finite automata.
 
+\bibitem[McCulloch and Pitts, ]{mcculloch1943a}
+McCulloch, W. and Pitts, W.
+\newblock A logical calculus of the ideas immanent in nervous activity.
+\newblock {\em Bulletin of Mathematical Biophysics}, 5:115–133.
+
 \bibitem[McDonnell and Waagen, ]{mcdonnell1994a}
 McDonnell, J. and Waagen, D.
 \newblock Evolving recurrent perceptrons for time-series modeling.
@@ -143,6 +148,10 @@ Smith, E. and Wright, R.
 Smith, J.
 \newblock {\em Evolution and the theory of games}.
 \newblock Cambridge University Press, Cambridge.
+
+\bibitem[University, ]{university2004a}
+University, S.
+\newblock Basics of automata theory.
 
 \bibitem[Veelen et~al., ]{veelen2012a}
 Veelen, M., García, J., Rand, D., and Nowak, M.
