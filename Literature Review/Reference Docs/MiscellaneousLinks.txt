@@ -1,3 +1,5 @@
 https://mindyourdecisions.com/GameSolver.html
 https://www.quora.com/What-is-Nash-equilibrium-and-what-were-its-impacts-on-the-world-How-does-it-compare-to-the-theory-of-Adam-Smith
 https://projecteuclid.org/euclid.dmj/1077492791#info
+ftp://ftp.iust.ac.ir/DAI/Wiley%20-%20An%20Introduction%20to%20Multiagent%20Systems%20[Wooldridge,%20Scan,%20OCR]%20-%202002%20!!%20-%20(By%20Laxxuss).pdf
+https://tex.stackexchange.com/questions/163768/write-pseudo-code-in-latex
