@@ -2,7 +2,7 @@
 
 Within this repository currently:
 * Classification and Regression files/models using supervised learning.
-* Game Theory Literature Review (Unf.)
+* Game Theory Literature Review
 
 What this repository aims to have:
 * Predictive Analytics with Ensemble Learning,
