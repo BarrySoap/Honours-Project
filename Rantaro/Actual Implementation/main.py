@@ -10,7 +10,6 @@ import neat
 genomes = [(0.0, 0.0), (0.0, 1.0), (1.0, 0.0), (1.0, 1.0)]
 
 def run():
-    
-    
-if __name__ == '__main__':
-    run()
+
+    if __name__ == '__main__':
+        print("w")
