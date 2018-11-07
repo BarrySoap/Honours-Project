@@ -259,15 +259,148 @@ Conclusion here.
 \newline
 \textbf{SOC10101 Honours Project (40 Credits)}\\
 \newline
-\textbf{Title of Project: Learning to Play: Nash Equilibria in Repeated Games Using Machine Learning and Neural Networks}
-%\begin{subappendices}
-%\end{subappendices}
+\textbf{Title of Project: Learning to Play: Nash Equilibria in Repeated Games Using Machine Learning and Neural Networks} \\
+\newline
+\textbf{\underline{Overview of Project Content and Milestones}} \\
+\newline
+The aim of the project is to investigate how changing the representation of an agent's cognition changes how easy or difficult it is to evolve effective strategies for playing repeated games. \\
+\newline
+The key milestones to achieving this are:
+\begin{enumerate}
+  \item Research different models of agent cognition, in particular neural networks and finite state machines.
+  \item Implement an evolutionary algorithm that can evolve agents to play a repeated Prisoner's Dilemma, where the representation of the evolving agent strategies can be changed between neural networks and finite state machines.
+  \item Test the evolutionary algorithm by recreating existing results from the literature.
+  \item Perform experimental analysis to determine how the representation of the agent's strategy changes how easy it is for the evolutionary algorithm to find strategies that give high payoffs, i.e. that play the game well.
+  \item Perform additional experiments to determine how robust the results are to changes in the game, e.g. Stag Hunt vs Prisoner's Dilemma. \\
+\end{enumerate}
+
+\textbf{The Main Deliverable(s):}
+\begin{enumerate}
+  \item The main deliverable of the project is to have a robust program which houses an evolutionary algorithm capable of handling both finite state machines and neural networks, as forms of representations of an agents’ cognition within a repeated game theory scenario. These agents should be able to play against each other in multiple games, with evolving strategies. These representations should be able to evolve, whether they be controllers such as neural networks or finite state machines.
+  \item The secondary deliverable will be an experimental analysis into the controllers of the program: neural networks and finite state machines. When these techniques are implemented within the program, they must be compared to identify the best method of evolving an agents’ strategy/cognition by ways of algorithm fitness or strategy payoff. \\
+\end{enumerate}
+
+\textbf{The Target Audience for the Deliverable(s):} \\
+\newline
+The finished product of the project will most likely require some working knowledge of game theory and/or machine learning to understand. Ideally, the finished product will have enough of an interesting result to yield possibilities of further research, which may interest those with experience in the applicable fields. \\
+
+\textbf{The Work to be Undertaken:} \\
+\newline
+The project will first require a great amount of research and review. Most of the foundational work applicable to this project was published in the 1950s/60s, with important work on evolutionary algorithms and neural networks between then and the present. Thus, most of the information needed for the project is a collection of professional papers and/or publications written by well-established mathematicians and game theorists. \\
+A system will need to be designed and implemented to sustain 2 agents, a repeated game scenario, a neural network and a relay of information which the agents can train from. This system will all be built in the Python programming language - and may use code packages as reference material. \\
+After a suitable system is designed and implemented, the user should have control over the power of computation for the agents, and the weights/payoffs of the neural network should be serialised to a CSV file – which can used to compare results between iterations of the games. \\
+The end result of the project should have the ability of experimentation, although the best strategies should more or less be the same/similar on each iteration depending on the situation. Ideally, the project should be able to replicate the results of the iterated prisoner’s dilemma experiment by Harrald and Fogel in 1996, if given the same initial values. \\
+
+\textbf{Additional Information / Knowledge Required:} \\
+\newline
+I will be honing my skills in Python and project management. I will ideally have a working knowledge of artificial intelligence, machine learning and evolutionary algorithms. Additionally, I will learn about the various packages and features of Python which are applicable to the project. \\
+
+\textbf{Information Sources that Provide a Context for the Project:} \\
+\newline
+Work leading up to the eventual discovery of the Nash equilibrium was authored by John von Neumann and John Forbes Nash. Work on repeated games was introduced and popularised by Robert Axelrod. Work on neural networks was arguably pioneered by Marvin Lee Minsky with his creation of the SNARC (Stochastic Neural Analog Reinforcement Calculator). \\
+
+\textbf{The Importance of the Project:} \\
+\newline
+From a personal standpoint, the project will be important for gaining useful information on topics I’ve never studied, and the end result will hopefully be a proud accomplishment which I can show to employers. If said result is good enough, the project itself may be a useful research topic/experiment for others in the future. The project as a whole should also be a good investigation tool into how much computation power is needed for a project of this type, as this project will have limited power. These results should be helpful in answering the question of whether or not these scenarios can be adapted to evolve non-player characters in video games. \\
+
+\textbf{The Key Challenge(s) to be Overcome:} \\
+\newline
+There is an inevitable difficulty when dealing with these topics – game theory, artificial intelligence and evolutionary algorithms are difficult fields to put into application, and I suspect there will be an inherited difficulty which comes with the task. Blending such fields may prove difficult given the free open-source software, in which work like this project may/may not have been done before. Finally, given the time and effort constraints of university, the timelines and workloads other modules may make it difficult to complete each deliverable on time. \\
 
 \section{Interim Report Overview}
 Insert a copy of the project review form you were given at the end of the review by the second marker
 
 \section{Diary Sheets \& Project Management Documents}
-Insert diary sheets here together with any project management plan you have
+\textbf{\textit{September}}
+\newline
+\hrule
+\textbf{\underline{Week 1}} \\
+\newline
+\textbf{Objectives:} \\
+The initial goal of the meeting was to examine and modify the first draft of the initial project overview document, with the hope of improving it to a standard for submission. 
+Another goal was to discuss the project timeline, and how it should be laid out in a chart. \\
+
+\textbf{Progress:} \\
+Upon reading the draft of the document, Simon discussed and agreed suitable goals/milestones of the project, which would eventually be placed into a project timeline chart (Gantt). Simon and I then made changes to a couple of sections in the IPO document, then discussed plans for how the program should be designed. This led to Simon proposing an unofficial, rough change of the project title, given the new scope of design and implementation: “Learning to play: A comparison of effectiveness between different representation of agent cognitions using evolutionary algorithms and machine learning”. Simon also suggested reading up on evolutionary algorithms, as well as emailing the new second marker as per my prompt. \\
+
+\textbf{Goal for Next Week:} \\
+Finish IPO document, refine for submission. \\
+Finish project timeline (Gantt Chart). \\
+
+\textbf{\underline{Week 2}} \\
+\newline
+\textbf{Objectives:} \\
+The goal of this meeting was to finalise the initial project overview document, as well as establish clear milestones for the project and iron out any concerns I had since the last meeting. \\
+
+\textbf{Progress:} \\
+Simon suggested multiple changes to the initial project overview document in order to have it ready for submission, mainly to do with the aims/deliverables of the project. Simon and I then agreed realistic dates for the deliverables, as well as what was expected at each point. We then sorted out a Github collaboration issue and discussed how the project timeline should be laid out.  \\
+
+\textbf{Goal for Next Week:} \\
+Finish the evolutionary algorithms section of the literature review. \\
+\hrule
+
+\textbf{\textit{October}}
+\newline
+\hrule
+\textbf{\underline{Week 3}} \\
+\newline
+\textbf{Objectives:} \\
+The goal of this meeting was to scan over the literature review of the project, so that Simon could see the structure and overall content quality and eventually offer feedback for each section. I also had to iron out a few queries/thoughts regarding the referencing and citation facet of the project. \\
+
+\textbf{Progress:} \\
+Simon started by looking over the list of references for the literature review to make sure they were all in the correct format and reliable sources. He then suggested a few papers to read and then add to the list, as a good general reference for the review such as books/papers by John Maynard Smith and Ken Binmore. After this, Simon started to read over the content of the literature review, and offered a number of suggestions/changes for the benefit of quality/readability. \\
+
+\textbf{Goal for Next Week:} \\
+Finalise first draft of the literature review, to eventually look over the content. \\
+
+\textbf{\underline{Week 4}} \\
+\newline
+\textbf{Objectives:} \\
+The goal of this meeting was to comprehensively edit and finalise the literature review based on Simon’s feedback, as well as draft research questions for the project to focus on. \\
+
+\textbf{Progress:} \\
+Simon started by looking over the research questions I drafted, suggesting things to add and things to remove. After editing the research questions down to 3, we moved on to editing the literature review. Simon suggested a large amount of changes, in order to get the review fit for submission. \\
+
+\textbf{Goal for Next Week:} \\
+Start looking at implementation, maybe bring a basic first demo. \\
+
+\textbf{\underline{Week 5}} \\
+\newline
+\textbf{Objectives:} \\
+The goal of this meeting was to go over progress for the week. \\
+
+\textbf{Progress:} \\
+Simon looked over the changes I made to the literature review for the past week to make sure they were all good for the review. He then suggested a few final edits, which finalises the literature review. \\
+
+\textbf{Goal for Next Week:} \\
+Implement an evolutionary algorithm which can evolve a neural network, then demo. \\
+
+\textbf{\underline{Week 6}} \\
+\newline
+\textbf{Objectives:} \\
+The goal of this meeting was to go over progress for the week regarding neural networks/evolutionary algorithms implementation. \\
+
+\textbf{Progress:} \\
+Simon started by looking over the reference material I found to check if it was applicable. He explained why the implementation of this project isn’t similar to the other repositories and how it should look. Simon suggested reading up on the operation of neural networks – specifically Haykin’s book.  \\
+
+\textbf{Goal for Next Week:} \\
+Read on the operation of neural networks, make sure understanding of implementation is solid. \\
+\hrule
+
+\textbf{\textit{November}}
+\newline
+\hrule
+\textbf{\underline{Week 7}} \\
+\newline
+\textbf{Objectives:} \\
+The goal of this meeting was plan the implementation of the project. \\
+
+\textbf{Progress:} \\
+Simon suggested a good amount of tips for how to approach the program, and what the eventual output should be.   \\
+
+\textbf{Goal for Next Week:} \\
+Work on implementation – neural networks + evolutionary algorithms. \\
+\hrule
 \end{appendices}
 
 \end{document}
