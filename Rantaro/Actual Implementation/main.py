@@ -7,8 +7,11 @@ Created on Thu Oct 25 16:03:30 2018
 
 import neat
 
-cooperate = (1, 0)
-defect = (0, 1)
+_strategy = 3
+_opponents = 49 # how many opponents for a network to play? (population size - 1)
+_cooperate = 1
+_defect = 0
+_history = {}
 
 config = neat.Config(neat.DefaultGenome, neat.DefaultReproduction,
                          neat.DefaultSpeciesSet, neat.DefaultStagnation, 'config')
