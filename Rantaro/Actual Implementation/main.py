@@ -9,13 +9,23 @@ import neat
 
 _strategy = 3
 _opponents = 49 # how many opponents for a network to play? (population size - 1)
-_cooperate = 1
-_defect = 0
+_cooperate = "cooperate"
+_defect = "defect"
 _history = {}
 
 config = neat.Config(neat.DefaultGenome, neat.DefaultReproduction,
                          neat.DefaultSpeciesSet, neat.DefaultStagnation, 'config')
 p = neat.Population(config)
+
+def Play_Round(_agentOneAction, _agentTwoAction):
+	if _agentOneAction == "cooperate" and _agentTwoAction == "defect":
+		return 0
+	if _agentOneAction == "defect" and _agentTwoAction == "defect":
+		return 2
+	if _agentOneAction == "cooperate" and _agentTwoAction == "cooperate":
+		return 3
+	if _agentOneAction == "defect" and _agentTwoAction == "cooperate":
+		return 5
 
 def evo_alg(networks, config):
     for network_id_one, playerOne in networks:
