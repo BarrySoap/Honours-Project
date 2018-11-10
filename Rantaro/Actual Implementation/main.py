@@ -6,6 +6,8 @@ Created on Thu Oct 25 16:03:30 2018
 """
 
 import neat
+import random
+import numpy as np
 
 _strategy = 3
 _opponents = 49 # how many opponents for a network to play? (population size - 1)
@@ -17,7 +19,7 @@ config = neat.Config(neat.DefaultGenome, neat.DefaultReproduction,
                          neat.DefaultSpeciesSet, neat.DefaultStagnation, 'config')
 p = neat.Population(config)
 
-def Play_Round(_agentOneAction, _agentTwoAction):
+def Calculate_Payoff(_agentOneAction, _agentTwoAction):
 	if _agentOneAction == "cooperate" and _agentTwoAction == "defect":
 		return 0
 	if _agentOneAction == "defect" and _agentTwoAction == "defect":
@@ -26,18 +28,33 @@ def Play_Round(_agentOneAction, _agentTwoAction):
 		return 3
 	if _agentOneAction == "defect" and _agentTwoAction == "cooperate":
 		return 5
+		
+def Fitness(move, payoff):
+    if payoff == 0:
+        if move == C:
+			return [1, 0]
+        else:               
+			return [0, 1]        
+    else:
+        if move == C:
+			return [0, 1]
+        else:
+			return [1, 0]
+
+def Play_Round():
+	
 
 def evo_alg(networks, config):
-    for network_id_one, playerOne in networks:
-        playerOne.fitness = 4.0
-        allNets = neat.nn.FeedForwardNetwork.create(playerOne, config)
-        for network_id_two, playerTwo in networks:
-            playerTwo.fitness = 4.0
-            allNets.activate(cooperate, defect)
-            # Play one network against another, for each in the network
-            # Ping one neuron as the move, how do they decide?
-            # Update payoffs according to result
-    # Tally payoffs into new fitness
+	ids = []
+    allNets = {}
+
+    for network_id, network in networks:
+        network.fitness = 0.0
+        allNets[str(network_id)] = neat.nn.FeedForwardNetwork.create(playerOne, config)
+		history[str(network_id)] =  [-1] * _history
+		ids.append(network_id)
+	random.shuffle(ids)
+	
 
 def run():
     print("w")
