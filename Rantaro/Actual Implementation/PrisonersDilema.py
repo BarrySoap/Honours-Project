@@ -13,7 +13,7 @@ n_tries = 10                # number of random opponets to play each round
 
 # location of config file
 path = os.path.dirname(__file__)
-file_name = 'configPrisonersDilema.txt'
+file_name = 'config'
 config_file = os.path.join(path, file_name)
 
 # confess is 0, stay silent is 1, -1 means no previous history 

@@ -41,8 +41,28 @@ def Fitness(move, payoff):
         else:
 			return [1, 0]
 
-def Play_Round():
-	
+def Play_Round(networks):      
+    for network_id, network in networks:
+        
+        network.fitness = 0.
+
+        for f in range(len(networks)):
+            
+            foe_id, foe_genome = networks[f]
+            my_history = history[str(network_id)]            
+            foe_history = history[str(foe_id)]
+       
+            # run opposing player's prior actions through network and decide action to take
+            my_output = nets[str(network_id)].activate(foe_history[-n_history:])
+            my_action = np.argmax(my_output)
+            history[str(network_id)].append(my_action)
+
+            foe_output = nets[str(foe_id)].activate(my_history[-n_history:])
+            foe_action = np.argmax(foe_output)
+            history[str(foe_id)].append(foe_action)
+
+            network.fitness -= score(my_action, foe_action) 
+            foe_genome.fitness -= score(foe_action, my_action) 
 
 def evo_alg(networks, config):
 	ids = []
@@ -54,7 +74,7 @@ def evo_alg(networks, config):
 		history[str(network_id)] =  [-1] * _history
 		ids.append(network_id)
 	random.shuffle(ids)
-	
+	Play_Round(networks)
 
 def run():
     print("w")
