@@ -1,87 +1,106 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Oct 25 16:03:30 2018
-
-@author: Glenn Wilkie-Sullivan
-"""
-
-import neat
-import random
 import numpy as np
+import random
+import neat
 
-_strategy = 3
-_opponents = 49 # how many opponents for a network to play? (population size - 1)
-_cooperate = "cooperate"
-_defect = "defect"
-_history = {}
+# Iterator used to move down the move history
+hist_iterator = 3
 
-config = neat.Config(neat.DefaultGenome, neat.DefaultReproduction,
-                         neat.DefaultSpeciesSet, neat.DefaultStagnation, 'config')
-p = neat.Population(config)
+# Moves
+cooperate = 0
+defect = 1
 
-def Calculate_Payoff(_agentOneAction, _agentTwoAction):
-	if _agentOneAction == "cooperate" and _agentTwoAction == "defect":
-		return 0
-	if _agentOneAction == "defect" and _agentTwoAction == "defect":
-		return 2
-	if _agentOneAction == "cooperate" and _agentTwoAction == "cooperate":
-		return 3
-	if _agentOneAction == "defect" and _agentTwoAction == "cooperate":
-		return 5
-		
-def Fitness(move, payoff):
-    if payoff == 0:
-        if move == C:
-			return [1, 0]
-        else:               
-			return [0, 1]        
-    else:
-        if move == C:
-			return [0, 1]
-        else:
-			return [1, 0]
+# History of moves made by the agents
+history = {}
 
-def Play_Round(networks):      
-    for network_id, network in networks:
+# Container to randomise play
+agent_ids = []
+# Container for agents
+networks = {}
+
+# Calculate payoff for round, returns number of years in the dilemma scenario
+def Calculate_Payoff(agent_one_move, agent_two_action):
+
+    if (agent_one_move == cooperate) and (agent_two_action == defect):
+        return 0
+    
+    if (agent_one_move == defect) and (agent_two_action == defect):
+        return 2
+    
+    if (agent_one_move == cooperate) and (agent_two_action == cooperate):
+        return 3
+
+    if (agent_one_move == defect) and (agent_two_action == cooperate):
+        return 5
+
+# Play agents against each other
+def evo_alg(agents, config):
+
+    agent_ids.clear()
+    networks.clear()
+    
+    for agent_id, agent in agents:
+        # Reset agent fitness
+        agent.fitness = 4.0
+        networks[str(agent_id)] = neat.nn.FeedForwardNetwork.create(agent, config)
+        # Using the history iterator, go back in the history of moves
+        # to judge the remaining agents
+        history[str(agent_id)] =  [-1] * hist_iterator
+        # Add agent ids
+        agent_ids.append(agent_id)
+
+    # Randomise order of play
+    random.shuffle(agent_ids)
+
+    # Play Round
+    for agent_id, agent in agents:
         
-        network.fitness = 0.
+        agent.fitness = 4.0
 
-        for f in range(len(networks)):
+        for f in range(len(agents)):
             
-            foe_id, foe_genome = networks[f]
-            my_history = history[str(network_id)]            
-            foe_history = history[str(foe_id)]
+            # Initialise opposing agent
+            opponent_id, opponent = agents[f]
+            # Get history of agent's moves
+            agent_history = history[str(agent_id)]      
+            # Get history of opposing agent's moves
+            opponent_history = history[str(opponent_id)]
        
-            # run opposing player's prior actions through network and decide action to take
-            my_output = nets[str(network_id)].activate(foe_history[-n_history:])
-            my_action = np.argmax(my_output)
-            history[str(network_id)].append(my_action)
+            # Based on the opposing agent's previous actions, determine move to make
+            determineMove = networks[str(agent_id)].activate(opponent_history[-hist_iterator:])
+            move = np.argmax(determineMove)
+            history[str(agent_id)].append(move)
 
-            foe_output = nets[str(foe_id)].activate(my_history[-n_history:])
-            foe_action = np.argmax(foe_output)
-            history[str(foe_id)].append(foe_action)
+            determineMoveOpponent = networks[str(opponent_id)].activate(agent_history[-hist_iterator:])
+            opponent_move = np.argmax(determineMoveOpponent)
+            history[str(opponent_id)].append(opponent_move)
 
-            network.fitness -= score(my_action, foe_action) 
-            foe_genome.fitness -= score(foe_action, my_action) 
-
-def evo_alg(networks, config):
-	ids = []
-    allNets = {}
-
-    for network_id, network in networks:
-        network.fitness = 0.0
-        allNets[str(network_id)] = neat.nn.FeedForwardNetwork.create(playerOne, config)
-		history[str(network_id)] =  [-1] * _history
-		ids.append(network_id)
-	random.shuffle(ids)
-	Play_Round(networks)
+            # Calculate new fitness
+            agent.fitness -= Calculate_Payoff(move, opponent_move) 
+            opponent.fitness -= Calculate_Payoff(opponent_move, move)
 
 def run():
-    print("w")
-    # Only gets the fittest network, need to have a roulette wheel
-    # selection for the next generation
-    winner = p.run(evo_alg, 200)
-    # Get fitness of all networks
+    
+    # load network config
+    config = neat.Config(neat.DefaultGenome, 
+                        neat.DefaultReproduction, 
+                        neat.DefaultSpeciesSet, 
+                        neat.DefaultStagnation, 
+                        'config')
 
-if __name__ == '__main__':
-    run()
+    # Initialise population
+    p = neat.Population(config)
+  
+    # add reporter to display progress in terminal
+    p.add_reporter(neat.StdOutReporter(False))
+    stats = neat.StatisticsReporter()
+    p.add_reporter(stats)
+    p.add_reporter(neat.Checkpointer(5))
+
+    # Run for 50 generations
+    winner = p.run(evo_alg, 50)
+
+    # Print fittest agent
+    print('\nFittest Agent:\n{!s}'.format(winner))
+
+
+run()
