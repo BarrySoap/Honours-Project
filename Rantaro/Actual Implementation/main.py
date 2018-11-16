@@ -75,8 +75,9 @@ def evo_alg(agents, config):
             history[str(opponent_id)].append(opponent_move)
 
             # Calculate new fitness
-            agent.fitness -= Calculate_Payoff(move, opponent_move) 
-            opponent.fitness -= Calculate_Payoff(opponent_move, move)
+            agent.fitness += Calculate_Payoff(move, opponent_move) 
+            opponent.fitness += Calculate_Payoff(opponent_move, move)
+            agent.fitness /= 49
 
 def run():
     
