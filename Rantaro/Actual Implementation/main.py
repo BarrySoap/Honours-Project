@@ -101,10 +101,8 @@ def run():
     winner = p.run(evo_alg, 50)
 
     # Print fittest agent
-    print('\nFittest Agent:\n{!s}'.format(winner))
+    print('\nFittest Agent:\n{!s}'.format(winner)) # Doesn't get fittest agent, needs to be fixed.
 
-    node_names = {-1:'In -2', -2: 'In  -1', -3: 'In 0',  0:'Cooperate', 1:'Defect'}
-    visualise.draw_net(config, winner, True, node_names=node_names)
     visualise.plot_stats(stats, ylog=False, view=True)
     visualise.plot_species(stats, view=True)
 
