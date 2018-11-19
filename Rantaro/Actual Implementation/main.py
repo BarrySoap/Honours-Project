@@ -1,6 +1,7 @@
 import numpy as np
 import random
 import neat
+import visualise as visualise
 
 # Iterator used to move down the move history
 hist_iterator = 3
@@ -77,7 +78,6 @@ def evo_alg(agents, config):
             # Calculate new fitness
             agent.fitness += Calculate_Payoff(move, opponent_move) 
             opponent.fitness += Calculate_Payoff(opponent_move, move)
-            agent.fitness /= 49
 
 def run():
     
@@ -103,5 +103,9 @@ def run():
     # Print fittest agent
     print('\nFittest Agent:\n{!s}'.format(winner))
 
+    node_names = {-1:'In -2', -2: 'In  -1', -3: 'In 0',  0:'Cooperate', 1:'Defect'}
+    visualise.draw_net(config, winner, True, node_names=node_names)
+    visualise.plot_stats(stats, ylog=False, view=True)
+    visualise.plot_species(stats, view=True)
 
 run()
