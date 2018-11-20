@@ -7,8 +7,8 @@ import visualise as visualise
 hist_iterator = 3
 
 # Moves
-cooperate = 0
-defect = 1
+hunt_stag = 0       # Cooperate
+hunt_hare = 1       # Defect
 
 # History of moves made by the agents
 history = {}
@@ -21,17 +21,17 @@ networks = {}
 # Calculate payoff for round, returns number of years in the dilemma scenario
 def Calculate_Payoff(agent_one_move, agent_two_action):
 
-    if (agent_one_move == cooperate) and (agent_two_action == defect):
+    if (agent_one_move == hunt_stag) and (agent_two_action == hunt_hare):
         return 0
     
-    if (agent_one_move == defect) and (agent_two_action == defect):
-        return 2
+    if (agent_one_move == hunt_hare) and (agent_two_action == hunt_hare):
+        return 1
     
-    if (agent_one_move == cooperate) and (agent_two_action == cooperate):
-        return 3
+    if (agent_one_move == hunt_stag) and (agent_two_action == hunt_stag):
+        return 2
 
-    if (agent_one_move == defect) and (agent_two_action == cooperate):
-        return 5
+    if (agent_one_move == hunt_hare) and (agent_two_action == hunt_stag):
+        return 3
 
 # Play agents against each other
 def evo_alg(agents, config):
