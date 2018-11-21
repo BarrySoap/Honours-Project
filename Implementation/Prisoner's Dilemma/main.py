@@ -64,7 +64,7 @@ def evo_alg(agents, config):
     # Play Round
     for agent_id, agent in agents:
         
-        iterator.append("round")
+        #iterator.append("round") # Program runs: 250
         
         agent.fitness = 4.0
 
@@ -89,6 +89,8 @@ def evo_alg(agents, config):
             # Calculate new fitness
             agent.fitness += Calculate_Payoff(move, opponent_move) 
             opponent.fitness += Calculate_Payoff(opponent_move, move)
+            
+            #iterator.append("round") # Program runs: 22500
             
             with open('history.csv', mode = 'a') as output_file:
                     writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
