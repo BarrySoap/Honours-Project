@@ -19,7 +19,7 @@ agent_ids = []
 # Container for agents
 networks = {}
 
-iterator = []
+round_count = []
 
 with open('history.csv', mode = 'w') as output_file:
     writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
@@ -63,7 +63,7 @@ def evo_alg(agents, config):
     # Play Round
     for agent_id, agent in agents:
         
-        #iterator.append("round") # Program runs: 250
+        #round_count.append("round") # Program runs: 250
         
         agent.fitness = 4.0
 
@@ -89,11 +89,11 @@ def evo_alg(agents, config):
             agent.fitness += Calculate_Payoff(move, opponent_move) 
             opponent.fitness += Calculate_Payoff(opponent_move, move)
             
-            iterator.append("round") # Program runs: 22500
+            round_count.append("round") # Program runs: 22500
             
             with open('history.csv', mode = 'a') as output_file:
                     writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-                    writer.writerow(["{} and {}".format("Round: ", len(iterator))])
+                    writer.writerow(["Round: " + repr(len(round_count))])
                     writer.writerow([agent.key, agent.fitness, move])
                     writer.writerow([opponent.key, opponent.fitness, opponent_move])
                     output_file.close()
@@ -125,6 +125,6 @@ def run():
     visualise.plot_stats(stats, ylog=False, view=True)
     #visualise.plot_species(stats, view=True)
     
-    print(len(iterator))
+    print(len(round_count))
 
 run()
