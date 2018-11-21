@@ -2,6 +2,7 @@ import numpy as np
 import random
 import neat
 import visualise as visualise
+import csv
 
 # Iterator used to move down the move history
 hist_iterator = 3
@@ -17,6 +18,14 @@ history = {}
 agent_ids = []
 # Container for agents
 networks = {}
+
+iterator = []
+
+with open('history.csv', mode = 'w') as output_file:
+    writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    writer.writerow(['Agent', 'Fitness', 'Move'])
+    writer.writerow(['Agent1', '30', 'Cooperate'])
+    output_file.close()
 
 # Calculate payoff for round, returns number of years in the dilemma scenario
 def Calculate_Payoff(agent_one_move, agent_two_action):
@@ -55,6 +64,8 @@ def evo_alg(agents, config):
     # Play Round
     for agent_id, agent in agents:
         
+        iterator.append("round")
+        
         agent.fitness = 4.0
 
         for f in range(len(agents)):
@@ -78,6 +89,12 @@ def evo_alg(agents, config):
             # Calculate new fitness
             agent.fitness += Calculate_Payoff(move, opponent_move) 
             opponent.fitness += Calculate_Payoff(opponent_move, move)
+            
+            with open('history.csv', mode = 'a') as output_file:
+                    writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+                    writer.writerow([agent.key, agent.fitness, move])
+                    writer.writerow([opponent.key, opponent.fitness, opponent_move])
+                    output_file.close()
 
 def run():
     
@@ -98,12 +115,14 @@ def run():
     p.add_reporter(neat.Checkpointer(5))
 
     # Run for 50 generations
-    winner = p.run(evo_alg, 50)
+    winner = p.run(evo_alg, 3)
 
     # Print fittest agent
     print('\nFittest Agent:\n{!s}'.format(winner)) # Doesn't get fittest agent, needs to be fixed.
 
     visualise.plot_stats(stats, ylog=False, view=True)
     #visualise.plot_species(stats, view=True)
+    
+    print(len(iterator))
 
 run()
