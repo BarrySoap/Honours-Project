@@ -117,7 +117,7 @@ def run():
     p.add_reporter(neat.Checkpointer(5))
 
     # Run for 50 generations
-    winner = p.run(evo_alg, 3)
+    winner = p.run(evo_alg, 50)
 
     # Print fittest agent
     print('\nFittest Agent:\n{!s}'.format(winner)) # Doesn't get fittest agent, needs to be fixed.
