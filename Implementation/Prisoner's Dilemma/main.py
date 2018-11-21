@@ -24,7 +24,6 @@ iterator = []
 with open('history.csv', mode = 'w') as output_file:
     writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     writer.writerow(['Agent', 'Fitness', 'Move'])
-    writer.writerow(['Agent1', '30', 'Cooperate'])
     output_file.close()
 
 # Calculate payoff for round, returns number of years in the dilemma scenario
@@ -90,10 +89,11 @@ def evo_alg(agents, config):
             agent.fitness += Calculate_Payoff(move, opponent_move) 
             opponent.fitness += Calculate_Payoff(opponent_move, move)
             
-            #iterator.append("round") # Program runs: 22500
+            iterator.append("round") # Program runs: 22500
             
             with open('history.csv', mode = 'a') as output_file:
                     writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+                    writer.writerow(["{} and {}".format("Round: ", len(iterator))])
                     writer.writerow([agent.key, agent.fitness, move])
                     writer.writerow([opponent.key, opponent.fitness, opponent_move])
                     output_file.close()
