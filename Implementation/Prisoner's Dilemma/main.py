@@ -119,8 +119,10 @@ def run():
     # Run for 50 generations
     winner = p.run(evo_alg, 50)
 
-    # Print fittest agent
-    print('\nFittest Agent:\n{!s}'.format(winner)) # Doesn't get fittest agent, needs to be fixed.
+    # Print fittest agent of last round
+    print('\nFittest Agent:\n{!s}'.format(winner))
+    
+    
 
     visualise.plot_stats(stats, ylog=False, view=True)
     #visualise.plot_species(stats, view=True)
