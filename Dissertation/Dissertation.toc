@@ -16,6 +16,7 @@
 \contentsline {subsection}{\numberline {2.7}Research Questions}{24}
 \contentsline {subsection}{\numberline {2.8}Conclusion}{24}
 \contentsline {section}{\numberline {3}Methodology}{26}
+\contentsline {subsection}{\numberline {3.1}Approach}{26}
 \contentsline {section}{\numberline {4}Implementation and Testing}{27}
 \contentsline {section}{\numberline {5}Results}{28}
 \contentsline {section}{\numberline {6}Evaluation}{29}
