@@ -91,12 +91,12 @@ def evo_alg(agents, config):
             
             round_count.append("round") # Program runs: 22500
             
-            with open('history.csv', mode = 'a') as output_file:
-                    writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-                    writer.writerow(["Round: " + repr(len(round_count))])
-                    writer.writerow([agent.key, agent.fitness, move])
-                    writer.writerow([opponent.key, opponent.fitness, opponent_move])
-                    output_file.close()
+#            with open('history.csv', mode = 'a') as output_file:
+#                    writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+#                    writer.writerow(["Round: " + repr(len(round_count))])
+#                    writer.writerow([agent.key, agent.fitness, move])
+#                    writer.writerow([opponent.key, opponent.fitness, opponent_move])
+#                    output_file.close()
 
 def run():
     
