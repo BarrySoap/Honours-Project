@@ -17,13 +17,14 @@
 \contentsline {subsection}{\numberline {2.8}Conclusion}{24}
 \contentsline {section}{\numberline {3}Methodology}{26}
 \contentsline {subsection}{\numberline {3.1}Approach}{26}
-\contentsline {subsubsection}{\numberline {3.1.1}Fitness Function}{26}
-\contentsline {section}{\numberline {4}Implementation and Testing}{27}
-\contentsline {section}{\numberline {5}Results}{28}
-\contentsline {section}{\numberline {6}Evaluation}{29}
-\contentsline {section}{\numberline {7}Conclusion}{30}
-\contentsline {section}{Appendices}{34}
-\contentsline {section}{\numberline {A}Initial Project Overview (IPO)}{34}
-\contentsline {section}{\numberline {B}Interim Report Overview}{37}
-\contentsline {section}{\numberline {C}Diary Sheets \& Project Management Documents}{37}
-\contentsline {section}{\numberline {D}Original Proposed Project Timeline}{41}
+\contentsline {subsection}{\numberline {3.2}Technologies}{26}
+\contentsline {subsubsection}{\numberline {3.2.1}Python}{27}
+\contentsline {section}{\numberline {4}Implementation and Testing}{28}
+\contentsline {section}{\numberline {5}Results}{29}
+\contentsline {section}{\numberline {6}Evaluation}{30}
+\contentsline {section}{\numberline {7}Conclusion}{31}
+\contentsline {section}{Appendices}{35}
+\contentsline {section}{\numberline {A}Initial Project Overview (IPO)}{35}
+\contentsline {section}{\numberline {B}Interim Report Overview}{38}
+\contentsline {section}{\numberline {C}Diary Sheets \& Project Management Documents}{38}
+\contentsline {section}{\numberline {D}Original Proposed Project Timeline}{42}
