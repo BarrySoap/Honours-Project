@@ -41,6 +41,11 @@ Chen, J., Lu, S., and Vekhter, D. (1998).
 \newblock Game theory.
 \newblock Report, Stanford University.
 
+\bibitem[CodeReclaimers, ]{35}
+CodeReclaimers.
+\newblock Neat overview.
+\newblock $https://neat-python.readthedocs.io/en/latest/neat_overview.html$.
+
 \bibitem[Duignan, ]{8}
 Duignan, B.
 \newblock Prisoner's dilemma.
@@ -120,6 +125,11 @@ McCulloch, W. and Pitts, W. (1943).
 McDonnell, J. and Waagen, D. (1994).
 \newblock Evolving recurrent perceptrons for time-series modeling.
 \newblock {\em IEEE Transactions on Neural Networks}, 5:24–38.
+
+\bibitem[McIntyre et~al., ]{36}
+McIntyre, A., Kallada, M., Miguel, C.~G., and da~Silva, C.~F.
+\newblock neat-python.
+\newblock https://github.com/CodeReclaimers/neat-python.
 
 \bibitem[Nash, 1950a]{23}
 Nash, J. (1950a).
