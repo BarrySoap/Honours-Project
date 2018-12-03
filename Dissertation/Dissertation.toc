@@ -21,6 +21,9 @@
 \contentsline {subsubsection}{\numberline {3.2.1}Python}{28}
 \contentsline {subsubsection}{\numberline {3.2.2}NEAT}{28}
 \contentsline {subsubsection}{\numberline {3.2.3}Python Development Environments}{28}
+\contentsline {subsection}{\numberline {3.3}Terminology}{29}
+\contentsline {subsubsection}{\numberline {3.3.1}Agents}{29}
+\contentsline {subsubsection}{\numberline {3.3.2}Fitness Function}{29}
 \contentsline {section}{\numberline {4}Implementation and Testing}{30}
 \contentsline {section}{\numberline {5}Results}{31}
 \contentsline {section}{\numberline {6}Evaluation}{32}
