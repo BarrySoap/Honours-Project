@@ -138,11 +138,10 @@ def run():
     # Run for 50 generations
     winner = p.run(evo_alg, 50)
 
+    fittest_agent = stats.best_genome()
     # Print fittest agent of last round
-    print('\nFittest Agent:\n{!s}'.format(winner))
+    print('\nFittest Agent:\n{!s}'.format(fittest_agent))
     
-    
-
     visualise.plot_stats(stats, ylog=False, view=True)
     #visualise.plot_species(stats, view=True)
     
