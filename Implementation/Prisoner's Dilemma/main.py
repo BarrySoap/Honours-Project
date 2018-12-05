@@ -158,16 +158,19 @@ def run():
     # Print fittest agent of last round
     print('\nFittest Agent:\n{!s}'.format(fittest_agent))
     
-    plt.plot(generation_count, total_count_coop, label='Cooperate Ratio')
-    plt.plot(generation_count, total_count_def, label='Defect Ratio')
-    plt.grid()
-    plt.legend(loc='best')
-    plt.gca().set_aspect(1)
-    plt.show()
+#    plt.plot(generation_count, total_count_coop, label='Cooperate Ratio')
+#    plt.plot(generation_count, total_count_def, label='Defect Ratio')
+#    plt.grid()
+#    plt.legend(loc='best')
+#    plt.gca().set_aspect(1)
+#    plt.show()
     
     visualise.plot_stats(stats, ylog=False, view=True)
     #visualise.plot_species(stats, view=True)
     
-    #print(len(total_count_coop))
+#    print(len(total_count_coop))
+#    print(len(total_count_def))
+#    print(len(generation_count))
+#    print(*total_count_coop, sep = ", ")
 
 run()
