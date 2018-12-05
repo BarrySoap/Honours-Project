@@ -3,6 +3,7 @@ import random
 import neat
 import visualise as visualise
 import csv
+import matplotlib.pyplot as plt
 
 # Iterator used to move down the move history
 hist_iterator = 3
@@ -24,6 +25,11 @@ round_count = []
 coop_move_count = 0
 def_move_count = 0
 
+total_count_coop = []
+total_count_def = []
+
+generation_count = []
+
 with open('history.csv', mode = 'w') as output_file:
     writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     writer.writerow(['Agent', 'Fitness', 'Move'])
@@ -36,6 +42,11 @@ def add_coop_move():
 def add_def_move():
     global def_move_count
     def_move_count += 1
+    
+def count_generations():
+    global geneation_count
+    for x in range (0, 50):
+        generation_count.append(x)
 
 # Calculate payoff for round, returns number of years in the dilemma scenario
 def Calculate_Payoff(agent_one_move, agent_two_action):
@@ -65,6 +76,9 @@ def evo_alg(agents, config):
 
     agent_ids.clear()
     networks.clear()
+    
+    total_count_coop.append(coop_move_count)
+    total_count_def.append(def_move_count)
     
     for agent_id, agent in agents:
         # Reset agent fitness
@@ -119,6 +133,8 @@ def evo_alg(agents, config):
 
 def run():
     
+    count_generations()
+    
     # load network config
     config = neat.Config(neat.DefaultGenome, 
                         neat.DefaultReproduction, 
@@ -142,11 +158,16 @@ def run():
     # Print fittest agent of last round
     print('\nFittest Agent:\n{!s}'.format(fittest_agent))
     
+    plt.plot(generation_count, total_count_coop, label='Cooperate Ratio')
+    plt.plot(generation_count, total_count_def, label='Defect Ratio')
+    plt.grid()
+    plt.legend(loc='best')
+    plt.gca().set_aspect(1)
+    plt.show()
+    
     visualise.plot_stats(stats, ylog=False, view=True)
     #visualise.plot_species(stats, view=True)
     
-    print(len(round_count))
-    print(coop_move_count)
-    print(def_move_count)
+    #print(len(total_count_coop))
 
 run()
