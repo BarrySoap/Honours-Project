@@ -21,24 +21,43 @@ networks = {}
 
 round_count = []
 
+coop_move_count = 0
+def_move_count = 0
+
 with open('history.csv', mode = 'w') as output_file:
     writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     writer.writerow(['Agent', 'Fitness', 'Move'])
     output_file.close()
+    
+def add_coop_move():
+    global coop_move_count
+    coop_move_count += 1
+    
+def add_def_move():
+    global def_move_count
+    def_move_count += 1
 
 # Calculate payoff for round, returns number of years in the dilemma scenario
 def Calculate_Payoff(agent_one_move, agent_two_action):
 
     if (agent_one_move == cooperate) and (agent_two_action == defect):
+        add_coop_move()
+        add_def_move()
         return 0
     
     if (agent_one_move == defect) and (agent_two_action == defect):
+        add_def_move()
+        add_def_move()
         return 2
     
     if (agent_one_move == cooperate) and (agent_two_action == cooperate):
+        add_coop_move()
+        add_coop_move()
         return 3
 
     if (agent_one_move == defect) and (agent_two_action == cooperate):
+        add_def_move()
+        add_coop_move()
         return 5
 
 # Play agents against each other
@@ -63,7 +82,7 @@ def evo_alg(agents, config):
     # Play Round
     for agent_id, agent in agents:
         
-        #round_count.append("round") # Program runs: 250
+        #round_count.append("round")
         
         agent.fitness = 4.0
 
@@ -89,7 +108,7 @@ def evo_alg(agents, config):
             agent.fitness += Calculate_Payoff(move, opponent_move) 
             opponent.fitness += Calculate_Payoff(opponent_move, move)
             
-            round_count.append("round") # Program runs: 22500
+            round_count.append("round")
             
 #            with open('history.csv', mode = 'a') as output_file:
 #                    writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
@@ -128,5 +147,7 @@ def run():
     #visualise.plot_species(stats, view=True)
     
     print(len(round_count))
+    print(coop_move_count)
+    print(def_move_count)
 
 run()
