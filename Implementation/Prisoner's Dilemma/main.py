@@ -166,10 +166,10 @@ def run():
     visualise.plot_stats(stats, ylog=False, view=True)
     #visualise.plot_species(stats, view=True)
     
-    print(len(total_count_coop))
-    print(len(total_count_def))
+#    print(len(total_count_coop))
+#    print(len(total_count_def))
 #    print(len(generation_count))
-    print(*total_count_coop, sep = ", ")
-    print(*total_count_def, sep = ", ")
+#    print(*total_count_coop, sep = ", ")
+#    print(*total_count_def, sep = ", ")
 
 run()
