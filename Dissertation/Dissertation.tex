@@ -282,11 +282,23 @@ When discussing the program in following sections, a range of different technica
 \subsubsection{Agents}
 In this facet of programming, an agent is a term used to represent a code structure which makes seemingly logical decisions. In the prisoner's dilemma scenario used within this project, an agent will represent each prisoner, in the effort to emulate a real world scenario in which the agents play against each other. Each agent/prisoner will have a fitness, which could be compared to a real-world aptitude or ability. They will also have a particular strategy, in comparison to real-world, economically rational thinking.
 
+\subsubsection{Axelrod's Tournament}
+As seen in section 2.4, the resulting agents from a repeated prisoner's dilemma can very much vary - Robert Axelrod detailed four different characteristics in order to be successful in a repeated prisoner's dilemma:
+
+\begin{itemize}
+  \item Be nice, cooperate and never be the first to defect. It also paid off to be forgiving.
+  \item Be provocable - many of the competitors defected early in the game without provocation, a characteristic which was very costly in the long run.
+  \item Don't be envious - in the short run, neither side can benefit itself with a selfish choice enough to make up for the harm done to it from a selfish choice by the other.
+  \item Have clarity, or don't be too clever. Many of the competitors did less well in an environment in which their defections were usually echoed back at them. \\
+\end{itemize}
+
+Axelrod found that very basic strategies such as tit-for-tat were successful in the tournament. The forementioned attributes played a large role in being successful, even though the programs operate under economic rationality.
+
 \subsubsection{Fitness Function}
 Within an evolutionary algorithm, a fitness function will calculate the quality of a solution to a given problem. The algorithm will find the best input value for the fitness function, and select with of the solutions are the most adequate for the scenario. In this case, the fitness function will sum the payoffs of each agent for every round, and use the eventual value as the new fitness. The results will detail what moves the agents have chosen on average. However, what defines the fittest agent, and how can it be chosen? Assuming the population of agents all have mixed strategies, the 'fittest' agent could be seen as a loose term without much proof of being correct. However, by pitting an agent against itself and the rest of the population in a prisoner's dilemma scenario, the fittest agent will be a fair representative of the whole population, as they have played against each possible strategy.
 
 \subsubsection{Computational Power}
-A myriad of computing journals, papers and academic reports mention computational power in the context of their research, including this report. Computational power can have multiple definitions in other contexts, but within this context, it refers to the amount of generations required to evolve an agent successfully. This is tied to the general definition of the term, which is, "the amount of useful work a computer system accomplishes (i.e. instructions it executes)". 
+A myriad of computing journals, papers and academic reports mention computational power in the context of their research, including this report. Computational power can have multiple definitions in other contexts, but within this context, it refers to the amount of generations required to evolve an agent successfully. This is tied to the general definition of the term, which is, "the amount of useful work a computer system accomplishes (i.e. instructions it executes)".
 
 \newpage
 
