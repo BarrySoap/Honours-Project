@@ -76,7 +76,7 @@ Insert acknowledgements here
 	-
 \newpage
 
-
+\chapter
 \section{Introduction}
 Since 1713, game theory has been a prevalent and ever-rising field. Early work saw the introduction of game theory principles into solutions for economic and mathematical problems, yet didn't hit its main strides until the 1920s and 50s with the work of John von Neumann, Merrill Flood, Melvin Dresher and John Forbes Nash Jr. Books and academic journals such as, "On the Theory of Games of Strategy" from von Neumann and, "Two-person Cooperative Games" from Nash saw possibilities of game theory having applications in fields outside of economics and mathematics. Subsequently in the same decade as Nash's work, game theory saw its first appearance into fields such as philosophy, psychology and political science. \\
 Since then, one of the main advances in game theory was made by Robert Axelrod, with his work on the iterated prisoners dilemma - this is the most popular and instrumental occurence of game theory having application in fields such as artificial intelligence and evolutionary biology. \\
@@ -101,6 +101,7 @@ The reader will see that the report structure is systemically approaching the fi
 
 \newpage
 
+\chapter
 \section{Literature Review/Background}
 \subsection{Brief History of Game Theory}
 Game theory is the study of behaviours and mathematical models which result from the decisions and strategies of two or more economically rational players in either cooperative or non-cooperative strategy games. Applications of game theory have manifested in social science, psychology, mathematics and many more fields of study; however, the root interactions lie in strategic games such as the prisoner's dilemma or tit-for-tat. Game theory was introduced and popularised by mathematician John von Neumann, who first proved an optimal strategy for zero-sum games with perfect information such as chess or go called the minimax theorem in 1928. This theorem indicates that in such games, there is a pair of strategies for each player which allows them to minimise their maximum losses, while considering all responsive moves of the opponent. \\
@@ -255,12 +256,13 @@ With this knowledge of game theory and the Nash equilibrium in mind, a necessary
 
 \newpage
 
+\chapter
 \section{Methodology}
 %Within this section, the general approach to the planning program(s) will be covered, as well as the motivation and reasoning for the research goals and questions.
 As discussed previously, a working knowledge of game theory, machine learning and evolutionary algorithms is required to implement the base dilemmata of classic game theory scenarios. In the following section, the required knowledge will be comprehensively examined - such as game theory terms, associated technologies and operations of artificial intelligence architectures. \\
 
 \subsection{Approach}
-To have a robust and intensive implementation of the proposed ideas, a selection of milestones and criteria must be met to execute the goals of the project. Before attempting said implementation, the end result of the project must be abstracted into clearer and easier-to-understand points which will be clarified as follows. First, in order to simulate a game theory scenario, a program must be created which can support two agents, represented as both neural networks or finite state machines - playing against each other in a game determined through a payoff matrix as discussed previously. Following this, an evolutionary algorithm must be used to progress the game and evolve the agents through summation of payoffs and fitness functions. Assuming these facets are working as intended, the program should now be able to play a repeated prisoners' dilemma game, all the while evolving the agents to become better/fitter as the game progresses. The variables associated with the neural networks/finite state machines and the evolutionary algorithm should be modifiable to recreate results of research papers conducted previously, such as, ”Evolving continuous behaviors in the Iterated Prisoner's Dilemma” by Harrald in 1996. With this done, the topic of the dissertation can be tackled - assuming there are multiple working versions of the program discussed previously; using both finite state machines and neural networks as representations of the agents' cognitions, both methods can be compared and evaluated based on their use of computation power, difficulty, ease of use and overall suitability. The remainder of this section will cover all of the knowledge required to understand these milestones - such as the general terminology used, program structure and explanation of milestones. \\
+To have a robust and intensive implementation of the proposed ideas, a selection of milestones and criteria must be met to execute the goals of the project. Before attempting said implementation, the end result of the project must be abstracted into clearer and easier-to-understand points which will be clarified as follows. First, in order to simulate a game theory scenario, a program must be created which can support two agents, represented as both neural networks or finite state machines - playing against each other in a game determined through a payoff matrix as discussed previously. Following this, an evolutionary algorithm must be used to progress the game and evolve the agents through summation of payoffs and fitness functions. Assuming these facets are working as intended, the program should now be able to play a repeated prisoners' dilemma game, all the while evolving the agents to become better/fitter as the game progresses. The parameters associated with the neural networks/finite state machines and the evolutionary algorithm should be modifiable to recreate results of research papers conducted previously, such as, ”Evolving continuous behaviors in the Iterated Prisoner's Dilemma” by Harrald in 1996. With this done, the topic of the dissertation can be tackled - assuming there are multiple working versions of the program discussed previously; using both finite state machines and neural networks as representations of the agents' cognitions, both methods can be compared and evaluated based on their use of computation power\footnote{Computation power is referring to the amount of generations it takes to evolve the agents.} and difficulty. The remainder of this section will cover all of the knowledge required to understand these milestones - such as the general terminology used, program structure and explanation of milestones. \\
 
 \subsection{Technologies}
 In order to execute these milestones, a suitable method of application must be identfied. For this project, the implementation of the proposed ideas will use the Python programming language, which will be touched on in a following subsection. Multiple integrated development environments (IDE) exist for Python such as PyCharm, created by the Czech company, Jetbrains, and Spyder (Scientific PYthon Development EnviRonment), created by Pierre Raybaut. This project will be executed using Spyder, given its overall suitability for theoretical and scientific programming.
@@ -283,13 +285,18 @@ In this facet of programming, an agent is a term used to represent a code struct
 \subsubsection{Fitness Function}
 Within an evolutionary algorithm, a fitness function will calculate the quality of a solution to a given problem. The algorithm will find the best input value for the fitness function, and select with of the solutions are the most adequate for the scenario. In this case, the fitness function will sum the payoffs of each agent for every round, and use the eventual value as the new fitness. The results will detail what moves the agents have chosen on average.
 
+\subsubsection{Computational Power}
+A myriad of computing journals, papers and academic reports mention computational power in the context of their research, including this report. Computational power can have multiple definitions in other contexts, but within this context, it refers to the amount of generations required to evolve an agent successfully. This is tied to the general definition of the term, which is, "the amount of useful work a computer system accomplishes (i.e. instructions it executes)". 
+
 \newpage
 
+\chapter
 \section{Implementation and Testing}
 In this section, the program structure and content will be covered, as well as a measure of its intuitiveness and robustness. The final program can be compared to the original concept in the methodology section.
 
 \newpage
 
+\chapter
 \section{Results}
 After implementing the program, this section will hold discussions regarding the output of the program - whether it is correct or not, as well as comparisons between the various experiments of the project. A discussion of results could cover the following examples:
 
@@ -306,11 +313,13 @@ These discussions may be followed or preceded by visualisations of the results.
 
 \newpage
 
+\chapter
 \section{Evaluation}
 In comparison to the original plans of the project, i.e implementation and testing, what would be done differently if the project were re-attempted? This section will cover the rigour of the approaches and how well they may/may not have paid off. This may involve comparisons of approaches at the end of the project vs. the start. In addition, there will be discussions on how the output of the program(s) compare to previous research from Harrald, Axelrod, etc.
 
 \newpage
 
+\chapter
 \section{Conclusion}
 After covering the previous sections, what can be taken away from this project? The research goals and questions must be revisited in order to answer whether or not they were achieved. There may also be possible discussions on further research.  
 
