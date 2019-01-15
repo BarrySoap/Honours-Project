@@ -1,35 +1,36 @@
-\contentsline {section}{\numberline {1}Introduction}{8}
-\contentsline {subsection}{\numberline {1.1}Aims \& Objectives}{8}
-\contentsline {subsection}{\numberline {1.2}Scope \& Limitations}{9}
-\contentsline {subsection}{\numberline {1.3}Report Structure}{9}
-\contentsline {section}{\numberline {2}Literature Review/Background}{11}
-\contentsline {subsection}{\numberline {2.1}Brief History of Game Theory}{11}
-\contentsline {subsection}{\numberline {2.2}Prisoner's Dilemma}{12}
-\contentsline {subsection}{\numberline {2.3}Nash Equilibrium}{13}
-\contentsline {subsubsection}{\numberline {2.3.1}Applications of Game Theory}{14}
-\contentsline {subsection}{\numberline {2.4}Repeated Games}{15}
-\contentsline {subsubsection}{\numberline {2.4.1}Folk Theorem}{17}
-\contentsline {subsection}{\numberline {2.5}Machine Learning}{18}
-\contentsline {subsection}{\numberline {2.6}Evolutionary Algorithms}{19}
-\contentsline {subsubsection}{\numberline {2.6.1}Artificial Neural Networks}{22}
-\contentsline {subsubsection}{\numberline {2.6.2}Finite State Machines}{23}
-\contentsline {subsection}{\numberline {2.7}Research Questions}{24}
-\contentsline {subsection}{\numberline {2.8}Conclusion}{24}
-\contentsline {section}{\numberline {3}Methodology}{26}
-\contentsline {subsection}{\numberline {3.1}Approach}{26}
-\contentsline {subsection}{\numberline {3.2}Technologies}{26}
-\contentsline {subsubsection}{\numberline {3.2.1}Python}{27}
-\contentsline {subsubsection}{\numberline {3.2.2}NEAT}{27}
-\contentsline {subsubsection}{\numberline {3.2.3}Python Development Environments}{27}
-\contentsline {subsection}{\numberline {3.3}Terminology}{28}
-\contentsline {subsubsection}{\numberline {3.3.1}Agents}{28}
-\contentsline {subsubsection}{\numberline {3.3.2}Fitness Function}{28}
-\contentsline {section}{\numberline {4}Implementation and Testing}{29}
-\contentsline {section}{\numberline {5}Results}{30}
-\contentsline {section}{\numberline {6}Evaluation}{31}
-\contentsline {section}{\numberline {7}Conclusion}{32}
-\contentsline {section}{Appendices}{36}
-\contentsline {section}{\numberline {A}Initial Project Overview (IPO)}{36}
-\contentsline {section}{\numberline {B}Interim Report Overview}{39}
-\contentsline {section}{\numberline {C}Diary Sheets \& Project Management Documents}{39}
-\contentsline {section}{\numberline {D}Original Proposed Project Timeline}{45}
+\contentsline {section}{\numberline {1}Introduction}{9}
+\contentsline {subsection}{\numberline {1.1}Aims \& Objectives}{9}
+\contentsline {subsection}{\numberline {1.2}Scope \& Limitations}{10}
+\contentsline {subsection}{\numberline {1.3}Report Structure}{11}
+\contentsline {section}{\numberline {2}Literature Review/Background}{12}
+\contentsline {subsection}{\numberline {2.1}Brief History of Game Theory}{12}
+\contentsline {subsection}{\numberline {2.2}Prisoner's Dilemma}{13}
+\contentsline {subsection}{\numberline {2.3}Nash Equilibrium}{14}
+\contentsline {subsubsection}{\numberline {2.3.1}Applications of Game Theory}{16}
+\contentsline {subsection}{\numberline {2.4}Repeated Games}{17}
+\contentsline {subsubsection}{\numberline {2.4.1}Folk Theorem}{18}
+\contentsline {subsection}{\numberline {2.5}Machine Learning}{19}
+\contentsline {subsection}{\numberline {2.6}Evolutionary Algorithms}{20}
+\contentsline {subsubsection}{\numberline {2.6.1}Artificial Neural Networks}{24}
+\contentsline {subsubsection}{\numberline {2.6.2}Finite State Machines}{24}
+\contentsline {subsection}{\numberline {2.7}Research Questions}{25}
+\contentsline {subsection}{\numberline {2.8}Conclusion}{26}
+\contentsline {section}{\numberline {3}Methodology}{28}
+\contentsline {subsection}{\numberline {3.1}Approach}{28}
+\contentsline {subsection}{\numberline {3.2}Technologies}{29}
+\contentsline {subsubsection}{\numberline {3.2.1}Python}{29}
+\contentsline {subsubsection}{\numberline {3.2.2}NEAT}{29}
+\contentsline {subsubsection}{\numberline {3.2.3}Python Development Environments}{30}
+\contentsline {subsection}{\numberline {3.3}Terminology}{30}
+\contentsline {subsubsection}{\numberline {3.3.1}Agents}{30}
+\contentsline {subsubsection}{\numberline {3.3.2}Fitness Function}{31}
+\contentsline {subsubsection}{\numberline {3.3.3}Computational Power}{32}
+\contentsline {section}{\numberline {4}Implementation and Testing}{33}
+\contentsline {section}{\numberline {5}Results}{34}
+\contentsline {section}{\numberline {6}Evaluation}{35}
+\contentsline {section}{\numberline {7}Conclusion}{36}
+\contentsline {section}{Appendices}{40}
+\contentsline {section}{\numberline {A}Initial Project Overview (IPO)}{40}
+\contentsline {section}{\numberline {B}Interim Report Overview}{43}
+\contentsline {section}{\numberline {C}Diary Sheets \& Project Management Documents}{43}
+\contentsline {section}{\numberline {D}Original Proposed Project Timeline}{49}

@@ -162,6 +162,11 @@ Ross, D.
 \newblock Game theory.
 \newblock Website detailing game theory principles.
 
+\bibitem[Russell and Norvig, 1994]{38}
+Russell, S. and Norvig, P. (1994).
+\newblock {\em Artificial Intelligence: A Modern Approach}.
+\newblock Prentice Hall, New Jersey.
+
 \bibitem[Samuel, 1959]{29}
 Samuel, A. (1959).
 \newblock Some studies in machine learning using the game of checkers.
