@@ -294,7 +294,7 @@ Axelrod found that very basic strategies such as tit-for-tat were successful in 
 \subsubsection{Fitness Function}
 Within an evolutionary algorithm, a fitness function will calculate the quality of a solution to a given problem. The algorithm will find the best input value for the fitness function, and select with of the solutions are the most adequate for the scenario. In this case, the fitness function will sum the payoffs of each agent for every round, and use the eventual value as the new fitness. The results will detail what moves the agents have chosen on average. However, what defines the fittest agent, and how can it be chosen? Assuming the population of agents all have mixed strategies, the 'fittest' agent could be seen as a loose term without much proof of being correct. However, by pitting an agent against itself and the rest of the population in a prisoner's dilemma scenario, the fittest agent will be a fair representative of the whole population, as they have played against each possible strategy. The fitness function used in this project is as follows: \\
 
-
+% ALGEBRAIC FITNESS FUNCTION HERE
 
 \subsubsection{Computational Power}
 A myriad of computing journals, papers and academic reports mention computational power in the context of their research, including this report. Computational power can have multiple definitions in other contexts, but within this context, it refers to the amount of generations required to evolve an agent successfully. This is tied to the general definition of the term, which is, "the amount of useful work a computer system accomplishes (i.e. instructions it executes)".
@@ -303,7 +303,24 @@ A myriad of computing journals, papers and academic reports mention computationa
 
 \chapter
 \section{Implementation and Testing}
-In this section, the program structure and content will be covered, as well as a measure of its intuitiveness and robustness. The final program can be compared to the original concept in the methodology section.
+%In this section, the program structure and content will be covered, as well as a measure of its intuitiveness and robustness. The final program can be compared to the original concept in the methodology section.
+
+In order to comprehensively examine the differences between neural networks and finite state machines, two versions of the project had to be created, one with each representation of an agent, respectively. This section will accommodate both methods, and will attempt to talk about each in equal amounts. \\
+
+\subsection{Neural Networks Method}
+The first attempt at creating a prisoner's dilemma was created using neural networks to represent the agents. In order to correctly execute this, a handful of requirements had to be met, such as: \\
+
+\begin{itemize}
+  \item Concept of agents as prisoners.
+  \item Attributes for the prisoners, such as a unique ID and fitness.
+  \item Concept of dilemma, being able to select a move (Cooperate/Defect) and receive a payoff.
+  \item Basic evolutionary algorithm capable of initialising a population and handling multiple generations.
+  \item Interaction between agents.
+  \item Extending the dilemma to facilitate play between two agents, as well as giving payoffs accordingly.
+  \item Output and plot the attributes of each generation. \\
+\end{itemize}
+
+While the program shows other pieces of code associated to this list, this is a general overview of how the program is structured. 
 
 \newpage
 

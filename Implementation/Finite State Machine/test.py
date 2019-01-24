@@ -64,3 +64,5 @@ class NarcolepticSuperhero(object):
         
 batman = NarcolepticSuperhero("Batman")
 print(batman.state)
+batman.wake_up()
+print(batman.state)

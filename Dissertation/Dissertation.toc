@@ -26,6 +26,7 @@
 \contentsline {subsubsection}{\numberline {3.3.2}Fitness Function}{30}
 \contentsline {subsubsection}{\numberline {3.3.3}Computational Power}{30}
 \contentsline {section}{\numberline {4}Implementation and Testing}{32}
+\contentsline {subsection}{\numberline {4.1}Neural Networks Method}{32}
 \contentsline {section}{\numberline {5}Results}{33}
 \contentsline {section}{\numberline {6}Evaluation}{34}
 \contentsline {section}{\numberline {7}Conclusion}{35}
