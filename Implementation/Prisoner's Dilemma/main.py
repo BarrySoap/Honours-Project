@@ -4,6 +4,7 @@ import neat
 import visualise as visualise
 import csv
 import matplotlib.pyplot as plt
+from fractions import Fraction
 
 # Iterator used to move down the move history
 hist_iterator = 3
@@ -27,6 +28,7 @@ def_move_count = 0
 
 total_count_coop = []
 total_count_def = []
+total_move_count = []
 
 generation_count = []
 
@@ -79,6 +81,7 @@ def evo_alg(agents, config):
     
     total_count_coop.append(coop_move_count)
     total_count_def.append(def_move_count)
+    total_move_count.append(coop_move_count + def_move_count)
     
     for agent_id, agent in agents:
         # Reset agent fitness
@@ -158,6 +161,11 @@ def run():
     # Print fittest agent of last round
     print('\nFittest Agent:\n{!s}'.format(fittest_agent))
     
+    for p in range(len(total_move_count)):
+        if (p != 0):
+            total_count_coop[p] = Fraction(total_count_coop[p] / total_move_count[p]).limit_denominator()
+            total_count_def[p] = Fraction(total_count_def[p] / total_move_count[p]).limit_denominator()
+    
     plt.plot(generation_count, total_count_coop, label='Cooperate Ratio')
     plt.plot(generation_count, total_count_def, label='Defect Ratio')
     plt.legend(loc='best')
@@ -170,6 +178,10 @@ def run():
 #    print(len(total_count_def))
 #    print(len(generation_count))
 #    print(*total_count_coop, sep = ", ")
-#    print(*total_count_def, sep = ", ")
+#    print(*total_move_count, sep = ", ")
+    
+    for p in range(len(total_move_count)):
+        if (p != 0):
+            print("Generation: " + str(p) + " cooperate move count = " + str(total_count_coop[p]))
 
 run()
