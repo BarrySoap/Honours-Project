@@ -101,6 +101,9 @@ weight_mutate_rate      = 0.8
 weight_replace_rate     = 0.1
 
 [DefaultSpeciesSet]
+    # To turn speciation on, set this value to 3. To turn speciation off, set this value to 25, or something higher.
+    # Effectively, if the value is too high/unreachable, the population will never be compatible, and new species
+    # will never be created.
 compatibility_threshold = 3.0
 
 [DefaultStagnation]
