@@ -299,13 +299,17 @@ Within an evolutionary algorithm, a fitness function will calculate the quality 
 \subsubsection{Computational Power}
 A myriad of computing journals, papers and academic reports mention computational power in the context of their research, including this report. Computational power can have multiple definitions in other contexts, but within this context, it refers to the amount of generations required to evolve an agent successfully. This is tied to the general definition of the term, which is, "the amount of useful work a computer system accomplishes (i.e. instructions it executes)".
 
+\subsubsection{Neural Network Types}
+
+\subsubsection{Activation Functions}
+
 \newpage
 
 \chapter
 \section{Implementation and Testing}
 %In this section, the program structure and content will be covered, as well as a measure of its intuitiveness and robustness. The final program can be compared to the original concept in the methodology section.
-
-In order to comprehensively examine the differences between neural networks and finite state machines, two versions of the project had to be created, one with each representation of an agent, respectively. This section will accommodate both methods, and will attempt to talk about each in equal amounts. \\
+\subsection{Introduction}
+In order to comprehensively examine the differences between neural networks and finite state machines, two versions of the project had to be created, one with each representation of an agent, respectively. This section will accommodate both methods, and will attempt to talk about each in equal amounts. Additionally, a comparison to the plans in the methodology will be included, such as what went right, and what went wrong. \\
 
 \subsection{Neural Networks Method}
 The first attempt at creating a prisoner's dilemma was created using neural networks to represent the agents. In order to correctly execute this, a handful of requirements had to be met, such as: \\
@@ -320,7 +324,15 @@ The first attempt at creating a prisoner's dilemma was created using neural netw
   \item Output and plot the attributes of each generation. \\
 \end{itemize}
 
-While the program shows other pieces of code associated to this list, this is a general overview of how the program is structured. 
+While the program shows other pieces of code associated to this list, this is a general overview of how the program is structured. \\
+
+\subsubsection{Initialisation of Agents}
+The first part of implementation was initialising the agents. Thankfully, NEAT aids the initialisation process a lot - alongside the main Python file containing the code for the networks and the evolutionary algorithm, there exists a configuration file containing all of the attributes relating to the networks. These attributes include things such as activation function control, bias control, compatibility control and more. The main attributes worth mentioning are as follows:
+
+\begin{itemize}
+  \item Activation Function - Sigmoid
+  
+\end{itemize}
 
 \newpage
 
