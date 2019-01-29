@@ -329,12 +329,18 @@ The first attempt at creating a prisoner's dilemma was created using neural netw
 While the program shows other pieces of code associated to this list, this is a general overview of how the program is structured. \\
 
 \subsubsection{Initialisation of Agents}
-The first part of implementation was initialising the agents. Thankfully, NEAT aids the initialisation process a lot - alongside the main Python file containing the code for the networks and the evolutionary algorithm, there exists a configuration file containing all of the attributes relating to the networks. These attributes include things such as activation function control, bias control, compatibility control and more. The main attributes worth mentioning are as follows:
+The first part of implementation was initialising the agents. Thankfully, NEAT aids the initialisation process a lot - alongside the main Python file containing the code for the networks and the evolutionary algorithm, there exists a configuration file containing all of the attributes relating to the networks. These attributes include things such as activation function control, bias control, compatibility control and more. The main attributes worth mentioning are as follows: \\
 
 \begin{itemize}
   \item Activation Function - Sigmoid
-  
+  \item Aggregation - Sum
+  \item Elitism - 2 \\
 \end{itemize}
+
+A lot of the contained/default attributes were already suited for this type of project, but allowed for a wide range of results. Outside of the configuration file, a few attributes were required in order to facilitate functional behaviour and fair play. The agents had to be kept in some form of list to facilitate randomised play. However, NEAT has no way of identifying networks from one another; So, a list of agent IDs were created and attached to each individual network for the evolutionary algorithm to access the agents directly.
+
+\subsubsection{Prisoner's Dilemma Strategies}
+In order to give the agents economically realistic behaviour, there has to be an incentive to choose particular actions, or incentives to aim for a particular outcome. While this can be achieved, or aided, by the attributes contained within the configuration file, a history of moves has to be maintained in order to extract a strategy from the agents' previous behaviours.
 
 \newpage
 

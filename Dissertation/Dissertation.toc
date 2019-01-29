@@ -31,6 +31,7 @@
 \contentsline {subsection}{\numberline {4.1}Introduction}{32}
 \contentsline {subsection}{\numberline {4.2}Neural Networks Method}{32}
 \contentsline {subsubsection}{\numberline {4.2.1}Initialisation of Agents}{32}
+\contentsline {subsubsection}{\numberline {4.2.2}Prisoner's Dilemma Strategies}{33}
 \contentsline {section}{\numberline {5}Results}{34}
 \contentsline {section}{\numberline {6}Evaluation}{35}
 \contentsline {section}{\numberline {7}Conclusion}{36}
