@@ -46,6 +46,12 @@ CodeReclaimers.
 \newblock Neat overview.
 \newblock $https://neat-python.readthedocs.io/en/latest/neat_overview.html$.
 
+\bibitem[Collis, ]{40}
+Collis, J.
+\newblock Glossary of deep learning: Bias.
+\newblock
+  https://medium.com/deeper-learning/glossary-of-deep-learning-bias-cf49d9c895e2.
+
 \bibitem[Duignan, ]{8}
 Duignan, B.
 \newblock Prisoner's dilemma.
@@ -186,6 +192,11 @@ Smith, J. (1982).
 Stergiou, Christos.~Siganos, D. (n.d.).
 \newblock Neural networks.
 \newblock Report, Imperial College London.
+
+\bibitem[Tiwari, ]{39}
+Tiwari, S.
+\newblock Activation functions in neural networks.
+\newblock https://www.geeksforgeeks.org/activation-functions-neural-networks/.
 
 \bibitem[Veelen et~al., 2012]{34}
 Veelen, M., García, J., Rand, D., and Nowak, M. (2012).

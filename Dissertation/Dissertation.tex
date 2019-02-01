@@ -294,7 +294,9 @@ Axelrod found that very basic strategies such as tit-for-tat were successful in 
 \subsubsection{Fitness Function}
 Within an evolutionary algorithm, a fitness function will calculate the quality of a solution to a given problem. The algorithm will find the best input value for the fitness function, and select with of the solutions are the most adequate for the scenario. In this case, the fitness function will sum the payoffs of each agent for every round, and use the eventual value as the new fitness. The results will detail what moves the agents have chosen on average. However, what defines the fittest agent, and how can it be chosen? Assuming the population of agents all have mixed strategies, the 'fittest' agent could be seen as a loose term without much proof of being correct. However, by pitting an agent against itself and the rest of the population in a prisoner's dilemma scenario, the fittest agent will be a fair representative of the whole population, as they have played against each possible strategy. The fitness function used in this project is as follows: \\
 
-% ALGEBRAIC FITNESS FUNCTION HERE
+F = F + (P1 $||$  P2) \\
+
+Where F is the fitness of an agent, and P1/P2 is the payoff for the agent and opponent's move respectively.
 
 \subsubsection{Computational Power}
 A myriad of computing journals, papers and academic reports mention computational power in the context of their research, including this report. Computational power can have multiple definitions in other contexts, but within this context, it refers to the amount of generations required to evolve an agent successfully. This is tied to the general definition of the term, which is, "the amount of useful work a computer system accomplishes (i.e. instructions it executes)".
@@ -303,7 +305,13 @@ A myriad of computing journals, papers and academic reports mention computationa
 There exists two types of neural networks which can be used in the context of this project - recurrent and feedforward. The difference between the two networks discerns their applicability; feedforward networks strictly allow signals to only travel one way, from input to output. Feedforward networks are useful and extensively used in speech and pattern recognition. Recurrent networks, in contrast, allow signals to travel in both directions - introducing loops to the network. A loop means that the output of any layer cannot affect that same layer. Recurrent networks are specifically useful for identifying how the input variable(s) can affect the output variable - this relates to the project as there has to be multiple moves from the agents/prisoners (inputs) and the resulting payoff will be the output variable.
 
 \subsubsection{Activation Functions}
+In the context of neural networks, an activation function is the deciding factor in whether a neuron should be activated or not. It does this by calculating a weighted sum of it's input, and adding a bias value to it. By doing this, the output of said can be seen as non-linear. Non-linearity means that the output cannot be reproduced from a linear combination of the inputs. Without a non-linear activation function in the network, a neural network would behave just like a single-layer perceptron regardless of the amount of layers.
 
+\subsubsection{Bias}
+When using activation functions, a bias value is added for the function to better fit the data. The bias value can range from 0 to 1, and can offset the sigmoid curve between the input and output values. The bias only interacts with the output values, and thus, determines how easy/likely it is for a node to be activated. If the bias value is high, the output of the network will tend to be higher, even if the weights and inputs have smaller values. If the bias is smaller, or 0, the output value will be decided solely by the weights and inputs.
+
+\subsubsection{Aggregation}
+When collating the input and weight values to filter into input, there needs to be a way to gather input from the previous neurons. This process is called an aggregation function, and is used in almost every instance of a neural network. In this project, the aggregation function used is called 'sum of product', which sums the weights and the input values, in addition to the bias.
 
 \newpage
 
@@ -451,21 +459,10 @@ Upon reading the draft of the document, Simon discussed and agreed suitable goal
 Finish IPO document, refine for submission. \\
 Finish project timeline (Gantt Chart). \\
 
-\textbf{\underline{Week 2}} \\
-\newline
-\textbf{Objectives:} \\
-The goal of this meeting was to finalise the initial project overview document, as well as establish clear milestones for the project and iron out any concerns I had since the last meeting. \\
-
-\textbf{Progress:} \\
-Simon suggested multiple changes to the initial project overview document in order to have it ready for submission, mainly to do with the aims/deliverables of the project. Simon and I then agreed realistic dates for the deliverables, as well as what was expected at each point. We then sorted out a Github collaboration issue and discussed how the project timeline should be laid out.  \\
-
-\textbf{Goal for Next Week:} \\
-Finish the evolutionary algorithms section of the literature review. \\
 \hrule
 
-\textbf{\textit{October}}
+\textbf{\textit{October}} \\
 \newline
-\hrule
 \textbf{\underline{Week 3}} \\
 \newline
 \textbf{Objectives:} \\
@@ -477,43 +474,10 @@ Simon started by looking over the list of references for the literature review t
 \textbf{Goal for Next Week:} \\
 Finalise first draft of the literature review, to eventually look over the content. \\
 
-\textbf{\underline{Week 4}} \\
-\newline
-\textbf{Objectives:} \\
-The goal of this meeting was to comprehensively edit and finalise the literature review based on Simon’s feedback, as well as draft research questions for the project to focus on. \\
-
-\textbf{Progress:} \\
-Simon started by looking over the research questions I drafted, suggesting things to add and things to remove. After editing the research questions down to 3, we moved on to editing the literature review. Simon suggested a large amount of changes, in order to get the review fit for submission. \\
-
-\textbf{Goal for Next Week:} \\
-Start looking at implementation, maybe bring a basic first demo. \\
-
-\textbf{\underline{Week 5}} \\
-\newline
-\textbf{Objectives:} \\
-The goal of this meeting was to go over progress for the week. \\
-
-\textbf{Progress:} \\
-Simon looked over the changes I made to the literature review for the past week to make sure they were all good for the review. He then suggested a few final edits, which finalises the literature review. \\
-
-\textbf{Goal for Next Week:} \\
-Implement an evolutionary algorithm which can evolve a neural network, then demo. \\
-
-\textbf{\underline{Week 6}} \\
-\newline
-\textbf{Objectives:} \\
-The goal of this meeting was to go over progress for the week regarding neural networks/evolutionary algorithms implementation. \\
-
-\textbf{Progress:} \\
-Simon started by looking over the reference material I found to check if it was applicable. He explained why the implementation of this project isn’t similar to the other repositories and how it should look. Simon suggested reading up on the operation of neural networks – specifically Haykin’s book.  \\
-
-\textbf{Goal for Next Week:} \\
-Read on the operation of neural networks, make sure understanding of implementation is solid. \\
 \hrule
 
-\textbf{\textit{November}}
+\textbf{\textit{November}} \\
 \newline
-\hrule
 \textbf{\underline{Week 7}} \\
 \newline
 \textbf{Objectives:} \\
@@ -524,50 +488,6 @@ Simon suggested a good amount of tips for how to approach the program, and what 
 
 \textbf{Goal for Next Week:} \\
 Work on implementation – neural networks + evolutionary algorithms. \\
-
-\textbf{\underline{Week 8}} \\
-\newline
-\textbf{Objectives:} \\
-The goal of this meeting was to look over the dissertation intro and outline of remaining chapters, as well as some basic implementation pseudocode. \\
-
-\textbf{Progress:} \\
-Simon suggested a number of changes to the overall structure and content of the current dissertation progress, and suggested a few things related to the implementation of the prisoners’ dilemma in Python. \\
-
-\textbf{Goal for Next Week:} \\
-Work on implementation – towards a repeated prisoners’ dilemma program. \\
-
-\textbf{\underline{Week 9}} \\
-\newline
-\textbf{Objectives:} \\
-The goal of this meeting was to look over the first draft of the implementation, and iron out any issues or errors. \\
-
-\textbf{Progress:} \\
-Simon suggested modifying some of the program parameters in order to optimise the output, as well as a potential functionality for evolving the network topologies. He then looked over the dissertation progress to make sure I was on the right track. \\
-
-\textbf{Goal for Next Week:} \\
-Visualise the output of the implementation, and prepare for the interim review meeting. \\
-
-\textbf{\underline{Week 10}} \\
-\newline
-\textbf{Objectives:} \\
-The goal of this meeting was to validate progress for the interim meeting in the following week. \\
-
-\textbf{Progress:} \\
-Simon looked over the visualisation and serialisation of the networks and their moves, and suggested finding the ratio between cooperate and defect moves and plotting them as a graph. He also suggested a few things for the implementation for next week. \\
-
-\textbf{Goal for Next Week:} \\
-Look at turning off speciation and plotting the ratio of cooperate/defect moves each round. \\
-
-\textbf{\underline{Week 11}} \\
-\newline
-\textbf{Objectives:} \\
-Originally supposed to be the interim meeting, this meeting was a discussion of what was expected for next week. \\
-
-\textbf{Progress:} \\
-I showed Simon the progress I had made, albeit not much. I managed to turn off speciation and the results changed. From this, Simon and I discussed how to address this in the results section. \\
-
-\textbf{Goal for Next Week:} \\
-Look at plotting the ratio of cooperate/defect moves each round. \\
 
 \hrule
 
