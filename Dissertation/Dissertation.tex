@@ -313,6 +313,9 @@ When using activation functions, a bias value is added for the function to bette
 \subsubsection{Aggregation}
 When collating the input and weight values to filter into input, there needs to be a way to gather input from the previous neurons. This process is called an aggregation function, and is used in almost every instance of a neural network. In this project, the aggregation function used is called 'sum of product', which sums the weights and the input values, in addition to the bias.
 
+\subsubsection{Elitism}
+When a population is moving into the next generation, elitism is a value which copies a certain amount of individuals into the next generation without any changes. Meaning, if a genetic algorithm uses an elitism value of two, then two individuals will pass into the next generation with no changes to their attributes - this is usually determined by the individuals with the highest fitness values.
+
 \newpage
 
 \chapter
