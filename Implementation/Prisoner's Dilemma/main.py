@@ -167,6 +167,9 @@ def run():
             total_count_def[p] = Fraction(total_count_def[p] / total_move_count[p]).limit_denominator()
     
     plt.plot(generation_count, total_count_coop, label='Proportion of Cooperative Moves')
+    plt.ylabel('Ratio of Moves')
+    plt.xlabel('Generations')
+    plt.title('Proportion of Moves - Speciation On')
     plt.plot(generation_count, total_count_def, label='Proportion of Defective Moves')
     plt.legend(loc='best')
     plt.show()

@@ -316,6 +316,9 @@ When collating the input and weight values to filter into input, there needs to 
 \subsubsection{Elitism}
 When a population is moving into the next generation, elitism is a value which copies a certain amount of individuals into the next generation without any changes. Meaning, if a genetic algorithm uses an elitism value of two, then two individuals will pass into the next generation with no changes to their attributes - this is usually determined by the individuals with the highest fitness values.
 
+\subsubsection{Speciation}
+
+
 \newpage
 
 \chapter
@@ -357,6 +360,7 @@ In order to give the agents economically realistic behaviour, there has to be an
 
 \chapter
 \section{Results}
+\iffalse
 After implementing the program, this section will hold discussions regarding the output of the program - whether it is correct or not, as well as comparisons between the various experiments of the project. A discussion of results could cover the following examples:
 
 \begin{itemize}
@@ -369,6 +373,28 @@ After implementing the program, this section will hold discussions regarding the
 \end{itemize}
 
 These discussions may be followed or preceded by visualisations of the results.
+\fi
+
+In this section, the results following the implementation of the program will be discussed. As with the forementioned section, this section will cover both neural networks and finite state machines separately, and then discuss them comparatively. In regards to the output of the program, there will be a handful of topical questions which must be asked and answered in order to determine if the results are correct.
+
+\subsection{Neural Networks Results}
+In the previous section, the structure of the program was discussed, in terms of how it was built and how it executes. The first topical question to start with is as follows: \textbf{After the strategies of the networks are evolved, do the agents ever reach a point in which they always defect?} Interestingly, speciation plays a large role in how the strategies are evolved; the ability to control speciation within the population yielded a decent range of results, as will now be discussed.
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.75\textwidth]{RatioSpeciationOff}
+		\caption{Neural Networks Proportion of Moves With No Speciation}
+\end{figure}
+
+As seen in figure 6, a large fraction of the population hit a preferred strategy after roughly 15 - 20 generations. In the program, the agents are playing against themselves and each other agent in the population. With this in mind, their strategies will yield better payoffs each generation, regardless of the opposing strategy. In regards to the forementioned question which was posed, there very obviously seems to be a point in which defecting becomes the preferred strategy, but does this prove the existence of a Nash equilibrium?
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.75\textwidth]{RatioSpeciationOn}
+		\caption{Neural Networks Proportion of Moves With Speciation}
+\end{figure}
+
+With speciation turned on, the results are vastly different - the fitness of the networks starts out very high as the mix of moves (one agent choosing cooperate and the other choosing defect) brigns the highest payoff. After testing this strategy for roughly 25 - 30 generations, the agents realise that constant mutual defection yields the best possible payoff in the long run. After generation 40, each agent in the population is choosing defect at an exponential rate, which proves indefinitely the existence of a Nash equilibrium within the population. Another interesting point worth bringing up is the comparison of results between figure 7 and the results from van Veelen's\cite{34} paper.
 
 \newpage
 
