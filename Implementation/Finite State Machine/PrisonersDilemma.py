@@ -63,24 +63,24 @@ def count_generations():
         generation_count.append(x)
         
 # Calculate payoff for round, returns number of years in the dilemma scenario
-def Calculate_Payoff(agent_one_move, agent_two_action):
+def Calculate_Payoff(agent_one_move, agent_two_move):
 
-    if (agent_one_move == cooperate) and (agent_two_action == defect):
+    if (agent_one_move == cooperate) and (agent_two_move == defect):
         add_coop_move()
         add_def_move()
         return 0
     
-    if (agent_one_move == defect) and (agent_two_action == defect):
+    if (agent_one_move == defect) and (agent_two_move == defect):
         add_def_move()
         add_def_move()
         return 2
     
-    if (agent_one_move == cooperate) and (agent_two_action == cooperate):
+    if (agent_one_move == cooperate) and (agent_two_move == cooperate):
         add_coop_move()
         add_coop_move()
         return 3
 
-    if (agent_one_move == defect) and (agent_two_action == cooperate):
+    if (agent_one_move == defect) and (agent_two_move == cooperate):
         add_def_move()
         add_coop_move()
         return 5
