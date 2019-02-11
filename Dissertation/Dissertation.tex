@@ -354,7 +354,37 @@ The first part of implementation was initialising the agents. Thankfully, NEAT a
 A lot of the contained/default attributes were already suited for this type of project, but allowed for a wide range of results. Outside of the configuration file, a few attributes were required in order to facilitate functional behaviour and fair play. The agents had to be kept in some form of list to facilitate randomised play. However, NEAT has no way of identifying networks from one another; So, a list of agent IDs were created and attached to each individual network for the evolutionary algorithm to access the agents directly.
 
 \subsubsection{Prisoner's Dilemma Strategies}
-In order to give the agents economically realistic behaviour, there has to be an incentive to choose particular actions, or incentives to aim for a particular outcome. While this can be achieved, or aided, by the attributes contained within the configuration file, a history of moves has to be maintained in order to extract a strategy from the agents' previous behaviours.
+In order to give the agents economically realistic behaviour, there has to be an incentive to choose particular actions, or incentives to aim for a particular outcome. While this can be achieved, or aided, by the attributes contained within the configuration file, a history of moves has to be maintained in order to extract a strategy from the agents' previous behaviours. The activation function can then use this collection of moves with an iterator to determine a strategy to follow. But what can incentivise an agent to follow any particular strategy?
+
+\subsubsection{Incentivisation and Payoff}
+To evolve a strategy, an agent must have incentive to change - without it, the game will see fairly random play, or the game reaches a Nash equilibrium. In the prisoner's dilemma, the prisoners are aiming for the best possible payoff from their actions; this is easily replicable by giving the agents an integer attribute to contain their fitness. By directly correlating payoff to fitness, the agents are incentived to aim for the highest payoffs as it dictates their position in the population. The pseudocode for such a concept looks as follows:
+
+\begin{algorithm}[H]
+\caption{Payoff Calculation}\label{euclid}
+\begin{algorithmic}[1]
+\Procedure{Calculate\_Payoff(A1A - Agent One Action, A2A - Agent Two Action)}{}
+
+\If {(A1A == cooperate \textbf{and} A2A == defect)}
+    \State{\textbf{return} 0}
+\EndIf
+
+\If {(A1A == defect \textbf{and} A2A == defect)}
+    \State{\textbf{return} 2}
+\EndIf
+
+\If {(A1A == cooperate \textbf{and} A2A == cooperate)}
+    \State{\textbf{return} 3}
+\EndIf
+
+\If {(A1A == defect \textbf{and} A2A == cooperate)}
+    \State{\textbf{return} 5}
+\EndIf
+
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+Although the code is extremely simplified, this is all that is required to incentivise an agent in a prisoner's dilemma scenario. To explain, the method itself takes in two arguments - the actions/moves of agents one and two. The method itself directly returns a payoff which can be accumulated onto an agent's fitness - for a population of 50, where 2,500 rounds of the prisoner's dilemma are played, an agent's fitness will rapidly increase for a successful strategy, or will stay average for an unsuccessful strategy.
 
 \newpage
 
