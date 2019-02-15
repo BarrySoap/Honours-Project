@@ -2,9 +2,9 @@
     # Function used to compute the termination criterion from the set of genome fitnesses. 
 fitness_criterion     = max
     # when the fitness computed by fitness_criterion meets or exceeds this threshold, the evolution process will terminate.
-fitness_threshold     = 2000
+fitness_threshold     = 2000000
     # The number of individuals in each generation.
-pop_size              = 50
+pop_size              = 10
     # if true, when all species simultaneously become extinct due to stagnation, a new random population will be created.
 reset_on_extinction   = False
 

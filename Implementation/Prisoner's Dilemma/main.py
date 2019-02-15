@@ -47,7 +47,7 @@ def add_def_move():
     
 def count_generations():
     global geneation_count
-    for x in range (0, 50):
+    for x in range (0, 10):
         generation_count.append(x)
 
 # Calculate payoff for round, returns number of years in the dilemma scenario
@@ -105,34 +105,36 @@ def evo_alg(agents, config):
 
         for f in range(len(agents)):
             
-            # Initialise opposing agent
-            opponent_id, opponent = agents[f]
-            # Get history of agent's moves
-            agent_history = history[str(agent_id)]      
-            # Get history of opposing agent's moves
-            opponent_history = history[str(opponent_id)]
-       
-            # Based on the opposing agent's previous actions, determine move to make
-            determineMove = networks[str(agent_id)].activate(opponent_history[-hist_iterator:])
-            move = np.argmax(determineMove)
-            history[str(agent_id)].append(move)
-
-            determineMoveOpponent = networks[str(opponent_id)].activate(agent_history[-hist_iterator:])
-            opponent_move = np.argmax(determineMoveOpponent)
-            history[str(opponent_id)].append(opponent_move)
-
-            # Calculate new fitness
-            agent.fitness += Calculate_Payoff(move, opponent_move) 
-            opponent.fitness += Calculate_Payoff(opponent_move, move)
-            
-            round_count.append("round")
-            
-#            with open('history.csv', mode = 'a') as output_file:
-#                    writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-#                    writer.writerow(["Round: " + repr(len(round_count))])
-#                    writer.writerow([agent.key, agent.fitness, move])
-#                    writer.writerow([opponent.key, opponent.fitness, opponent_move])
-#                    output_file.close()
+            # Change the second range value to however many round are to be played.
+            for x in range (0, 50):
+                # Initialise opposing agent
+                opponent_id, opponent = agents[f]
+                # Get history of agent's moves
+                agent_history = history[str(agent_id)]      
+                # Get history of opposing agent's moves
+                opponent_history = history[str(opponent_id)]
+                
+                # Based on the opposing agent's previous actions, determine move to make
+                determineMove = networks[str(agent_id)].activate(opponent_history[-hist_iterator:])
+                move = np.argmax(determineMove)
+                history[str(agent_id)].append(move)
+                
+                determineMoveOpponent = networks[str(opponent_id)].activate(agent_history[-hist_iterator:])
+                opponent_move = np.argmax(determineMoveOpponent)
+                history[str(opponent_id)].append(opponent_move)
+                
+                # Calculate new fitness
+                agent.fitness += Calculate_Payoff(move, opponent_move) 
+                opponent.fitness += Calculate_Payoff(opponent_move, move)
+                
+                round_count.append("round")
+                
+                with open('history.csv', mode = 'a') as output_file:
+                        writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+                        writer.writerow(["Round: " + repr(len(round_count))])
+                        writer.writerow([agent.key, agent.fitness, move])
+                        writer.writerow([opponent.key, opponent.fitness, opponent_move])
+                        output_file.close()
 
 def run():
     
@@ -155,7 +157,7 @@ def run():
     p.add_reporter(neat.Checkpointer(5))
 
     # Run for 50 generations
-    winner = p.run(evo_alg, 50)
+    winner = p.run(evo_alg, 10)
 
     fittest_agent = stats.best_genome()
     # Print fittest agent of last round
