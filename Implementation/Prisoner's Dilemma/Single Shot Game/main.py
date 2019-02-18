@@ -1,3 +1,12 @@
+# -*- coding: utf-8 -*-
+"""
+Class: Single-Shot Prisoner's Dilemma (Neural Networks)
+Author: Glenn Wilkie-Sullivan
+Purpose: This program will run a prisoner's dilemma (https://en.wikipedia.org/wiki/Prisoner%27s_dilemma)
+         with single-shot rounds (only one round played between agents). Agents are represented as neural networks.
+         This program DOES allow the agents to play against each other.
+"""
+
 import numpy as np
 import random
 import neat

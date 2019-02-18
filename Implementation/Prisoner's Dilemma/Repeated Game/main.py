@@ -1,3 +1,12 @@
+# -*- coding: utf-8 -*-
+"""
+Class: Repeated Prisoner's Dilemma (Neural Networks)
+Author: Glenn Wilkie-Sullivan
+Purpose: This program will run a prisoner's dilemma (https://en.wikipedia.org/wiki/Prisoner%27s_dilemma)
+         in a repeated fashion (more than one round played between agents). Agents are represented as neural networks.
+         This program DOES allow the agents to play against each other.
+"""
+
 import numpy as np
 import random
 import neat
