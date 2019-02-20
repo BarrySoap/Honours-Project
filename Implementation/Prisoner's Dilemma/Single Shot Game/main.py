@@ -56,7 +56,7 @@ def add_def_move():
     
 def count_generations():
     global geneation_count
-    for x in range (0, 50):
+    for x in range (0, 1000):
         generation_count.append(x)
 
 # Calculate payoff for round, returns number of years in the dilemma scenario
@@ -164,7 +164,7 @@ def run():
     p.add_reporter(neat.Checkpointer(5))
 
     # Run for 50 generations
-    winner = p.run(evo_alg, 50)
+    winner = p.run(evo_alg, 1000)
 
     fittest_agent = stats.best_genome()
     # Print fittest agent of last round
@@ -192,8 +192,8 @@ def run():
 #    print(*total_count_coop, sep = ", ")
 #    print(*total_move_count, sep = ", ")
     
-    for p in range(len(total_move_count)):
-        if (p != 0):
-            print("Generation: " + str(p) + " cooperate move count = " + str(total_count_coop[p]))
+#    for p in range(len(total_move_count)):
+#        if (p != 0):
+#            print("Generation: " + str(p) + " cooperate move count = " + str(total_count_coop[p]))
 
 run()
