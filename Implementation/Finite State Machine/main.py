@@ -23,18 +23,9 @@ class Prisoner(object):
         # Initialize the state machine
         self.machine = Machine(model=self, states=Prisoner.states, initial='thinking')
 
-        self.machine.add_transition(trigger='choose_move_cooperate', source='thinking', dest='cooperate', 
+        self.machine.add_transition(trigger='choose_move_cooperate', source='*', dest='cooperate', 
                                     after='update_move_coop')
-        self.machine.add_transition(trigger='choose_move_cooperate', source='cooperate', dest='cooperate', 
-                                    after='update_move_coop')
-        self.machine.add_transition(trigger='choose_move_cooperate', source='defect', dest='cooperate', 
-                                    after='update_move_coop')
-        
-        self.machine.add_transition(trigger='choose_move_defect', source='thinking', dest='defect', 
-                                    after='update_move_def')
-        self.machine.add_transition(trigger='choose_move_defect', source='cooperate', dest='defect', 
-                                    after='update_move_def')
-        self.machine.add_transition(trigger='choose_move_defect', source='defect', dest='defect', 
+        self.machine.add_transition(trigger='choose_move_defect', source='*', dest='defect', 
                                     after='update_move_def')
         
         self.machine.add_transition(trigger='choose_move', source='cooperate', dest='defect', 
