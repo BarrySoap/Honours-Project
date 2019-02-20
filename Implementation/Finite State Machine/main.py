@@ -1,11 +1,17 @@
 from transitions import Machine
 import random
+import csv
 
 machines = {}
 played_machines = {}
 ids = []
 
 generations = 50
+
+with open('history.csv', mode = 'w') as output_file:
+    writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    writer.writerow(['Agent', 'Fitness', 'Move'])
+    output_file.close()
 
 class Prisoner(object):
 
@@ -114,6 +120,13 @@ def evo_alg(machines):
                     machines[agentOne].move_history.append('cooperate')
                 else:
                     machines[agentOne].move_history.append('defect')
+                    
+                with open('history.csv', mode = 'a') as output_file:
+                    writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+                    writer.writerow(["Generation: " + repr(x)])
+                    writer.writerow([agentOne, machines[agentOne].fitness, machines[agentOne].move])
+                    writer.writerow([agentTwo, machines[agentTwo].fitness, machines[agentTwo].move])
+                    output_file.close()
             
             machines[agentOne].fitness += calc_payoff(machines[agentOne].move, machines[agentTwo].move)
             
