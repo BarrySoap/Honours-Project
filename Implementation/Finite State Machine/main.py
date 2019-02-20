@@ -5,8 +5,6 @@ machines = {}
 played_machines = {}
 ids = []
 
-opponent_move = ''
-
 generations = 50
 
 class Prisoner(object):
@@ -14,6 +12,7 @@ class Prisoner(object):
     fitness = 4
     agent_id = 0
     move = ''
+    move_history = []
     
     # Define some states. 
     states = ['thinking', 'cooperate', 'defect']
@@ -45,14 +44,16 @@ class Prisoner(object):
         print(str(self.agent_id) + ' defected')
         self.move = 'defect'
         
-    def opponent_defected():
-        if opponent_move == 'defect':
+    def opponent_defected(self):
+        #print(str(self.move_history[len(self.move_history) - 1]))
+        if self.move_history[len(self.move_history) - 1] == 'defect':
             return True
         else:
             return False
         
-    def opponent_cooperated():
-        if opponent_move == 'cooperate':
+    def opponent_cooperated(self):
+        #print(str(self.move_history[len(self.move_history) - 1]))
+        if self.move_history[len(self.move_history) - 1] == 'cooperate':
             return True
         else:
             return False
@@ -81,7 +82,8 @@ def calc_payoff(agent_one_move, agent_two_move):
 def evo_alg(machines):
     
     for x in range(0, generations):
-        for x in range(len(machines)):
+        print('\n' + 'Generation ' + str(x) + ':' + '\n')
+        for y in range(len(machines)):
             if (len(machines) == 0):
                 break
             agentOne = random.choice(ids)
@@ -93,8 +95,25 @@ def evo_alg(machines):
             
             #print(str(machines[agentOne].fitness))
             
-            machines[agentOne].choose_move_cooperate()
-            machines[agentTwo].choose_move_defect()
+            if (x == 0):
+                machines[agentOne].choose_move_cooperate()
+                machines[agentTwo].move_history.append('cooperate')
+                machines[agentTwo].choose_move_defect()
+                machines[agentOne].move_history.append('defect')
+            else:
+                machines[agentOne].choose_move()
+                
+                if (machines[agentOne].move == 'cooperate'):
+                    machines[agentTwo].move_history.append('cooperate')
+                else:
+                    machines[agentTwo].move_history.append('defect')
+                    
+                machines[agentTwo].choose_move()
+                
+                if (machines[agentTwo].move == 'cooperate'):
+                    machines[agentOne].move_history.append('cooperate')
+                else:
+                    machines[agentOne].move_history.append('defect')
             
             machines[agentOne].fitness += calc_payoff(machines[agentOne].move, machines[agentTwo].move)
             
