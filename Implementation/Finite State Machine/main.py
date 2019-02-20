@@ -19,6 +19,7 @@ class Prisoner(object):
     agent_id = 0
     move = ''
     move_history = []
+    strategy = 0
     
     # Define some states. 
     states = ['thinking', 'cooperate', 'defect']
@@ -33,14 +34,23 @@ class Prisoner(object):
         self.machine.add_transition(trigger='choose_move_defect', source='*', dest='defect', 
                                     after='update_move_def')
         
-        self.machine.add_transition(trigger='choose_move', source='cooperate', dest='defect', 
-                                    conditions = ['opponent_defected'], after='update_move_def')
-        self.machine.add_transition(trigger='choose_move', source='cooperate', dest='cooperate', 
-                                    conditions = ['opponent_cooperated'], after='update_move_coop')
-        self.machine.add_transition(trigger='choose_move', source='defect', dest='cooperate', 
-                                    conditions = ['opponent_cooperated'], after='update_move_coop')
-        self.machine.add_transition(trigger='choose_move', source='defect', dest='defect', 
-                                    conditions = ['opponent_defected'], after='update_move_def')
+        strategy = random.random()
+        
+        if (strategy < 0.5):
+            self.machine.add_transition(trigger='choose_move', source='cooperate', dest='defect', 
+                                        conditions = ['opponent_defected'], after='update_move_def')
+            self.machine.add_transition(trigger='choose_move', source='cooperate', dest='cooperate', 
+                                        conditions = ['opponent_cooperated'], after='update_move_coop')
+            self.machine.add_transition(trigger='choose_move', source='defect', dest='cooperate', 
+                                        conditions = ['opponent_cooperated'], after='update_move_coop')
+            self.machine.add_transition(trigger='choose_move', source='defect', dest='defect', 
+                                        conditions = ['opponent_defected'], after='update_move_def')
+        else:
+            self.machine.add_transition(trigger='choose_move', source='*', dest='defect', 
+                                        conditions = ['random_strategy'], after='update_move_def')
+            self.machine.add_transition(trigger='choose_move', source='*', dest='cooperate', 
+                                        conditions = ['random_strategy'], after='update_move_coop')
+        
         
     def update_move_coop(self):
         print(str(self.agent_id) + ' cooperated')
@@ -63,6 +73,9 @@ class Prisoner(object):
             return True
         else:
             return False
+        
+    def random_strategy(self):
+        return random.random() < 0.5
         
 def populate_machines():
     
