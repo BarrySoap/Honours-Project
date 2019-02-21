@@ -41,10 +41,10 @@ total_move_count = []
 
 generation_count = []
 
-with open('history.csv', mode = 'w') as output_file:
-    writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-    writer.writerow(['Agent', 'Fitness', 'Move'])
-    output_file.close()
+#with open('history.csv', mode = 'w') as output_file:
+#    writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+#    writer.writerow(['Agent', 'Fitness', 'Move'])
+#    output_file.close()
     
 def add_coop_move():
     global coop_move_count

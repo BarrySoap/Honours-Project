@@ -3,7 +3,8 @@
 Class: Repeated Prisoner's Dilemma (Neural Networks)
 Author: Glenn Wilkie-Sullivan
 Purpose: This program will run a prisoner's dilemma (https://en.wikipedia.org/wiki/Prisoner%27s_dilemma)
-         in a repeated fashion (more than one round played between agents). Agents are represented as neural networks.
+         in a repeated fashion (more than one round played between agents), 
+         with multiple replicants of the game being played. Agents are represented as neural networks.
          This program DOES allow the agents to play against each other.
 """
 
@@ -30,8 +31,6 @@ agent_ids = []
 # Container for agents
 networks = {}
 
-round_count = []
-
 coop_move_count = 0
 def_move_count = 0
 
@@ -41,10 +40,13 @@ total_move_count = []
 
 generation_count = []
 
-#with open('history.csv', mode = 'w') as output_file:
-#    writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-#    writer.writerow(['Agent', 'Fitness', 'Move'])
-#    output_file.close()
+average_generation_fitness = 0
+sd_generation_fitness = 0
+
+with open('history.csv', mode = 'w') as output_file:
+    writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    writer.writerow(['Game/Replicant #', 'Average Fitness', 'Fitness Standard Deviation'])
+    output_file.close()
     
 def add_coop_move():
     global coop_move_count
@@ -108,14 +110,12 @@ def evo_alg(agents, config):
     # Play Round
     for agent_id, agent in agents:
         
-        #round_count.append("round")
-        
         agent.fitness = 4.0
 
         for f in range(len(agents)):
             
             # Change the second range value to however many round are to be played.
-            for x in range (0, 25):
+            for x in range (0, 1):
                 # Initialise opposing agent
                 opponent_id, opponent = agents[f]
                 # Get history of agent's moves
@@ -135,67 +135,46 @@ def evo_alg(agents, config):
                 # Calculate new fitness
                 agent.fitness += Calculate_Payoff(move, opponent_move) 
                 opponent.fitness += Calculate_Payoff(opponent_move, move)
-                
-                round_count.append("round")
-                
-#                with open('history.csv', mode = 'a') as output_file:
-#                        writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-#                        writer.writerow(["Round: " + repr(len(round_count))])
-#                        writer.writerow([agent.key, agent.fitness, move])
-#                        writer.writerow([opponent.key, opponent.fitness, opponent_move])
-#                        output_file.close()
 
 def run():
+    global average_generation_fitness
+    global sd_generation_fitness
     
     count_generations()
     
     # load network config
     config = neat.Config(neat.DefaultGenome, 
-                        neat.DefaultReproduction, 
-                        neat.DefaultSpeciesSet, 
-                        neat.DefaultStagnation, 
-                        'config')
-
+                         neat.DefaultReproduction, 
+                         neat.DefaultSpeciesSet, 
+                         neat.DefaultStagnation, 
+                         'config')
+    
     # Initialise population
     p = neat.Population(config)
-  
+    
     # add reporter to display progress in terminal
     p.add_reporter(neat.StdOutReporter(False))
     stats = neat.StatisticsReporter()
     p.add_reporter(stats)
     p.add_reporter(neat.Checkpointer(5))
-
+    
     # Run for 50 generations
     winner = p.run(evo_alg, 50)
-
+    
     fittest_agent = stats.best_genome()
+    average_generation_fitness = stats.get_fitness_mean()
+    sd_generation_fitness = stats.get_fitness_stdev()
+    
     # Print fittest agent of last round
     print('\nFittest Agent:\n{!s}'.format(fittest_agent))
+ 
+for x in range(0, 10):    
+    run()
     
-    for p in range(len(total_move_count)):
-        if (p != 0):
-            total_count_coop[p] = Fraction(total_count_coop[p] / total_move_count[p]).limit_denominator()
-            total_count_def[p] = Fraction(total_count_def[p] / total_move_count[p]).limit_denominator()
+    average_generation_fitness = sum(average_generation_fitness) / float(len(average_generation_fitness))
+    sd_generation_fitness = sum(sd_generation_fitness) / float(len(sd_generation_fitness))
     
-    plt.plot(generation_count, total_count_coop, label='Proportion of Cooperative Moves')
-    plt.ylabel('Ratio of Moves')
-    plt.xlabel('Generations')
-    plt.title('Proportion of Moves - Speciation On')
-    plt.plot(generation_count, total_count_def, label='Proportion of Defective Moves')
-    plt.legend(loc='best')
-    plt.show()
-    
-    visualise.plot_stats(stats, ylog=False, view=True)
-    #visualise.plot_species(stats, view=True)
-    
-#    print(len(total_count_coop))
-#    print(len(total_count_def))
-#    print(len(generation_count))
-#    print(*total_count_coop, sep = ", ")
-#    print(*total_move_count, sep = ", ")
-    
-#    for p in range(len(total_move_count)):
-#        if (p != 0):
-#            print("Generation: " + str(p) + " cooperate move count = " + str(total_count_coop[p]))
-
-run()
+    with open('history.csv', mode = 'a') as output_file:
+        writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        writer.writerow([repr(x), average_generation_fitness, sd_generation_fitness])
+        output_file.close()
