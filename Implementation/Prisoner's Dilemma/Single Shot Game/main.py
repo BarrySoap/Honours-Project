@@ -41,10 +41,10 @@ total_move_count = []
 
 generation_count = []
 
-with open('history.csv', mode = 'w') as output_file:
-    writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-    writer.writerow(['Agent', 'Fitness', 'Move'])
-    output_file.close()
+#with open('history.csv', mode = 'w') as output_file:
+#    writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+#    writer.writerow(['Agent', 'Fitness', 'Move'])
+#    output_file.close()
     
 def add_coop_move():
     global coop_move_count
@@ -56,7 +56,7 @@ def add_def_move():
     
 def count_generations():
     global geneation_count
-    for x in range (0, 1000):
+    for x in range (0, 10000):
         generation_count.append(x)
 
 # Calculate payoff for round, returns number of years in the dilemma scenario
@@ -164,7 +164,7 @@ def run():
     p.add_reporter(neat.Checkpointer(5))
 
     # Run for 50 generations
-    winner = p.run(evo_alg, 1000)
+    winner = p.run(evo_alg, 10000)
 
     fittest_agent = stats.best_genome()
     # Print fittest agent of last round
