@@ -408,7 +408,11 @@ These discussions may be followed or preceded by visualisations of the results.
 In this section, the results following the implementation of the program will be discussed. As with the forementioned section, this section will cover both neural networks and finite state machines separately, and then discuss them comparatively. In regards to the output of the program, there will be a handful of topical questions which must be asked and answered in order to determine if the results are correct.
 
 \subsection{Neural Networks Results}
-In the previous section, the structure of the program was discussed, in terms of how it was built and how it executes. The first topical question to start with is as follows: \textbf{After the strategies of the networks are evolved, do the agents ever reach a point in which they always defect?} Interestingly, speciation plays a large role in how the strategies are evolved; the ability to control speciation within the population yielded a decent range of results, as will now be discussed.
+In the previous section, the structure of the program was discussed, in terms of how it was built and how it executes. The first topical question to start with is as follows: \textbf{After the strategies of the networks are evolved, do the agents ever reach a point in which they always defect?} In order to effectively examine these results, the program must be examined in the form of a single-shot prisoner's dilemma, as well as a repeated game. Interestingly, speciation plays a large role in how the strategies are evolved; the ability to control speciation within the population yielded a decent range of results, as will now be discussed - starting with single-shot games.
+
+\subsubsection{Single-Shot Prisoner's Dilemma (Fixed Fitness)}
+
+Before the results are presented, an important note: as stated before in the methodology section, the fitness for the program is calculated as follows: F = F + (P1 $||$  P2). Where P1/P2 is the payoff from the move made by the first or second agent respectively. As a comparison, the following subsection will look at using Harrald's continuous fitness calculation\cite{25} found on page 139 of his paper. This fitness calculation will be explained in said subsection.
 
 \begin{figure}[H]
 	\centering
@@ -416,7 +420,7 @@ In the previous section, the structure of the program was discussed, in terms of
 		\caption{Neural Networks Proportion of Moves With No Speciation}
 \end{figure}
 
-As seen in figure 6, a large fraction of the population hit a preferred strategy after roughly 15 - 20 generations. In the program, the agents are playing against themselves and each other agent in the population. With this in mind, their strategies will yield better payoffs each generation, regardless of the opposing strategy. In regards to the forementioned question which was posed, there very obviously seems to be a point in which defecting becomes the preferred strategy, but does this prove the existence of a Nash equilibrium?
+As seen in figure 6, a large fraction of the population hit a preferred strategy after roughly 15 - 20 generations. In the program, the agents are playing against themselves and each other agent in the population \textbf{only once}. With this in mind, their strategies will yield better payoffs each generation, regardless of the opposing strategy. In regards to the forementioned question which was posed, there very obviously seems to be a point in which defecting becomes the preferred strategy, but does this prove the existence of a Nash equilibrium?
 
 \begin{figure}[H]
 	\centering
@@ -424,7 +428,16 @@ As seen in figure 6, a large fraction of the population hit a preferred strategy
 		\caption{Neural Networks Proportion of Moves With Speciation}
 \end{figure}
 
-With speciation turned on, the results are vastly different - the fitness of the networks starts out very high as the mix of moves (one agent choosing cooperate and the other choosing defect) brigns the highest payoff. After testing this strategy for roughly 25 - 30 generations, the agents realise that constant mutual defection yields the best possible payoff in the long run. After generation 40, each agent in the population is choosing defect at an exponential rate, which proves indefinitely the existence of a Nash equilibrium within the population. Another interesting point worth bringing up is the comparison of results between figure 7 and the results from van Veelen's\cite{34} paper.
+With speciation turned on, the results are vastly different - the fitness of the networks starts out very high as the mix of moves (one agent choosing cooperate and the other choosing defect) brigns the highest payoff. After testing this strategy for roughly 25 - 30 generations, the agents realise that constant mutual defection yields the best possible payoff in the long run. After generation 40, each agent in the population is choosing defect at an exponential rate, which proves indefinitely the existence of a Nash equilibrium within the population. Another interesting point worth bringing up is the comparison of results between figure 7 and the results from Harrald's\cite{25} paper in 1996. In this paper, Harrald has very similar results to that of figure 7, using networks with 20 hidden perceptrons as opposed to 2. But how well, or differently, does the program perform using Harrald's continuous fitness function?
+
+\subsubsection{Single-Shot Prisoner's Dilemma (Continuous Fitness)}
+
+On page 139 of Harrald's\cite{25} paper, it is stated that the fitness for a given player, A, is calculated as follows: \\
+
+\centerline{\textit{f}($\alpha, \beta$) = -0.75$\alpha + 1.75\beta$ + 2.25}
+\medspace
+
+Where $\alpha$ and $\beta$ are the moves of players A and B respectively. This subsection will examine the results of the program using the same parameters, but with this fitness function instead.
 
 \newpage
 
