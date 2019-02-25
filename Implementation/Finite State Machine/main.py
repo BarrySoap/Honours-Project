@@ -1,6 +1,7 @@
 from transitions import Machine
 import random
 import csv
+import matplotlib.pyplot as plt
 
 machines = {}
 played_machines = {}
@@ -8,10 +9,28 @@ ids = []
 
 generations = 50
 
+generation_count = []
+
+agent_fitnesses = []
+
 with open('history.csv', mode = 'w') as output_file:
     writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     writer.writerow(['Agent', 'Fitness', 'Move'])
     output_file.close()
+    
+def count_generations():
+    global geneation_count
+    for x in range (0, 50):
+        generation_count.append(x)
+        
+def visualise_graph(generation_count, fitnesses):
+    
+    plt.plot(generation_count, fitnesses)
+    plt.ylabel('Fitness')
+    plt.xlabel('Generations')
+    plt.title('Agent Fitnesses Across Generations')
+    plt.legend(loc='best')
+    plt.show()
 
 class Prisoner(object):
 
@@ -124,9 +143,11 @@ def evo_alg(machines):
                 break
             agentOne = random.choice(ids)
             machines[agentOne].agent_id = agentOne
+            machines[agentOne].fitness = 4
             ids.remove(agentOne)
             agentTwo = random.choice(ids)
             machines[agentTwo].agent_id = agentTwo
+            machines[agentTwo].fitness = 4
             ids.remove(agentTwo)
             
             #print(str(machines[agentOne].fitness))
@@ -161,8 +182,6 @@ def evo_alg(machines):
             machines[agentOne].fitness += calc_payoff(machines[agentOne].move, machines[agentTwo].move)
             machines[agentTwo].fitness += calc_payoff(machines[agentTwo].move, machines[agentOne].move)
             
-            #print(str(machines[agentOne].fitness))
-            
             if (len(played_machines) == 0):
                 played_machines[0] = machines[agentOne]
                 played_machines[1] = machines[agentTwo]
@@ -172,9 +191,16 @@ def evo_alg(machines):
             
             machines.pop(agentOne)
             machines.pop(agentTwo)
+            
+        fitnesses = []
     
         for a in range(0, 50):
             machines[a] = played_machines[a]
+            
+        for b in range(0, len(machines)):
+            fitnesses.append(machines[b].fitness)
+            
+        agent_fitnesses.append(sum(fitnesses) / float(len(fitnesses)))
         
         for z in range(0, 50):
             add_state = random.random()
@@ -193,3 +219,5 @@ def evo_alg(machines):
         
 populate_machines()
 evo_alg(machines)
+count_generations()
+visualise_graph(generation_count, agent_fitnesses)

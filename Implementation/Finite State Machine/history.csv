@@ -1,3676 +1,3676 @@
 Agent,Fitness,Move
 Generation: 1
-47,9,defect
-30,4,cooperate
-Generation: 1
-34,4,cooperate
-45,9,cooperate
-Generation: 1
-40,4,defect
-37,9,defect
-Generation: 1
-39,9,defect
-3,9,defect
-Generation: 1
-1,9,defect
-15,9,defect
-Generation: 1
-35,9,defect
-10,4,defect
-Generation: 1
-42,4,cooperate
-5,9,cooperate
-Generation: 1
-46,4,cooperate
-26,4,defect
-Generation: 1
-11,9,defect
-2,4,cooperate
-Generation: 1
-17,9,defect
-28,4,defect
-Generation: 1
-14,4,defect
-25,9,defect
-Generation: 1
-31,9,defect
-43,9,defect
-Generation: 1
-32,4,defect
-36,4,defect
-Generation: 1
-6,4,defect
-48,4,defect
-Generation: 1
-23,9,defect
-19,9,cooperate
+42,4,defect
+27,4,cooperate
 Generation: 1
 0,4,cooperate
-49,9,cooperate
+45,4,cooperate
 Generation: 1
-33,9,defect
+20,4,cooperate
+26,4,cooperate
+Generation: 1
+37,4,cooperate
+39,4,cooperate
+Generation: 1
+10,4,cooperate
+43,4,cooperate
+Generation: 1
+24,4,cooperate
+49,4,defect
+Generation: 1
+33,4,defect
+41,4,defect
+Generation: 1
+14,4,defect
+1,4,defect
+Generation: 1
+23,4,cooperate
+5,4,cooperate
+Generation: 1
+29,4,cooperate
+35,4,cooperate
+Generation: 1
+36,4,cooperate
+4,4,cooperate
+Generation: 1
+9,4,cooperate
+28,4,defect
+Generation: 1
+21,4,cooperate
+3,4,cooperate
+Generation: 1
+30,4,cooperate
+34,4,cooperate
+Generation: 1
+22,4,cooperate
+6,4,cooperate
+Generation: 1
+46,4,defect
+15,4,defect
+Generation: 1
+40,4,defect
+16,4,cooperate
+Generation: 1
 8,4,cooperate
+47,4,defect
+Generation: 1
+11,4,defect
+38,4,defect
+Generation: 1
+7,4,defect
+19,4,defect
+Generation: 1
+25,4,defect
+2,4,cooperate
 Generation: 1
 18,4,cooperate
-41,9,defect
+44,4,cooperate
 Generation: 1
-44,4,defect
-20,4,defect
+17,4,cooperate
+31,4,cooperate
 Generation: 1
+48,4,defect
 12,4,defect
-7,9,defect
 Generation: 1
-38,4,defect
-4,4,cooperate
-Generation: 1
-13,9,cooperate
-24,4,cooperate
-Generation: 1
-16,4,cooperate
-22,4,defect
-Generation: 1
-27,9,defect
-21,9,defect
-Generation: 1
-29,9,defect
-9,9,defect
+13,4,defect
+32,4,defect
 Generation: 2
-44,6,defect
-39,11,defect
+6,4,defect
+20,4,defect
+Generation: 2
+33,4,defect
+42,4,cooperate
+Generation: 2
+34,4,cooperate
+12,4,cooperate
+Generation: 2
+44,4,cooperate
+26,4,defect
+Generation: 2
+45,4,defect
+27,4,defect
+Generation: 2
+14,4,defect
+40,4,defect
+Generation: 2
+9,4,defect
+1,4,defect
+Generation: 2
+11,4,defect
+3,4,defect
+Generation: 2
+13,4,defect
+19,4,defect
+Generation: 2
+17,4,defect
+38,4,defect
+Generation: 2
+7,4,defect
+29,4,cooperate
+Generation: 2
+21,4,cooperate
+43,4,cooperate
+Generation: 2
+24,4,cooperate
+4,4,cooperate
 Generation: 2
 2,4,cooperate
-12,6,defect
+48,4,defect
 Generation: 2
-11,14,defect
 30,4,defect
-Generation: 2
-27,11,defect
-26,9,defect
-Generation: 2
-8,4,defect
-23,14,defect
-Generation: 2
-24,7,defect
-31,11,defect
-Generation: 2
-9,11,defect
-4,4,cooperate
-Generation: 2
-29,11,defect
-45,12,defect
-Generation: 2
-34,7,defect
-36,6,defect
-Generation: 2
-37,11,defect
-21,11,defect
-Generation: 2
-10,6,defect
-40,6,defect
-Generation: 2
-28,6,defect
-18,4,defect
-Generation: 2
-22,9,defect
-7,11,defect
-Generation: 2
-14,6,defect
-3,11,defect
-Generation: 2
-25,11,defect
-32,6,defect
-Generation: 2
-6,6,defect
-46,4,defect
-Generation: 2
-15,11,defect
-47,14,defect
-Generation: 2
-48,6,defect
-35,11,defect
+37,4,defect
 Generation: 2
 16,4,defect
-13,12,defect
+41,4,cooperate
 Generation: 2
-33,14,defect
-49,12,defect
+25,4,defect
+46,4,defect
 Generation: 2
-38,9,defect
-41,14,cooperate
+5,4,defect
+10,4,defect
 Generation: 2
-17,11,defect
-19,9,cooperate
+36,4,defect
+32,4,defect
 Generation: 2
-1,11,defect
-20,6,defect
+0,4,defect
+47,4,cooperate
 Generation: 2
-5,12,defect
-0,7,defect
+18,4,cooperate
+15,4,cooperate
 Generation: 2
-43,11,defect
-42,7,defect
-Generation: 3
-7,13,defect
-19,9,cooperate
-Generation: 3
-36,8,cooperate
-10,8,cooperate
-Generation: 3
-34,9,cooperate
-42,9,cooperate
-Generation: 3
-13,14,cooperate
-31,13,cooperate
-Generation: 3
-6,8,cooperate
-40,8,defect
-Generation: 3
-25,13,cooperate
-43,13,defect
-Generation: 3
-39,13,defect
-46,6,defect
-Generation: 3
-38,14,defect
-21,13,defect
-Generation: 3
-15,13,defect
-24,9,defect
-Generation: 3
-22,11,cooperate
-30,6,defect
-Generation: 3
-41,14,cooperate
-3,13,cooperate
-Generation: 3
-37,13,cooperate
-48,8,defect
-Generation: 3
-45,14,defect
-1,13,defect
-Generation: 3
-8,6,defect
-23,16,defect
-Generation: 3
-11,16,defect
-27,13,defect
-Generation: 3
-28,8,defect
-0,9,defect
-Generation: 3
-35,13,defect
-47,16,defect
-Generation: 3
-29,13,defect
-44,8,cooperate
-Generation: 3
-18,6,defect
-14,8,defect
-Generation: 3
-9,16,defect
-49,14,defect
+35,4,cooperate
+23,4,cooperate
+Generation: 2
+31,4,cooperate
+39,4,cooperate
+Generation: 2
+49,4,cooperate
+28,4,defect
+Generation: 2
+8,4,defect
+22,4,defect
 Generation: 3
 2,4,cooperate
-5,14,cooperate
+48,4,defect
 Generation: 3
-20,8,cooperate
-32,8,cooperate
+13,4,cooperate
+43,4,cooperate
 Generation: 3
-33,16,defect
-26,11,defect
+22,4,cooperate
+46,4,cooperate
 Generation: 3
-12,11,defect
-17,16,cooperate
+1,4,defect
+47,4,defect
 Generation: 3
-16,6,cooperate
+37,4,defect
+29,4,defect
+Generation: 3
+30,4,defect
+31,4,defect
+Generation: 3
+15,4,defect
+5,4,defect
+Generation: 3
+16,4,defect
+7,4,defect
+Generation: 3
+3,4,defect
+39,4,defect
+Generation: 3
+38,4,defect
+0,4,defect
+Generation: 3
+26,4,defect
+17,4,defect
+Generation: 3
+35,4,defect
+41,4,cooperate
+Generation: 3
+45,4,cooperate
+9,4,cooperate
+Generation: 3
+36,4,cooperate
+4,4,cooperate
+Generation: 3
+23,4,defect
+8,4,defect
+Generation: 3
+10,4,defect
+12,4,defect
+Generation: 3
+49,4,defect
+6,4,defect
+Generation: 3
+27,4,defect
+25,4,defect
+Generation: 3
+14,4,defect
+24,4,defect
+Generation: 3
+19,4,defect
+18,4,cooperate
+Generation: 3
+32,4,cooperate
+33,4,cooperate
+Generation: 3
+44,4,cooperate
+28,4,cooperate
+Generation: 3
+11,4,cooperate
+34,4,cooperate
+Generation: 3
+20,4,cooperate
+42,4,defect
+Generation: 3
+21,4,cooperate
+40,4,cooperate
+Generation: 4
+5,4,cooperate
+7,4,defect
+Generation: 4
+34,4,defect
+47,4,defect
+Generation: 4
+43,4,defect
+27,4,defect
+Generation: 4
+17,4,defect
+22,4,defect
+Generation: 4
+31,4,defect
+28,4,cooperate
+Generation: 4
+36,4,cooperate
+11,4,cooperate
+Generation: 4
+42,4,cooperate
+13,4,defect
+Generation: 4
+20,4,defect
+35,4,defect
+Generation: 4
+9,4,defect
+40,4,defect
+Generation: 4
+25,4,defect
+41,4,cooperate
+Generation: 4
+4,4,cooperate
+0,4,cooperate
+Generation: 4
+37,4,cooperate
+8,4,cooperate
+Generation: 4
+33,4,cooperate
+16,4,defect
+Generation: 4
+44,4,defect
+48,4,defect
+Generation: 4
+12,4,defect
+3,4,defect
+Generation: 4
+26,4,cooperate
+15,4,cooperate
+Generation: 4
+29,4,defect
+21,4,cooperate
+Generation: 4
+10,4,cooperate
+18,4,defect
+Generation: 4
+39,4,defect
+46,4,cooperate
+Generation: 4
+14,4,cooperate
+45,4,cooperate
+Generation: 4
+49,4,cooperate
+6,4,cooperate
+Generation: 4
+19,4,cooperate
+30,4,defect
+Generation: 4
+1,4,cooperate
+24,4,cooperate
+Generation: 4
+23,4,defect
+2,4,cooperate
+Generation: 4
+38,4,cooperate
+32,4,cooperate
+Generation: 5
+9,4,cooperate
+29,4,cooperate
+Generation: 5
+15,4,cooperate
+28,4,cooperate
+Generation: 5
+1,4,defect
+22,4,defect
+Generation: 5
+37,4,defect
+3,4,defect
+Generation: 5
+46,4,defect
+5,4,defect
+Generation: 5
+6,4,defect
+21,4,cooperate
+Generation: 5
+26,4,defect
 4,4,defect
-Generation: 4
-39,15,defect
-31,16,defect
-Generation: 4
-28,10,defect
-40,13,cooperate
-Generation: 4
-21,15,defect
-32,11,defect
-Generation: 4
-9,18,defect
-44,8,cooperate
-Generation: 4
-4,9,defect
-43,18,defect
-Generation: 4
-36,11,defect
-34,12,defect
-Generation: 4
-12,16,defect
-48,13,cooperate
-Generation: 4
-19,9,cooperate
-16,6,cooperate
-Generation: 4
-18,8,defect
-45,16,defect
-Generation: 4
-49,16,defect
-35,15,defect
-Generation: 4
-33,18,defect
-22,11,cooperate
-Generation: 4
-23,18,defect
-7,18,defect
-Generation: 4
-2,7,cooperate
-13,17,cooperate
-Generation: 4
-20,11,cooperate
-24,11,defect
-Generation: 4
-17,16,defect
-25,13,defect
-Generation: 4
-30,11,defect
-10,11,defect
-Generation: 4
-27,15,defect
-14,10,defect
-Generation: 4
-5,17,defect
-41,17,cooperate
-Generation: 4
-37,13,defect
-11,18,cooperate
-Generation: 4
-0,11,cooperate
-8,8,defect
-Generation: 4
-47,18,defect
-1,15,defect
-Generation: 4
-29,18,defect
-38,16,defect
-Generation: 4
-15,15,defect
-6,8,cooperate
-Generation: 4
-42,12,defect
-3,16,defect
-Generation: 4
-46,8,defect
-26,13,defect
 Generation: 5
-17,18,defect
-9,23,defect
+24,4,defect
+11,4,defect
 Generation: 5
-27,17,defect
-30,13,defect
+39,4,defect
+44,4,defect
 Generation: 5
-2,10,cooperate
-3,18,cooperate
+41,4,cooperate
+25,4,cooperate
 Generation: 5
-45,18,cooperate
-28,15,cooperate
+8,4,cooperate
+18,4,defect
 Generation: 5
-7,20,cooperate
-43,20,defect
+33,4,defect
+35,4,defect
 Generation: 5
-38,18,defect
-1,17,defect
+10,4,defect
+48,4,defect
 Generation: 5
-39,17,defect
-19,12,defect
+49,4,defect
+32,4,defect
 Generation: 5
-26,15,defect
-20,11,defect
+16,4,cooperate
+19,4,cooperate
 Generation: 5
-0,11,defect
-31,18,defect
+23,4,cooperate
+27,4,defect
 Generation: 5
-44,8,defect
-41,17,defect
+47,4,defect
+0,4,defect
 Generation: 5
-36,13,defect
-34,14,defect
+36,4,defect
+20,4,defect
 Generation: 5
-49,18,defect
-29,20,defect
+42,4,defect
+7,4,defect
 Generation: 5
-32,13,defect
-14,12,defect
+34,4,defect
+12,4,defect
 Generation: 5
-11,18,cooperate
-40,13,defect
+13,4,cooperate
+38,4,cooperate
 Generation: 5
-8,13,defect
-35,17,defect
+30,4,defect
+2,4,defect
 Generation: 5
-48,13,cooperate
-33,23,defect
+31,4,defect
+45,4,defect
 Generation: 5
-22,11,cooperate
-47,20,cooperate
+43,4,defect
+40,4,defect
 Generation: 5
-10,13,cooperate
-13,20,cooperate
-Generation: 5
-12,21,defect
-42,14,defect
-Generation: 5
-24,16,cooperate
-46,10,cooperate
-Generation: 5
-15,20,cooperate
-37,18,cooperate
-Generation: 5
-4,11,defect
-25,15,defect
-Generation: 5
-18,10,cooperate
-6,8,defect
-Generation: 5
-5,22,defect
-23,20,defect
-Generation: 5
-16,9,defect
-21,17,defect
+14,4,defect
+17,4,defect
 Generation: 6
-42,16,defect
-41,19,defect
+15,4,defect
+14,4,defect
 Generation: 6
-38,20,defect
-17,20,cooperate
+0,4,defect
+46,4,defect
 Generation: 6
-9,25,cooperate
-40,18,defect
+9,4,defect
+48,4,defect
 Generation: 6
-29,22,defect
-20,13,defect
+26,4,defect
+40,4,defect
 Generation: 6
-22,14,defect
-5,24,defect
+7,4,defect
+27,4,defect
 Generation: 6
-8,15,defect
-2,13,cooperate
+35,4,defect
+21,4,defect
 Generation: 6
-13,23,cooperate
-30,15,defect
+17,4,defect
+42,4,defect
 Generation: 6
-36,15,defect
-15,23,defect
+49,4,defect
+12,4,defect
 Generation: 6
-28,18,defect
-34,16,defect
+33,4,defect
+16,4,defect
 Generation: 6
-24,19,cooperate
-23,22,cooperate
+19,4,defect
+23,4,defect
 Generation: 6
-11,18,defect
-44,10,defect
+31,4,defect
+38,4,defect
 Generation: 6
-25,17,cooperate
-19,14,defect
+44,4,defect
+24,4,defect
 Generation: 6
-21,19,defect
-0,13,defect
+39,4,defect
+18,4,defect
 Generation: 6
-35,19,defect
-27,19,defect
+13,4,defect
+25,4,cooperate
 Generation: 6
-45,21,defect
-37,21,defect
+8,4,cooperate
+37,4,cooperate
 Generation: 6
-46,13,defect
-7,20,defect
+6,4,cooperate
+11,4,cooperate
 Generation: 6
-3,21,defect
-4,13,defect
+34,4,cooperate
+41,4,defect
 Generation: 6
-49,20,defect
-14,14,defect
+1,4,defect
+43,4,defect
 Generation: 6
-26,17,defect
-12,23,defect
+36,4,defect
+3,4,defect
 Generation: 6
-31,20,defect
-33,28,defect
+45,4,defect
+22,4,defect
 Generation: 6
-1,19,defect
-10,16,defect
+4,4,defect
+2,4,defect
 Generation: 6
-43,25,defect
-47,23,defect
+30,4,cooperate
+47,4,defect
 Generation: 6
-48,13,defect
-39,19,defect
+29,4,cooperate
+10,4,cooperate
 Generation: 6
-6,13,defect
-32,15,defect
+5,4,cooperate
+32,4,cooperate
 Generation: 6
-16,11,defect
-18,10,defect
+28,4,defect
+20,4,defect
 Generation: 7
-46,15,defect
-30,20,defect
+8,4,defect
+9,4,defect
 Generation: 7
-23,25,defect
-29,24,defect
+3,4,defect
+48,4,cooperate
 Generation: 7
-41,21,defect
-3,23,defect
+25,4,defect
+27,4,cooperate
 Generation: 7
-9,25,defect
-15,25,defect
+31,4,defect
+0,4,defect
 Generation: 7
-1,21,defect
-8,20,cooperate
+10,4,defect
+33,4,defect
 Generation: 7
-44,12,defect
-16,13,defect
+22,4,defect
+45,4,defect
 Generation: 7
-6,15,defect
-13,23,defect
+2,4,defect
+20,4,defect
 Generation: 7
-25,17,defect
-21,21,defect
+36,4,defect
+37,4,defect
 Generation: 7
-2,13,defect
-10,18,defect
+41,4,defect
+35,4,defect
 Generation: 7
-26,19,defect
-47,25,defect
+26,4,defect
+21,4,defect
 Generation: 7
-32,17,defect
-7,22,defect
+18,4,cooperate
+12,4,cooperate
 Generation: 7
-20,15,defect
-31,22,defect
+32,4,cooperate
+23,4,defect
 Generation: 7
-4,15,defect
-12,25,defect
+39,4,defect
+28,4,defect
 Generation: 7
-11,20,cooperate
-48,15,cooperate
+43,4,defect
+7,4,defect
 Generation: 7
-22,16,cooperate
-14,16,cooperate
+6,4,defect
+17,4,defect
 Generation: 7
-28,20,cooperate
-39,21,defect
+5,4,defect
+11,4,defect
 Generation: 7
-27,21,defect
-37,23,defect
+24,4,defect
+29,4,cooperate
 Generation: 7
-24,22,cooperate
-19,19,defect
+14,4,cooperate
+44,4,cooperate
 Generation: 7
-0,15,defect
-40,23,cooperate
+4,4,cooperate
+40,4,cooperate
 Generation: 7
-42,18,defect
-34,18,defect
+46,4,defect
+13,4,cooperate
 Generation: 7
-17,20,cooperate
-35,21,cooperate
+19,4,cooperate
+34,4,cooperate
 Generation: 7
-43,27,defect
-45,23,defect
+15,4,cooperate
+42,4,cooperate
 Generation: 7
-5,26,defect
-36,17,defect
+47,4,defect
+16,4,defect
 Generation: 7
-49,22,defect
-18,12,defect
+1,4,defect
+49,4,defect
 Generation: 7
-38,25,defect
-33,30,defect
+38,4,defect
+30,4,cooperate
 Generation: 8
-14,19,defect
-31,24,defect
+3,4,cooperate
+14,4,cooperate
 Generation: 8
-44,14,defect
-35,24,defect
+38,4,cooperate
+48,4,cooperate
 Generation: 8
-23,27,cooperate
-19,24,cooperate
+29,4,cooperate
+25,4,defect
 Generation: 8
-30,22,cooperate
-20,17,cooperate
+31,4,defect
+8,4,defect
 Generation: 8
-36,19,cooperate
-37,25,cooperate
+34,4,defect
+28,4,defect
 Generation: 8
-28,20,cooperate
-17,23,cooperate
+37,4,defect
+45,4,defect
 Generation: 8
-48,18,cooperate
-16,15,cooperate
+30,4,cooperate
+10,4,cooperate
 Generation: 8
-12,27,cooperate
-8,20,cooperate
+1,4,defect
+44,4,defect
 Generation: 8
-13,25,cooperate
-40,23,cooperate
+24,4,defect
+39,4,defect
 Generation: 8
-9,27,cooperate
-41,23,defect
+47,4,defect
+4,4,defect
 Generation: 8
-11,23,defect
-7,24,defect
+20,4,defect
+18,4,defect
 Generation: 8
-43,29,defect
-32,19,defect
+42,4,defect
+17,4,defect
 Generation: 8
-49,24,defect
-47,27,defect
+11,4,defect
+21,4,cooperate
 Generation: 8
-2,15,defect
-39,26,defect
+41,4,defect
+33,4,defect
 Generation: 8
-45,25,defect
-10,20,defect
+36,4,defect
+5,4,defect
 Generation: 8
-46,17,defect
-24,22,defect
+19,4,defect
+12,4,defect
 Generation: 8
-38,27,defect
-3,25,defect
+7,4,cooperate
+13,4,cooperate
 Generation: 8
-25,19,defect
-42,20,cooperate
+26,4,defect
+40,4,defect
 Generation: 8
-21,23,defect
-33,32,defect
+0,4,defect
+23,4,defect
 Generation: 8
-4,17,defect
-5,28,defect
+43,4,defect
+2,4,defect
 Generation: 8
-1,26,defect
-0,20,defect
+15,4,defect
+46,4,defect
 Generation: 8
-26,21,cooperate
-18,14,defect
+6,4,defect
+35,4,defect
 Generation: 8
-22,19,cooperate
-27,23,cooperate
+27,4,defect
+9,4,defect
 Generation: 8
-29,26,defect
-6,17,defect
+22,4,defect
+32,4,defect
 Generation: 8
-34,20,defect
-15,27,defect
+49,4,defect
+16,4,cooperate
 Generation: 9
-40,26,defect
-11,25,defect
+21,4,cooperate
+31,4,cooperate
 Generation: 9
-28,23,defect
-39,28,defect
+2,4,defect
+15,4,defect
 Generation: 9
-37,28,defect
-13,28,defect
+43,4,defect
+0,4,defect
 Generation: 9
-5,30,defect
-6,19,defect
+27,4,defect
+19,4,defect
 Generation: 9
-25,24,defect
-22,22,defect
+10,4,defect
+4,4,defect
 Generation: 9
-43,31,defect
-9,27,defect
+39,4,defect
+34,4,defect
 Generation: 9
-45,27,defect
-29,28,defect
+23,4,defect
+41,4,defect
 Generation: 9
-16,18,defect
-36,22,defect
+40,4,defect
+46,4,defect
 Generation: 9
-35,26,defect
-2,17,defect
+5,4,defect
+6,4,defect
 Generation: 9
-33,34,cooperate
-18,19,defect
+22,4,defect
+13,4,defect
 Generation: 9
-24,24,defect
-31,26,defect
+45,4,defect
+38,4,defect
 Generation: 9
-26,21,defect
-10,22,defect
+29,4,cooperate
+48,4,cooperate
 Generation: 9
-19,27,defect
-3,27,defect
+47,4,cooperate
+14,4,cooperate
 Generation: 9
-1,28,defect
-34,22,defect
+12,4,cooperate
+7,4,cooperate
 Generation: 9
-15,29,defect
-32,21,defect
+24,4,cooperate
+49,4,cooperate
 Generation: 9
-14,21,defect
-17,26,defect
+9,4,cooperate
+18,4,cooperate
 Generation: 9
-23,30,cooperate
-20,20,cooperate
+11,4,cooperate
+3,4,cooperate
 Generation: 9
-42,20,cooperate
-7,26,cooperate
+26,4,defect
+30,4,defect
 Generation: 9
-47,29,cooperate
-0,22,cooperate
+35,4,defect
+8,4,defect
 Generation: 9
-4,19,cooperate
-8,23,defect
+1,4,defect
+28,4,cooperate
 Generation: 9
-12,30,cooperate
-44,16,defect
+25,4,defect
+17,4,defect
 Generation: 9
-38,29,defect
-49,26,defect
+44,4,defect
+16,4,cooperate
 Generation: 9
-46,19,defect
-21,25,defect
+32,4,cooperate
+20,4,cooperate
 Generation: 9
-27,26,defect
-48,21,cooperate
+36,4,cooperate
+42,4,defect
 Generation: 9
-30,25,cooperate
-41,28,defect
+37,4,defect
+33,4,defect
 Generation: 10
-23,33,defect
-31,28,defect
+0,4,defect
+41,4,defect
 Generation: 10
-3,29,defect
-8,28,cooperate
+31,4,cooperate
+21,4,cooperate
 Generation: 10
-38,31,cooperate
-48,21,cooperate
+46,4,defect
+18,4,defect
 Generation: 10
-18,24,defect
-39,30,defect
+14,4,defect
+42,4,defect
 Generation: 10
-35,28,defect
-30,25,cooperate
+1,4,cooperate
+24,4,cooperate
 Generation: 10
-9,29,cooperate
-25,26,defect
+30,4,defect
+35,4,defect
 Generation: 10
-45,29,defect
-22,24,defect
+49,4,cooperate
+8,4,cooperate
 Generation: 10
-13,30,defect
-36,24,defect
+2,4,defect
+9,4,defect
 Generation: 10
-37,30,cooperate
-5,32,cooperate
+13,4,defect
+16,4,cooperate
 Generation: 10
-6,21,defect
-26,23,defect
+44,4,cooperate
+4,4,cooperate
 Generation: 10
-40,28,defect
-46,21,defect
+34,4,cooperate
+47,4,cooperate
 Generation: 10
-10,24,defect
-19,29,defect
+33,4,cooperate
+37,4,cooperate
 Generation: 10
-32,23,defect
-0,25,defect
+23,4,defect
+39,4,defect
 Generation: 10
-7,29,defect
-44,21,defect
+45,4,defect
+29,4,cooperate
 Generation: 10
-24,26,defect
-21,27,cooperate
+38,4,cooperate
+32,4,cooperate
 Generation: 10
-41,33,defect
-27,31,defect
+3,4,cooperate
+25,4,defect
 Generation: 10
-2,19,cooperate
-42,23,defect
+10,4,defect
+26,4,cooperate
 Generation: 10
-28,25,defect
-1,30,defect
+40,4,cooperate
+6,4,cooperate
 Generation: 10
-20,23,defect
-11,27,defect
+22,4,cooperate
+7,4,cooperate
 Generation: 10
-14,23,defect
-33,34,defect
+15,4,cooperate
+12,4,cooperate
 Generation: 10
-17,28,defect
-12,30,defect
+43,4,cooperate
+36,4,cooperate
 Generation: 10
-15,31,defect
-47,32,defect
+11,4,cooperate
+27,4,defect
 Generation: 10
-16,20,defect
-49,28,defect
+48,4,defect
+17,4,defect
 Generation: 10
-4,19,cooperate
-34,24,cooperate
+5,4,defect
+19,4,defect
 Generation: 10
-43,33,cooperate
-29,30,defect
+20,4,defect
+28,4,defect
 Generation: 11
-32,25,defect
-2,19,defect
+42,4,defect
+0,4,defect
 Generation: 11
-35,33,defect
-17,30,defect
+12,4,defect
+21,4,cooperate
 Generation: 11
-26,25,defect
-23,35,defect
+44,4,cooperate
+26,4,cooperate
 Generation: 11
-38,34,defect
-30,25,cooperate
+36,4,cooperate
+1,4,defect
 Generation: 11
-33,36,defect
-1,32,cooperate
+17,4,defect
+4,4,defect
 Generation: 11
-3,34,cooperate
-48,24,defect
+31,4,defect
+49,4,defect
 Generation: 11
-49,30,defect
-34,27,defect
+39,4,defect
+23,4,defect
 Generation: 11
-20,25,defect
-4,22,defect
+29,4,cooperate
+38,4,cooperate
 Generation: 11
-12,32,defect
-5,35,defect
+11,4,cooperate
+45,4,cooperate
 Generation: 11
-25,31,defect
-29,35,defect
+28,4,defect
+43,4,defect
 Generation: 11
-42,28,defect
-47,34,defect
+41,4,cooperate
+14,4,cooperate
 Generation: 11
-7,31,defect
-44,23,defect
+24,4,cooperate
+22,4,cooperate
 Generation: 11
-27,33,defect
-11,29,defect
+27,4,defect
+33,4,defect
 Generation: 11
-0,27,defect
-18,26,defect
+6,4,defect
+34,4,defect
 Generation: 11
-36,26,defect
-16,22,defect
+13,4,defect
+37,4,defect
 Generation: 11
-46,23,defect
-8,28,cooperate
+3,4,defect
+40,4,defect
 Generation: 11
-40,30,defect
-41,35,defect
+2,4,defect
+20,4,defect
 Generation: 11
-37,33,defect
-10,26,defect
+32,4,defect
+15,4,defect
 Generation: 11
-14,25,defect
-6,23,defect
+35,4,defect
+18,4,defect
 Generation: 11
-21,27,cooperate
-28,27,cooperate
+16,4,defect
+5,4,defect
 Generation: 11
-13,32,cooperate
-45,31,cooperate
+8,4,defect
+9,4,defect
 Generation: 11
-31,30,cooperate
-39,32,defect
+7,4,cooperate
+46,4,defect
 Generation: 11
-43,33,defect
-22,26,defect
+48,4,defect
+25,4,defect
 Generation: 11
-15,33,defect
-24,31,cooperate
+10,4,defect
+19,4,defect
 Generation: 11
-9,29,cooperate
-19,31,defect
+30,4,defect
+47,4,cooperate
 Generation: 12
-45,34,defect
-13,35,defect
+47,4,cooperate
+30,4,defect
 Generation: 12
-24,31,cooperate
-1,32,cooperate
+32,4,defect
+49,4,defect
 Generation: 12
-18,28,defect
-11,31,defect
+10,4,defect
+5,4,defect
 Generation: 12
-20,27,defect
-3,34,defect
+7,4,defect
+28,4,cooperate
 Generation: 12
-0,29,defect
-5,37,defect
+9,4,cooperate
+21,4,defect
 Generation: 12
-25,33,defect
-26,27,defect
+22,4,defect
+26,4,defect
 Generation: 12
-9,29,defect
-19,36,defect
+37,4,defect
+18,4,cooperate
 Generation: 12
-43,35,defect
-2,21,defect
+39,4,cooperate
+17,4,cooperate
 Generation: 12
-30,25,cooperate
-32,27,cooperate
+48,4,cooperate
+44,4,cooperate
 Generation: 12
-7,33,cooperate
-38,39,cooperate
+8,4,cooperate
+11,4,cooperate
 Generation: 12
-42,30,defect
-40,32,defect
+15,4,cooperate
+34,4,cooperate
 Generation: 12
-23,37,defect
-22,28,defect
+23,4,defect
+12,4,defect
 Generation: 12
-21,30,cooperate
-44,25,defect
+13,4,cooperate
+33,4,cooperate
 Generation: 12
-14,27,defect
-4,24,defect
+3,4,cooperate
+45,4,cooperate
 Generation: 12
-34,29,defect
-6,25,defect
+36,4,cooperate
+41,4,defect
 Generation: 12
-28,30,defect
-41,37,defect
+46,4,cooperate
+14,4,cooperate
 Generation: 12
-12,34,cooperate
-49,32,cooperate
+40,4,cooperate
+24,4,cooperate
 Generation: 12
-46,28,cooperate
-15,38,cooperate
+6,4,cooperate
+35,4,cooperate
 Generation: 12
-29,37,defect
-17,32,cooperate
+38,4,cooperate
+31,4,defect
 Generation: 12
-48,29,defect
-8,28,defect
+4,4,defect
+20,4,defect
 Generation: 12
-47,36,defect
-33,41,defect
+2,4,defect
+0,4,defect
 Generation: 12
-35,35,defect
-31,30,defect
+16,4,defect
+25,4,cooperate
 Generation: 12
-27,35,defect
-10,28,defect
+29,4,cooperate
+1,4,defect
 Generation: 12
-16,24,defect
-39,37,defect
+19,4,defect
+43,4,defect
 Generation: 12
-37,35,defect
-36,28,defect
+42,4,defect
+27,4,defect
 Generation: 13
-35,37,defect
-12,37,defect
+42,4,cooperate
+38,4,cooperate
 Generation: 13
-26,29,cooperate
-41,39,defect
+10,4,cooperate
+18,4,cooperate
 Generation: 13
-39,39,cooperate
-43,37,cooperate
+11,4,cooperate
+41,4,cooperate
 Generation: 13
-15,41,cooperate
-21,30,cooperate
+4,4,cooperate
+22,4,cooperate
 Generation: 13
-20,29,cooperate
-19,38,defect
+32,4,cooperate
+2,4,cooperate
 Generation: 13
-42,32,defect
-36,30,defect
+27,4,defect
+15,4,defect
 Generation: 13
-32,30,defect
-9,31,defect
+28,4,cooperate
+14,4,cooperate
 Generation: 13
-28,32,defect
-46,31,defect
+44,4,cooperate
+45,4,cooperate
 Generation: 13
-48,31,defect
-47,38,defect
+40,4,cooperate
+23,4,defect
 Generation: 13
-11,33,cooperate
-22,30,defect
+9,4,defect
+30,4,defect
 Generation: 13
-3,36,defect
-5,39,defect
+7,4,defect
+0,4,defect
 Generation: 13
-29,42,defect
-40,34,defect
+39,4,defect
+20,4,defect
 Generation: 13
-18,30,cooperate
-45,36,cooperate
+21,4,defect
+8,4,defect
 Generation: 13
-17,32,cooperate
-34,31,cooperate
+26,4,cooperate
+48,4,cooperate
 Generation: 13
-8,30,defect
-38,42,defect
+19,4,cooperate
+31,4,defect
 Generation: 13
-0,31,defect
-10,30,defect
+5,4,defect
+33,4,defect
 Generation: 13
-4,26,cooperate
-33,43,cooperate
+3,4,defect
+25,4,cooperate
 Generation: 13
-30,28,cooperate
-44,30,defect
+46,4,defect
+37,4,defect
 Generation: 13
-14,29,defect
-2,23,defect
+35,4,defect
+6,4,defect
 Generation: 13
-16,26,defect
-6,27,cooperate
+13,4,defect
+36,4,defect
 Generation: 13
-23,39,defect
-1,35,cooperate
+17,4,defect
+49,4,defect
 Generation: 13
-25,35,defect
-24,34,cooperate
+29,4,cooperate
+12,4,cooperate
 Generation: 13
-37,37,cooperate
-27,37,cooperate
+43,4,cooperate
+16,4,cooperate
 Generation: 13
-49,35,cooperate
-31,32,cooperate
+24,4,cooperate
+1,4,defect
 Generation: 13
-13,37,cooperate
-7,36,cooperate
+47,4,cooperate
+34,4,cooperate
 Generation: 14
-44,35,defect
-28,34,defect
+19,4,cooperate
+27,4,cooperate
 Generation: 14
-30,28,defect
-39,42,cooperate
+39,4,cooperate
+47,4,defect
 Generation: 14
-48,33,defect
-22,35,cooperate
+35,4,defect
+37,4,defect
 Generation: 14
-38,44,cooperate
-7,39,cooperate
+22,4,defect
+44,4,defect
 Generation: 14
-21,33,defect
-20,29,defect
+15,4,defect
+36,4,defect
 Generation: 14
-42,34,cooperate
-25,40,defect
+48,4,cooperate
+32,4,cooperate
 Generation: 14
-24,34,defect
-10,32,defect
+21,4,defect
+29,4,defect
 Generation: 14
-40,36,defect
-1,35,cooperate
+41,4,defect
+33,4,defect
 Generation: 14
-33,46,cooperate
-9,33,cooperate
+25,4,cooperate
+31,4,cooperate
 Generation: 14
-34,34,cooperate
-4,29,defect
+5,4,cooperate
+43,4,cooperate
 Generation: 14
-16,31,defect
-46,33,defect
+46,4,cooperate
+45,4,cooperate
 Generation: 14
-15,44,defect
-23,44,defect
+17,4,cooperate
+30,4,cooperate
 Generation: 14
-36,32,defect
-3,38,defect
+40,4,cooperate
+11,4,cooperate
 Generation: 14
-26,29,cooperate
-29,44,defect
+28,4,cooperate
+20,4,cooperate
 Generation: 14
-13,40,defect
-35,39,defect
+38,4,cooperate
+1,4,defect
 Generation: 14
-11,33,cooperate
-32,32,cooperate
+12,4,defect
+0,4,defect
 Generation: 14
-49,38,cooperate
-43,40,defect
+49,4,defect
+23,4,defect
 Generation: 14
-2,25,defect
-18,33,cooperate
+6,4,defect
+7,4,cooperate
 Generation: 14
-14,31,cooperate
-12,39,defect
+8,4,cooperate
+26,4,defect
 Generation: 14
-31,35,defect
-45,39,defect
+13,4,defect
+14,4,defect
 Generation: 14
-19,43,defect
-37,40,defect
+42,4,cooperate
+9,4,cooperate
 Generation: 14
-0,33,defect
-47,40,defect
+18,4,defect
+3,4,defect
 Generation: 14
-27,40,defect
-5,41,defect
+10,4,defect
+24,4,defect
 Generation: 14
-6,27,cooperate
-17,35,defect
+4,4,defect
+2,4,defect
 Generation: 14
-41,44,defect
-8,32,defect
+16,4,cooperate
+34,4,cooperate
 Generation: 15
-23,46,defect
-25,45,defect
+27,4,cooperate
+21,4,defect
 Generation: 15
-21,35,defect
-10,34,defect
+28,4,cooperate
+4,4,cooperate
 Generation: 15
-27,42,defect
-17,40,cooperate
+36,4,cooperate
+14,4,cooperate
 Generation: 15
-3,40,cooperate
-24,36,defect
+34,4,cooperate
+23,4,cooperate
 Generation: 15
-0,35,defect
-1,35,defect
+40,4,cooperate
+15,4,cooperate
 Generation: 15
-49,38,defect
-6,27,defect
+12,4,cooperate
+33,4,cooperate
 Generation: 15
-15,46,defect
-30,33,defect
+29,4,defect
+35,4,defect
 Generation: 15
-47,42,defect
-34,34,defect
+45,4,defect
+49,4,defect
 Generation: 15
-20,31,defect
-37,42,cooperate
+47,4,cooperate
+42,4,defect
 Generation: 15
-8,34,defect
-43,45,defect
+11,4,defect
+16,4,defect
 Generation: 15
-41,46,defect
-16,33,defect
+30,4,cooperate
+48,4,defect
 Generation: 15
-46,35,defect
-4,34,cooperate
+19,4,defect
+6,4,defect
 Generation: 15
-44,37,defect
-28,36,defect
+20,4,defect
+44,4,defect
 Generation: 15
-36,34,defect
-14,31,defect
+18,4,defect
+10,4,defect
 Generation: 15
-29,49,defect
-42,34,cooperate
+38,4,defect
+13,4,defect
 Generation: 15
-26,29,cooperate
-48,38,defect
+3,4,defect
+46,4,defect
 Generation: 15
-11,36,defect
-9,36,defect
+0,4,defect
+26,4,defect
 Generation: 15
-45,41,defect
-13,42,defect
+22,4,defect
+31,4,cooperate
 Generation: 15
-35,41,defect
-19,45,cooperate
+43,4,cooperate
+5,4,cooperate
 Generation: 15
-39,42,cooperate
-5,43,cooperate
+25,4,cooperate
+9,4,cooperate
 Generation: 15
-2,30,cooperate
-38,47,cooperate
+7,4,defect
+2,4,defect
 Generation: 15
-33,49,defect
-22,35,defect
+32,4,defect
+37,4,defect
 Generation: 15
-12,44,defect
-31,37,defect
+24,4,defect
+17,4,defect
 Generation: 15
-18,33,defect
-32,35,defect
+1,4,defect
+8,4,defect
 Generation: 15
-40,41,defect
-7,42,defect
+41,4,defect
+39,4,defect
 Generation: 16
-7,44,defect
-8,36,cooperate
+43,4,defect
+40,4,defect
 Generation: 16
-14,33,cooperate
-35,46,cooperate
+48,4,defect
+7,4,defect
 Generation: 16
-38,50,cooperate
-19,45,defect
+0,4,defect
+29,4,defect
 Generation: 16
-4,34,cooperate
-33,51,defect
+28,4,cooperate
+11,4,cooperate
 Generation: 16
-45,43,defect
-15,48,defect
+9,4,cooperate
+35,4,cooperate
 Generation: 16
-43,47,cooperate
-16,35,cooperate
+5,4,cooperate
+27,4,cooperate
 Generation: 16
-1,37,cooperate
-23,48,cooperate
+21,4,defect
+41,4,cooperate
 Generation: 16
-32,37,cooperate
-2,33,cooperate
+46,4,defect
+36,4,defect
 Generation: 16
-47,44,cooperate
-26,29,defect
+2,4,defect
+10,4,defect
 Generation: 16
-24,41,defect
-37,42,cooperate
+4,4,defect
+45,4,defect
 Generation: 16
-6,29,defect
-36,36,defect
+38,4,defect
+17,4,defect
 Generation: 16
-44,39,defect
-29,54,defect
+30,4,defect
+12,4,defect
 Generation: 16
-28,38,defect
-11,38,cooperate
+25,4,cooperate
+20,4,cooperate
 Generation: 16
-27,47,cooperate
-39,45,cooperate
+39,4,cooperate
+47,4,cooperate
 Generation: 16
-9,38,cooperate
-49,40,cooperate
+16,4,defect
+13,4,defect
 Generation: 16
-20,36,cooperate
-25,47,defect
+8,4,defect
+34,4,defect
 Generation: 16
-22,37,cooperate
-3,40,cooperate
+3,4,defect
+33,4,defect
 Generation: 16
-30,35,defect
-48,43,defect
+1,4,defect
+22,4,defect
 Generation: 16
-12,46,cooperate
-17,40,defect
+14,4,defect
+26,4,cooperate
 Generation: 16
-40,43,defect
-42,34,defect
+19,4,cooperate
+15,4,cooperate
 Generation: 16
-21,37,defect
-10,36,defect
+42,4,defect
+49,4,defect
 Generation: 16
-41,48,cooperate
-34,36,cooperate
+32,4,defect
+18,4,defect
 Generation: 16
-31,39,cooperate
-13,44,cooperate
+23,4,defect
+6,4,defect
 Generation: 16
-46,40,cooperate
-0,37,cooperate
+37,4,defect
+44,4,defect
 Generation: 16
-18,35,cooperate
-5,46,cooperate
+24,4,defect
+31,4,defect
 Generation: 17
-48,45,defect
-6,31,defect
+13,4,cooperate
+37,4,cooperate
 Generation: 17
-35,49,defect
-10,38,defect
+45,4,cooperate
+3,4,cooperate
 Generation: 17
-37,42,cooperate
-47,44,cooperate
+2,4,defect
+15,4,defect
 Generation: 17
-41,51,cooperate
-46,43,cooperate
+4,4,defect
+36,4,defect
 Generation: 17
-38,50,cooperate
-11,38,cooperate
+8,4,defect
+44,4,defect
 Generation: 17
-25,52,defect
-24,46,defect
+10,4,defect
+42,4,defect
 Generation: 17
-28,43,defect
-18,38,defect
+33,4,defect
+40,4,defect
 Generation: 17
-39,48,cooperate
-8,36,cooperate
+48,4,cooperate
+49,4,defect
 Generation: 17
-9,41,cooperate
-12,46,defect
+32,4,defect
+46,4,defect
 Generation: 17
-42,36,defect
-45,45,defect
+29,4,defect
+24,4,defect
 Generation: 17
-4,34,defect
-3,43,defect
+22,4,defect
+21,4,defect
 Generation: 17
-22,40,cooperate
-34,39,cooperate
+5,4,defect
+43,4,defect
 Generation: 17
-15,50,cooperate
-36,38,cooperate
+26,4,cooperate
+20,4,cooperate
 Generation: 17
-27,50,cooperate
-20,36,cooperate
+31,4,cooperate
+23,4,defect
 Generation: 17
-44,41,defect
-33,56,defect
+9,4,defect
+11,4,defect
 Generation: 17
-32,40,defect
-7,49,defect
+1,4,defect
+47,4,cooperate
 Generation: 17
-14,36,defect
-49,43,defect
+0,4,cooperate
+35,4,cooperate
 Generation: 17
-26,34,defect
-13,47,defect
+19,4,cooperate
+6,4,cooperate
 Generation: 17
-40,45,defect
-29,56,cooperate
+30,4,defect
+16,4,cooperate
 Generation: 17
-21,39,cooperate
-17,45,defect
+28,4,defect
+17,4,defect
 Generation: 17
-31,42,defect
-23,51,cooperate
+25,4,defect
+27,4,cooperate
 Generation: 17
-19,50,defect
-0,40,defect
+38,4,cooperate
+18,4,cooperate
 Generation: 17
-30,37,cooperate
-43,50,defect
+14,4,cooperate
+34,4,cooperate
 Generation: 17
-16,38,defect
-2,36,cooperate
+12,4,cooperate
+7,4,cooperate
 Generation: 17
-1,40,defect
-5,49,defect
+41,4,defect
+39,4,defect
 Generation: 18
-29,56,defect
-38,53,defect
+7,4,defect
+24,4,defect
 Generation: 18
-14,38,defect
-7,51,defect
+6,4,defect
+13,4,cooperate
 Generation: 18
-9,41,defect
-45,47,defect
+46,4,cooperate
+21,4,defect
 Generation: 18
-27,53,defect
-22,43,cooperate
+26,4,defect
+9,4,defect
 Generation: 18
-15,53,cooperate
-20,39,cooperate
+5,4,defect
+2,4,cooperate
 Generation: 18
-30,37,cooperate
-32,42,cooperate
+3,4,cooperate
+36,4,cooperate
 Generation: 18
-36,41,cooperate
-13,49,cooperate
+44,4,cooperate
+4,4,cooperate
 Generation: 18
-33,58,cooperate
-28,45,cooperate
+42,4,cooperate
+39,4,cooperate
 Generation: 18
-10,40,cooperate
-8,39,cooperate
+43,4,cooperate
+25,4,defect
 Generation: 18
-39,51,defect
-31,47,defect
+41,4,defect
+37,4,defect
 Generation: 18
-42,38,cooperate
-35,51,cooperate
+12,4,defect
+8,4,defect
 Generation: 18
-43,55,defect
-23,51,defect
+31,4,cooperate
+1,4,defect
 Generation: 18
-2,36,cooperate
-37,45,defect
+48,4,cooperate
+38,4,cooperate
 Generation: 18
-46,46,defect
-44,43,defect
+33,4,cooperate
+19,4,cooperate
 Generation: 18
-17,50,cooperate
-16,43,cooperate
+47,4,cooperate
+15,4,cooperate
 Generation: 18
-0,42,cooperate
-11,41,defect
+35,4,cooperate
+20,4,cooperate
 Generation: 18
-34,42,defect
-12,51,cooperate
+32,4,cooperate
+29,4,cooperate
 Generation: 18
-41,54,cooperate
-47,47,cooperate
+16,4,defect
+30,4,defect
 Generation: 18
-25,54,defect
-4,36,cooperate
+17,4,defect
+0,4,defect
 Generation: 18
-49,45,cooperate
-1,42,defect
+23,4,cooperate
+22,4,cooperate
 Generation: 18
-3,45,defect
-19,52,defect
+28,4,defect
+49,4,defect
 Generation: 18
-26,36,defect
-5,51,defect
+14,4,defect
+18,4,cooperate
 Generation: 18
-48,47,defect
-40,50,defect
+11,4,cooperate
+27,4,defect
 Generation: 18
-21,39,defect
-18,40,defect
+34,4,defect
+10,4,defect
 Generation: 18
-24,48,defect
-6,33,defect
+45,4,defect
+40,4,defect
 Generation: 19
-46,48,defect
-32,45,defect
+10,4,defect
+7,4,defect
 Generation: 19
-41,57,defect
-3,47,defect
+6,4,defect
+39,4,defect
 Generation: 19
-5,53,defect
-22,43,defect
+16,4,defect
+15,4,defect
 Generation: 19
-31,49,defect
-20,42,defect
+8,4,defect
+45,4,defect
 Generation: 19
-15,56,defect
-44,45,defect
+44,4,defect
+20,4,defect
 Generation: 19
-11,46,defect
-16,46,defect
+11,4,defect
+17,4,defect
 Generation: 19
-18,42,defect
-40,52,defect
+46,4,defect
+5,4,defect
 Generation: 19
-26,38,defect
-42,41,defect
+42,4,cooperate
+38,4,cooperate
 Generation: 19
-43,57,cooperate
-1,47,defect
+34,4,cooperate
+43,4,cooperate
 Generation: 19
-34,47,defect
-27,58,defect
+37,4,cooperate
+13,4,defect
 Generation: 19
-25,59,defect
-38,55,defect
+18,4,cooperate
+33,4,cooperate
 Generation: 19
-49,45,defect
-6,35,cooperate
+24,4,cooperate
+41,4,defect
 Generation: 19
-36,44,cooperate
-21,41,defect
+32,4,defect
+4,4,defect
 Generation: 19
-17,53,defect
-28,48,defect
+26,4,defect
+0,4,defect
 Generation: 19
-4,36,cooperate
-23,53,defect
+2,4,cooperate
+47,4,defect
 Generation: 19
-45,49,defect
-2,36,cooperate
+19,4,defect
+48,4,defect
 Generation: 19
-19,54,defect
-30,40,cooperate
+31,4,defect
+12,4,defect
 Generation: 19
-33,61,defect
-24,50,defect
+23,4,defect
+21,4,defect
 Generation: 19
-29,58,defect
-0,42,defect
+27,4,defect
+35,4,defect
 Generation: 19
-10,43,defect
-13,52,defect
+14,4,defect
+36,4,defect
 Generation: 19
-9,43,defect
-37,50,cooperate
+3,4,defect
+40,4,defect
 Generation: 19
-12,51,defect
-39,53,cooperate
+28,4,defect
+9,4,defect
 Generation: 19
-47,50,cooperate
-35,54,cooperate
+25,4,cooperate
+49,4,defect
 Generation: 19
-48,49,defect
-14,40,defect
+30,4,defect
+29,4,cooperate
 Generation: 19
-7,53,defect
-8,42,cooperate
+1,4,defect
+22,4,defect
 Generation: 20
-26,40,cooperate
-41,59,cooperate
+20,4,defect
+19,4,defect
 Generation: 20
-4,36,defect
-9,48,defect
+37,4,defect
+32,4,defect
 Generation: 20
-25,61,cooperate
-11,48,defect
+13,4,cooperate
+14,4,cooperate
 Generation: 20
-0,44,defect
-49,50,defect
+12,4,cooperate
+30,4,defect
 Generation: 20
-15,58,defect
-28,50,defect
+39,4,defect
+34,4,defect
 Generation: 20
-16,48,defect
-47,53,defect
+5,4,defect
+38,4,defect
 Generation: 20
-17,55,defect
-31,51,defect
+44,4,defect
+6,4,defect
 Generation: 20
-12,56,defect
-33,63,defect
+42,4,cooperate
+10,4,cooperate
 Generation: 20
-30,40,defect
-48,51,defect
+15,4,cooperate
+29,4,cooperate
 Generation: 20
-46,50,defect
-7,58,defect
+1,4,defect
+4,4,defect
 Generation: 20
-40,54,defect
-10,45,defect
+45,4,defect
+41,4,defect
 Generation: 20
-14,42,defect
-20,44,defect
+9,4,defect
+22,4,defect
 Generation: 20
-6,35,defect
-24,52,defect
+47,4,defect
+2,4,cooperate
 Generation: 20
-36,44,defect
-22,45,defect
+36,4,cooperate
+16,4,defect
 Generation: 20
-42,43,defect
-45,54,defect
+49,4,defect
+35,4,defect
 Generation: 20
-35,57,defect
-2,36,defect
+23,4,defect
+43,4,defect
 Generation: 20
-29,60,cooperate
-38,57,cooperate
+48,4,cooperate
+18,4,cooperate
 Generation: 20
-43,57,defect
-32,47,defect
+25,4,defect
+8,4,defect
 Generation: 20
-27,60,defect
-34,49,defect
+31,4,cooperate
+40,4,cooperate
 Generation: 20
-13,54,defect
-5,55,defect
+7,4,cooperate
+11,4,cooperate
 Generation: 20
-44,47,defect
-8,42,defect
+26,4,defect
+0,4,defect
 Generation: 20
-23,58,defect
-21,46,defect
+46,4,cooperate
+3,4,cooperate
 Generation: 20
-37,50,defect
-39,53,defect
+27,4,cooperate
+17,4,cooperate
 Generation: 20
-1,52,defect
-18,44,defect
+28,4,cooperate
+24,4,cooperate
 Generation: 20
-3,49,defect
-19,59,defect
+21,4,cooperate
+33,4,cooperate
 Generation: 21
-49,52,defect
-18,46,cooperate
+44,4,cooperate
+37,4,cooperate
 Generation: 21
-17,57,defect
-20,46,defect
+20,4,cooperate
+29,4,defect
 Generation: 21
-40,56,cooperate
-45,56,cooperate
+45,4,defect
+33,4,defect
 Generation: 21
-42,45,defect
-36,46,defect
+1,4,cooperate
+18,4,cooperate
 Generation: 21
-5,57,defect
-30,42,defect
+46,4,cooperate
+34,4,cooperate
 Generation: 21
-7,60,defect
-3,51,defect
+23,4,defect
+13,4,defect
 Generation: 21
-29,63,defect
-12,58,cooperate
+49,4,defect
+21,4,cooperate
 Generation: 21
-46,52,cooperate
-11,53,cooperate
+47,4,defect
+43,4,defect
 Generation: 21
-28,52,cooperate
-32,49,cooperate
+40,4,defect
+3,4,defect
 Generation: 21
-26,43,cooperate
-1,54,defect
+6,4,defect
+32,4,defect
 Generation: 21
-37,52,defect
-4,38,cooperate
+2,4,defect
+36,4,defect
 Generation: 21
-16,50,cooperate
-38,60,cooperate
+5,4,defect
+17,4,defect
 Generation: 21
-8,44,defect
-13,56,defect
+30,4,defect
+7,4,cooperate
 Generation: 21
-22,47,defect
-48,53,cooperate
+25,4,cooperate
+35,4,cooperate
 Generation: 21
-31,53,cooperate
-47,55,cooperate
+31,4,cooperate
+14,4,cooperate
 Generation: 21
-34,51,cooperate
-39,55,cooperate
+27,4,defect
+9,4,defect
 Generation: 21
-41,62,defect
-6,37,defect
+28,4,defect
+19,4,defect
 Generation: 21
-10,47,defect
-25,61,cooperate
+12,4,defect
+39,4,defect
 Generation: 21
-14,44,cooperate
-19,61,defect
+10,4,defect
+24,4,defect
 Generation: 21
-0,46,defect
-2,38,cooperate
+48,4,defect
+41,4,defect
 Generation: 21
-23,60,defect
-27,62,defect
+22,4,defect
+38,4,defect
 Generation: 21
-35,59,defect
-24,54,defect
+16,4,defect
+11,4,defect
 Generation: 21
-9,50,defect
-33,65,defect
+4,4,defect
+0,4,defect
 Generation: 21
-21,48,defect
-15,60,defect
+26,4,defect
+42,4,defect
 Generation: 21
-43,59,defect
-44,49,defect
+8,4,defect
+15,4,defect
 Generation: 22
-26,43,cooperate
-41,64,defect
+10,4,defect
+42,4,defect
 Generation: 22
-33,67,defect
-1,59,cooperate
+11,4,defect
+6,4,defect
 Generation: 22
-20,48,cooperate
-24,56,defect
+30,4,cooperate
+40,4,cooperate
 Generation: 22
-5,59,defect
-21,50,defect
+7,4,defect
+47,4,defect
 Generation: 22
-8,46,defect
-7,62,defect
+8,4,defect
+22,4,defect
 Generation: 22
-42,47,defect
-40,59,cooperate
+5,4,defect
+34,4,defect
 Generation: 22
-18,46,cooperate
-15,62,cooperate
+21,4,cooperate
+16,4,cooperate
 Generation: 22
-12,58,defect
-46,55,defect
+15,4,cooperate
+32,4,cooperate
 Generation: 22
-29,68,defect
-36,48,defect
+45,4,cooperate
+44,4,cooperate
 Generation: 22
-9,52,defect
-11,56,cooperate
+0,4,cooperate
+13,4,defect
 Generation: 22
-30,44,cooperate
-10,52,cooperate
+36,4,defect
+9,4,defect
 Generation: 22
-37,57,cooperate
-25,61,cooperate
+20,4,defect
+23,4,defect
 Generation: 22
-48,53,defect
-49,57,defect
+17,4,defect
+49,4,cooperate
 Generation: 22
-13,58,defect
-43,61,defect
+35,4,cooperate
+12,4,cooperate
 Generation: 22
-22,52,defect
-44,51,defect
+4,4,cooperate
+39,4,cooperate
 Generation: 22
-32,52,defect
-35,61,defect
+19,4,cooperate
+29,4,defect
 Generation: 22
-27,64,defect
-14,44,defect
+48,4,defect
+14,4,defect
 Generation: 22
-23,62,defect
-47,58,defect
+37,4,defect
+24,4,defect
 Generation: 22
-17,59,defect
-16,53,defect
+41,4,defect
+1,4,cooperate
 Generation: 22
-6,39,defect
-45,59,defect
+43,4,cooperate
+27,4,defect
 Generation: 22
-3,53,defect
-39,58,cooperate
+25,4,cooperate
+28,4,cooperate
 Generation: 22
-2,38,cooperate
-0,51,cooperate
+3,4,cooperate
+2,4,cooperate
 Generation: 22
-38,63,cooperate
-28,55,cooperate
+31,4,defect
+18,4,cooperate
 Generation: 22
-19,66,defect
-31,56,defect
+46,4,cooperate
+38,4,cooperate
 Generation: 22
-4,38,defect
-34,54,defect
+33,4,cooperate
+26,4,defect
 Generation: 23
-46,57,defect
-11,56,cooperate
+29,4,defect
+19,4,defect
 Generation: 23
-24,61,cooperate
-40,59,cooperate
+41,4,defect
+31,4,cooperate
 Generation: 23
-28,58,cooperate
-22,54,cooperate
+45,4,cooperate
+21,4,defect
 Generation: 23
-8,48,defect
-48,55,defect
+35,4,defect
+1,4,defect
 Generation: 23
-33,72,defect
-18,49,defect
+10,4,defect
+28,4,cooperate
 Generation: 23
-13,60,defect
-25,64,defect
+34,4,cooperate
+11,4,cooperate
 Generation: 23
-30,47,defect
-39,58,defect
+9,4,cooperate
+37,4,cooperate
 Generation: 23
-49,59,defect
-27,66,defect
+8,4,cooperate
+26,4,defect
 Generation: 23
-31,58,defect
-23,64,cooperate
+12,4,defect
+46,4,defect
 Generation: 23
-44,53,cooperate
-34,56,cooperate
+4,4,defect
+3,4,defect
 Generation: 23
-14,46,cooperate
-45,61,cooperate
+16,4,cooperate
+32,4,cooperate
 Generation: 23
-5,61,cooperate
-16,55,cooperate
+36,4,cooperate
+18,4,cooperate
 Generation: 23
-12,60,defect
-26,43,defect
+38,4,cooperate
+17,4,cooperate
 Generation: 23
-3,58,defect
-4,40,defect
+49,4,defect
+33,4,defect
 Generation: 23
-2,41,cooperate
-32,54,cooperate
+40,4,defect
+44,4,defect
 Generation: 23
-42,52,cooperate
-9,57,cooperate
+6,4,defect
+20,4,defect
 Generation: 23
-7,64,cooperate
-29,70,defect
+39,4,defect
+23,4,defect
 Generation: 23
-41,69,defect
-6,41,defect
+22,4,defect
+42,4,cooperate
 Generation: 23
-15,65,defect
-35,63,defect
+7,4,cooperate
+25,4,defect
 Generation: 23
-0,54,defect
-17,61,defect
+27,4,cooperate
+30,4,defect
 Generation: 23
-36,50,defect
-38,66,defect
+15,4,defect
+5,4,defect
 Generation: 23
-43,63,cooperate
-10,55,cooperate
+2,4,defect
+14,4,defect
 Generation: 23
-20,48,cooperate
-47,60,cooperate
+47,4,defect
+0,4,defect
 Generation: 23
-37,60,defect
-21,52,defect
+13,4,defect
+48,4,defect
 Generation: 23
-1,59,cooperate
-19,68,cooperate
+24,4,defect
+43,4,defect
 Generation: 24
-4,42,defect
-14,49,defect
+3,4,defect
+0,4,defect
 Generation: 24
-49,61,defect
-24,64,defect
+43,4,defect
+45,4,defect
 Generation: 24
-12,62,defect
-34,59,defect
+23,4,defect
+18,4,cooperate
 Generation: 24
-13,62,defect
-16,58,defect
+1,4,defect
+47,4,cooperate
 Generation: 24
-35,65,defect
-10,58,defect
+10,4,cooperate
+44,4,cooperate
 Generation: 24
-20,51,defect
-21,54,defect
+13,4,defect
+5,4,defect
 Generation: 24
-39,60,defect
-1,62,cooperate
+39,4,defect
+42,4,cooperate
 Generation: 24
-28,61,cooperate
-22,57,defect
+41,4,defect
+40,4,defect
 Generation: 24
-48,57,defect
-15,67,defect
+26,4,defect
+21,4,defect
 Generation: 24
-33,74,cooperate
-2,44,defect
+20,4,defect
+12,4,defect
 Generation: 24
-18,51,defect
-37,62,defect
+49,4,defect
+27,4,defect
 Generation: 24
-47,63,defect
-41,71,defect
+30,4,defect
+28,4,defect
 Generation: 24
-11,56,defect
-32,57,defect
+11,4,defect
+24,4,defect
 Generation: 24
-7,64,defect
-5,64,defect
+22,4,defect
+46,4,defect
 Generation: 24
-42,55,cooperate
-45,64,cooperate
+38,4,defect
+29,4,cooperate
 Generation: 24
-31,63,cooperate
-46,62,cooperate
+37,4,cooperate
+35,4,cooperate
 Generation: 24
-25,66,defect
-44,56,defect
+16,4,cooperate
+34,4,cooperate
 Generation: 24
-30,49,defect
-23,64,cooperate
+19,4,cooperate
+4,4,cooperate
 Generation: 24
-38,68,cooperate
-26,45,cooperate
+9,4,cooperate
+6,4,cooperate
 Generation: 24
-36,52,cooperate
-9,60,cooperate
+36,4,cooperate
+2,4,defect
 Generation: 24
-19,71,defect
-43,66,cooperate
+8,4,defect
+7,4,defect
 Generation: 24
-3,60,cooperate
-0,56,cooperate
+48,4,cooperate
+15,4,cooperate
 Generation: 24
-8,50,defect
-29,75,cooperate
+33,4,cooperate
+25,4,defect
 Generation: 24
-40,62,defect
-17,63,defect
+17,4,defect
+32,4,defect
 Generation: 24
-6,43,defect
-27,68,defect
+14,4,defect
+31,4,cooperate
 Generation: 25
-24,66,cooperate
-32,59,cooperate
+1,4,defect
+5,4,defect
 Generation: 25
-35,67,cooperate
-5,66,cooperate
+9,4,defect
+32,4,defect
 Generation: 25
-45,67,cooperate
-31,66,cooperate
+12,4,defect
+4,4,defect
 Generation: 25
-41,73,cooperate
-16,60,cooperate
+31,4,cooperate
+39,4,cooperate
 Generation: 25
-46,65,cooperate
-15,69,cooperate
+37,4,cooperate
+21,4,defect
 Generation: 25
-25,68,cooperate
-13,64,cooperate
+3,4,defect
+25,4,defect
 Generation: 25
-14,51,cooperate
-6,45,defect
+47,4,cooperate
+42,4,cooperate
 Generation: 25
-8,55,defect
-38,71,defect
+11,4,cooperate
+23,4,defect
 Generation: 25
-20,53,defect
-2,49,cooperate
+33,4,defect
+16,4,cooperate
 Generation: 25
-22,62,defect
-12,64,defect
+15,4,cooperate
+34,4,cooperate
 Generation: 25
-23,64,defect
-44,58,cooperate
+45,4,cooperate
+29,4,cooperate
 Generation: 25
-21,56,cooperate
-39,65,cooperate
+40,4,cooperate
+20,4,cooperate
 Generation: 25
-17,65,cooperate
-26,48,cooperate
+48,4,cooperate
+36,4,cooperate
 Generation: 25
-27,70,cooperate
-10,60,cooperate
+19,4,cooperate
+43,4,cooperate
 Generation: 25
-18,53,defect
-42,58,defect
+38,4,cooperate
+49,4,defect
 Generation: 25
-0,59,defect
-36,55,defect
+35,4,defect
+28,4,defect
 Generation: 25
-37,64,defect
-28,61,defect
+18,4,defect
+0,4,defect
 Generation: 25
-30,54,cooperate
-40,64,defect
+30,4,cooperate
+46,4,defect
 Generation: 25
-47,65,defect
-33,74,defect
+14,4,defect
+41,4,defect
 Generation: 25
-34,61,defect
-49,63,defect
+7,4,defect
+17,4,defect
 Generation: 25
-19,76,cooperate
-1,62,defect
+13,4,defect
+10,4,defect
 Generation: 25
-7,66,defect
-3,63,defect
+27,4,cooperate
+26,4,defect
 Generation: 25
-48,59,defect
-43,66,defect
+8,4,defect
+22,4,defect
 Generation: 25
-9,63,defect
-4,44,defect
+24,4,defect
+44,4,defect
 Generation: 25
-11,58,cooperate
-29,75,cooperate
+2,4,cooperate
+6,4,cooperate
 Generation: 26
-23,69,cooperate
-5,69,cooperate
+13,4,defect
+42,4,defect
 Generation: 26
-15,72,cooperate
-26,51,cooperate
+33,4,defect
+43,4,defect
 Generation: 26
-20,58,cooperate
-24,69,defect
+1,4,defect
+6,4,defect
 Generation: 26
-38,73,defect
-11,61,defect
+8,4,defect
+30,4,defect
 Generation: 26
-47,67,defect
-13,67,defect
+34,4,defect
+39,4,defect
 Generation: 26
-30,54,cooperate
-25,71,cooperate
+40,4,defect
+9,4,defect
 Generation: 26
-34,63,cooperate
-28,63,cooperate
+26,4,cooperate
+36,4,cooperate
 Generation: 26
-16,63,cooperate
-21,59,defect
+35,4,cooperate
+48,4,cooperate
 Generation: 26
-14,51,defect
-35,70,defect
+23,4,defect
+47,4,defect
 Generation: 26
-0,61,defect
-27,73,defect
+21,4,defect
+45,4,defect
 Generation: 26
-18,55,cooperate
-32,62,cooperate
+37,4,defect
+32,4,defect
 Generation: 26
-8,57,defect
-6,50,defect
+3,4,defect
+0,4,defect
 Generation: 26
-1,67,defect
-45,70,defect
+49,4,defect
+5,4,defect
 Generation: 26
-22,64,defect
-7,68,defect
+10,4,defect
+11,4,defect
 Generation: 26
-39,68,cooperate
-41,76,defect
+16,4,defect
+7,4,defect
 Generation: 26
-4,46,defect
-44,58,defect
+28,4,cooperate
+46,4,defect
 Generation: 26
-49,65,defect
-36,57,defect
+17,4,defect
+15,4,defect
 Generation: 26
-3,65,defect
-12,66,defect
+31,4,cooperate
+12,4,cooperate
 Generation: 26
-2,49,defect
-43,68,defect
+27,4,defect
+38,4,defect
 Generation: 26
-9,65,defect
-31,69,defect
+18,4,cooperate
+25,4,defect
 Generation: 26
-10,63,defect
-40,69,cooperate
+14,4,defect
+22,4,defect
 Generation: 26
-17,68,cooperate
-46,68,cooperate
+2,4,cooperate
+41,4,defect
 Generation: 26
-19,76,cooperate
-42,60,defect
+19,4,defect
+44,4,defect
 Generation: 26
-29,78,cooperate
-33,76,defect
+20,4,defect
+29,4,defect
 Generation: 26
-37,66,cooperate
-48,61,cooperate
+4,4,defect
+24,4,defect
 Generation: 27
-4,48,defect
-36,59,defect
+49,4,defect
+30,4,defect
 Generation: 27
-44,60,defect
-6,52,cooperate
+23,4,defect
+16,4,defect
 Generation: 27
-45,72,cooperate
-26,54,cooperate
+18,4,defect
+24,4,defect
 Generation: 27
-48,64,defect
-39,68,cooperate
+3,4,defect
+17,4,defect
 Generation: 27
-23,72,cooperate
-32,65,cooperate
+28,4,defect
+46,4,defect
 Generation: 27
-0,63,cooperate
-17,71,defect
+21,4,defect
+15,4,defect
 Generation: 27
-15,75,defect
-7,70,defect
+48,4,cooperate
+44,4,cooperate
 Generation: 27
-40,69,cooperate
-42,65,defect
+7,4,defect
+25,4,defect
 Generation: 27
-25,74,cooperate
-11,63,defect
+45,4,defect
+47,4,defect
 Generation: 27
-33,81,defect
-41,81,defect
+9,4,defect
+32,4,defect
 Generation: 27
-14,53,defect
-46,71,defect
+10,4,defect
+2,4,cooperate
 Generation: 27
-43,70,defect
-31,71,defect
+43,4,cooperate
+37,4,cooperate
 Generation: 27
-49,67,defect
-22,66,defect
+36,4,cooperate
+19,4,cooperate
 Generation: 27
-47,69,defect
-28,66,defect
+6,4,cooperate
+0,4,cooperate
 Generation: 27
-10,68,defect
-37,69,defect
+26,4,cooperate
+8,4,cooperate
 Generation: 27
-30,57,cooperate
-35,72,cooperate
+20,4,cooperate
+41,4,defect
 Generation: 27
-16,63,cooperate
-38,75,cooperate
+4,4,defect
+13,4,cooperate
 Generation: 27
-9,67,cooperate
-18,58,cooperate
+33,4,cooperate
+31,4,cooperate
 Generation: 27
-29,78,defect
-21,64,defect
+12,4,cooperate
+14,4,cooperate
 Generation: 27
-3,67,defect
-34,66,defect
+35,4,cooperate
+34,4,cooperate
 Generation: 27
-8,59,defect
-27,75,defect
+27,4,defect
+11,4,defect
 Generation: 27
-5,72,defect
-12,68,defect
+22,4,defect
+38,4,defect
 Generation: 27
-20,58,defect
-24,74,defect
+5,4,defect
+40,4,defect
 Generation: 27
-1,69,cooperate
-13,69,cooperate
+39,4,defect
+1,4,cooperate
 Generation: 27
-19,76,cooperate
-2,51,cooperate
+29,4,defect
+42,4,defect
 Generation: 28
-7,72,cooperate
-22,68,defect
+9,4,defect
+45,4,defect
 Generation: 28
-17,76,defect
-14,55,defect
+47,4,defect
+27,4,defect
 Generation: 28
-20,60,defect
-2,54,cooperate
+12,4,defect
+49,4,defect
 Generation: 28
-21,66,defect
-40,69,cooperate
+8,4,defect
+39,4,defect
 Generation: 28
-29,80,defect
-24,76,cooperate
+29,4,defect
+0,4,defect
 Generation: 28
-13,72,cooperate
-0,63,cooperate
+26,4,defect
+3,4,defect
 Generation: 28
-10,70,cooperate
-16,66,cooperate
+46,4,cooperate
+15,4,cooperate
 Generation: 28
-28,68,cooperate
-1,72,defect
+35,4,cooperate
+2,4,cooperate
 Generation: 28
-27,77,defect
-33,83,defect
+1,4,cooperate
+6,4,cooperate
 Generation: 28
-43,72,defect
-34,68,defect
+10,4,cooperate
+5,4,cooperate
 Generation: 28
-35,75,defect
-9,70,defect
+42,4,cooperate
+16,4,defect
 Generation: 28
-31,73,defect
-15,77,defect
+23,4,defect
+36,4,defect
 Generation: 28
-47,71,defect
-32,68,defect
+48,4,cooperate
+40,4,cooperate
 Generation: 28
-49,69,defect
-48,69,defect
+41,4,cooperate
+37,4,cooperate
 Generation: 28
-6,52,defect
-45,75,defect
+11,4,cooperate
+22,4,cooperate
 Generation: 28
-46,73,defect
-18,61,cooperate
+20,4,cooperate
+24,4,cooperate
 Generation: 28
-4,50,defect
-23,75,defect
+14,4,cooperate
+38,4,cooperate
 Generation: 28
-26,57,defect
-30,60,defect
+30,4,defect
+18,4,cooperate
 Generation: 28
-36,61,defect
-8,61,defect
+28,4,cooperate
+43,4,cooperate
 Generation: 28
-42,70,defect
-11,68,defect
+31,4,cooperate
+19,4,cooperate
 Generation: 28
-39,68,cooperate
-25,74,defect
+25,4,defect
+44,4,defect
 Generation: 28
-5,74,defect
-41,83,defect
+17,4,defect
+32,4,defect
 Generation: 28
-44,65,defect
-3,69,defect
+7,4,defect
+33,4,defect
 Generation: 28
-12,70,defect
-38,78,defect
+21,4,defect
+13,4,cooperate
 Generation: 28
-37,71,cooperate
-19,79,cooperate
+4,4,cooperate
+34,4,cooperate
 Generation: 29
-27,79,cooperate
-30,62,cooperate
+19,4,cooperate
+38,4,cooperate
 Generation: 29
-9,72,cooperate
-48,71,defect
+3,4,cooperate
+5,4,cooperate
 Generation: 29
-42,72,defect
-19,82,cooperate
+22,4,cooperate
+7,4,cooperate
 Generation: 29
-29,85,defect
-46,78,defect
+9,4,cooperate
+18,4,cooperate
 Generation: 29
-39,68,cooperate
-25,79,defect
+36,4,cooperate
+20,4,cooperate
 Generation: 29
-12,72,cooperate
-17,78,defect
+10,4,cooperate
+23,4,defect
 Generation: 29
-40,69,cooperate
-34,70,cooperate
+8,4,defect
+31,4,defect
 Generation: 29
-41,85,defect
-3,71,defect
+28,4,defect
+33,4,defect
 Generation: 29
-7,72,defect
-16,69,defect
+37,4,defect
+43,4,defect
 Generation: 29
-31,75,defect
-24,76,cooperate
+11,4,defect
+30,4,cooperate
 Generation: 29
-13,75,cooperate
-5,76,cooperate
+15,4,cooperate
+46,4,defect
 Generation: 29
-22,73,defect
-32,70,defect
+24,4,defect
+12,4,defect
 Generation: 29
-26,59,defect
-18,61,defect
+27,4,cooperate
+48,4,cooperate
 Generation: 29
-47,73,defect
-36,63,defect
+42,4,defect
+21,4,defect
 Generation: 29
-45,77,defect
-11,70,defect
+32,4,defect
+41,4,cooperate
 Generation: 29
-37,74,cooperate
-10,73,cooperate
+49,4,cooperate
+14,4,cooperate
 Generation: 29
-21,71,defect
-38,80,defect
+45,4,cooperate
+6,4,cooperate
 Generation: 29
-15,79,defect
-8,63,cooperate
+39,4,cooperate
+0,4,cooperate
 Generation: 29
-2,54,defect
-28,68,defect
+25,4,cooperate
+34,4,cooperate
 Generation: 29
-49,71,defect
-6,54,defect
+17,4,cooperate
+26,4,defect
 Generation: 29
-33,85,defect
-44,67,defect
+16,4,cooperate
+44,4,cooperate
 Generation: 29
-14,57,defect
-4,52,cooperate
+4,4,cooperate
+40,4,cooperate
 Generation: 29
-20,65,cooperate
-23,77,defect
+1,4,defect
+35,4,defect
 Generation: 29
-1,77,defect
-0,66,defect
+13,4,cooperate
+2,4,cooperate
 Generation: 29
-43,74,defect
-35,77,defect
+29,4,cooperate
+47,4,defect
 Generation: 30
-32,72,defect
-12,72,cooperate
+37,4,defect
+19,4,defect
 Generation: 30
-31,80,cooperate
-4,52,defect
+15,4,defect
+43,4,defect
 Generation: 30
-27,82,defect
-15,84,defect
+42,4,cooperate
+4,4,cooperate
 Generation: 30
-13,78,defect
-41,87,cooperate
+46,4,defect
+9,4,defect
 Generation: 30
-33,87,cooperate
-9,72,cooperate
+32,4,defect
+12,4,defect
 Generation: 30
-14,62,cooperate
-20,65,cooperate
+10,4,defect
+44,4,defect
 Generation: 30
-46,80,cooperate
-18,63,defect
+26,4,cooperate
+1,4,defect
 Generation: 30
-40,72,cooperate
-38,82,cooperate
+25,4,cooperate
+13,4,cooperate
 Generation: 30
-19,82,cooperate
-7,74,cooperate
+36,4,cooperate
+6,4,cooperate
 Generation: 30
-35,79,cooperate
-5,79,cooperate
+17,4,cooperate
+34,4,cooperate
 Generation: 30
-1,79,cooperate
-37,77,defect
+29,4,defect
+8,4,defect
 Generation: 30
-0,68,defect
-3,73,defect
+16,4,cooperate
+2,4,cooperate
 Generation: 30
-8,63,defect
-24,76,defect
+39,4,cooperate
+11,4,cooperate
 Generation: 30
-30,65,defect
-23,82,defect
+27,4,defect
+33,4,defect
 Generation: 30
-25,84,cooperate
-34,73,cooperate
+45,4,defect
+38,4,defect
 Generation: 30
-36,65,cooperate
-39,68,cooperate
+40,4,defect
+0,4,defect
 Generation: 30
-11,72,defect
-2,56,cooperate
+22,4,defect
+3,4,defect
 Generation: 30
-26,61,defect
-45,79,defect
+28,4,defect
+7,4,cooperate
 Generation: 30
-17,83,defect
-47,75,defect
+41,4,cooperate
+20,4,cooperate
 Generation: 30
-44,69,cooperate
-43,76,defect
+30,4,defect
+47,4,cooperate
 Generation: 30
-49,73,defect
-42,77,defect
+31,4,defect
+49,4,defect
 Generation: 30
-21,73,defect
-28,70,defect
+48,4,defect
+21,4,cooperate
 Generation: 30
-22,75,defect
-16,71,defect
+35,4,cooperate
+24,4,cooperate
 Generation: 30
-10,76,defect
-48,76,defect
+18,4,cooperate
+23,4,defect
 Generation: 30
-29,87,defect
-6,56,defect
+5,4,defect
+14,4,defect
 Generation: 31
-40,75,defect
-10,78,defect
+47,4,cooperate
+25,4,cooperate
 Generation: 31
-32,77,defect
-44,69,defect
+22,4,cooperate
+15,4,cooperate
 Generation: 31
-41,87,cooperate
-25,87,defect
+7,4,cooperate
+33,4,cooperate
 Generation: 31
-3,75,defect
-0,70,defect
+9,4,cooperate
+4,4,cooperate
 Generation: 31
-29,89,defect
-8,65,cooperate
+26,4,cooperate
+24,4,cooperate
 Generation: 31
-31,80,cooperate
-9,75,cooperate
+43,4,cooperate
+0,4,cooperate
 Generation: 31
-13,83,cooperate
-18,68,cooperate
+32,4,cooperate
+10,4,cooperate
 Generation: 31
-17,85,cooperate
-19,85,defect
+23,4,defect
+3,4,defect
 Generation: 31
-11,77,defect
-24,78,defect
+31,4,cooperate
+14,4,cooperate
 Generation: 31
-45,81,defect
-21,75,defect
+8,4,cooperate
+36,4,cooperate
 Generation: 31
-7,77,defect
-49,75,defect
+28,4,defect
+41,4,cooperate
 Generation: 31
-5,82,defect
-33,90,defect
+20,4,cooperate
+35,4,cooperate
 Generation: 31
-36,68,defect
-35,82,defect
+6,4,cooperate
+18,4,cooperate
 Generation: 31
-30,67,defect
-4,57,defect
+17,4,cooperate
+29,4,defect
 Generation: 31
-15,86,defect
-1,79,defect
+21,4,defect
+19,4,defect
 Generation: 31
-14,65,defect
-2,56,defect
+39,4,defect
+44,4,defect
 Generation: 31
-47,77,defect
-46,80,defect
+2,4,cooperate
+1,4,cooperate
 Generation: 31
-12,72,defect
-22,77,defect
+30,4,cooperate
+42,4,defect
 Generation: 31
-20,68,defect
-48,78,defect
+49,4,cooperate
+46,4,defect
 Generation: 31
-42,79,defect
-6,58,defect
+11,4,defect
+37,4,defect
 Generation: 31
-34,76,defect
-43,81,defect
+16,4,cooperate
+34,4,cooperate
 Generation: 31
-38,85,defect
-39,71,cooperate
+27,4,defect
+40,4,defect
 Generation: 31
-28,72,cooperate
-23,84,defect
+38,4,defect
+13,4,defect
 Generation: 31
-37,82,defect
-27,84,defect
+12,4,defect
+45,4,defect
 Generation: 31
-26,63,defect
-16,73,defect
+5,4,defect
+48,4,cooperate
 Generation: 32
-3,77,defect
-33,92,defect
+0,4,cooperate
+20,4,cooperate
 Generation: 32
-31,83,defect
-25,92,defect
+28,4,defect
+6,4,defect
 Generation: 32
-42,81,defect
-22,79,cooperate
+12,4,defect
+49,4,cooperate
 Generation: 32
-37,84,cooperate
-18,71,defect
+5,4,cooperate
+43,4,cooperate
 Generation: 32
-8,65,defect
-44,71,cooperate
+39,4,cooperate
+9,4,cooperate
 Generation: 32
-36,70,cooperate
-12,74,defect
+26,4,defect
+17,4,defect
 Generation: 32
-47,79,defect
-23,89,cooperate
+16,4,defect
+38,4,defect
 Generation: 32
-6,60,defect
-43,83,defect
+44,4,defect
+45,4,defect
 Generation: 32
-29,94,defect
-40,77,cooperate
+11,4,defect
+29,4,defect
 Generation: 32
-1,81,cooperate
-45,83,cooperate
+8,4,defect
+48,4,defect
 Generation: 32
-24,80,cooperate
-5,84,cooperate
+7,4,cooperate
+35,4,cooperate
 Generation: 32
-10,80,cooperate
-13,86,cooperate
+4,4,cooperate
+3,4,cooperate
 Generation: 32
-14,67,cooperate
-34,78,cooperate
+21,4,cooperate
+34,4,cooperate
 Generation: 32
-30,69,defect
-4,59,defect
+2,4,cooperate
+42,4,defect
 Generation: 32
-11,79,defect
-9,78,defect
+40,4,defect
+33,4,defect
 Generation: 32
-41,87,cooperate
-48,80,defect
+10,4,defect
+14,4,defect
 Generation: 32
-0,72,defect
-28,72,defect
+30,4,cooperate
+41,4,defect
 Generation: 32
-27,86,defect
-38,90,defect
+22,4,defect
+46,4,cooperate
 Generation: 32
-49,77,defect
-2,58,defect
+24,4,cooperate
+31,4,defect
 Generation: 32
-17,85,defect
-7,79,defect
+15,4,defect
+36,4,defect
 Generation: 32
-15,88,defect
-46,82,defect
+25,4,cooperate
+1,4,cooperate
 Generation: 32
-20,70,defect
-32,79,defect
+32,4,cooperate
+13,4,defect
 Generation: 32
-21,77,defect
-39,71,defect
+19,4,defect
+47,4,defect
 Generation: 32
-19,90,defect
-16,75,defect
+23,4,defect
+18,4,cooperate
 Generation: 32
-26,65,defect
-35,84,defect
+37,4,cooperate
+27,4,defect
 Generation: 33
-27,88,defect
-8,70,defect
+5,4,defect
+40,4,defect
 Generation: 33
-47,84,defect
-31,85,defect
+33,4,defect
+44,4,defect
 Generation: 33
-2,60,cooperate
-16,77,cooperate
+14,4,defect
+10,4,defect
 Generation: 33
-49,79,cooperate
-6,62,defect
+21,4,cooperate
+36,4,cooperate
 Generation: 33
-37,84,cooperate
-7,81,cooperate
+28,4,defect
+43,4,defect
 Generation: 33
-19,92,defect
-33,94,defect
+38,4,defect
+9,4,defect
 Generation: 33
-43,85,defect
-38,92,defect
+22,4,defect
+27,4,defect
 Generation: 33
-40,77,defect
-3,79,defect
+13,4,defect
+30,4,defect
 Generation: 33
-36,70,defect
-4,61,defect
+34,4,defect
+29,4,cooperate
 Generation: 33
-29,99,cooperate
-15,90,cooperate
+17,4,cooperate
+15,4,cooperate
 Generation: 33
-45,86,cooperate
-39,73,defect
+31,4,defect
+16,4,defect
 Generation: 33
-30,71,cooperate
-35,86,cooperate
+12,4,defect
+41,4,cooperate
 Generation: 33
-41,87,defect
-14,70,defect
+7,4,cooperate
+20,4,cooperate
 Generation: 33
-5,87,defect
-18,76,defect
+47,4,defect
+46,4,defect
 Generation: 33
-21,79,defect
-32,81,defect
+39,4,defect
+24,4,defect
 Generation: 33
-12,79,defect
-13,89,defect
+18,4,cooperate
+45,4,cooperate
 Generation: 33
-24,83,defect
-22,79,cooperate
+37,4,cooperate
+49,4,defect
 Generation: 33
-23,89,cooperate
-17,87,defect
+42,4,defect
+35,4,defect
 Generation: 33
-46,84,defect
-34,81,defect
+11,4,defect
+2,4,defect
 Generation: 33
-1,84,defect
-26,67,defect
+0,4,defect
+3,4,defect
 Generation: 33
-20,72,defect
-9,80,defect
+6,4,defect
+8,4,defect
 Generation: 33
-42,86,defect
-10,83,defect
+32,4,defect
+1,4,defect
 Generation: 33
-48,85,defect
-0,74,defect
+26,4,defect
+25,4,cooperate
 Generation: 33
-28,74,defect
-11,81,cooperate
+48,4,defect
+23,4,defect
 Generation: 33
-44,71,defect
-25,94,defect
+19,4,defect
+4,4,defect
 Generation: 34
-13,91,defect
-17,92,defect
+34,4,defect
+2,4,cooperate
 Generation: 34
-14,72,defect
-25,96,defect
+13,4,cooperate
+43,4,cooperate
 Generation: 34
-29,102,cooperate
-9,82,cooperate
+0,4,cooperate
+32,4,cooperate
 Generation: 34
-28,79,cooperate
-4,63,defect
+39,4,cooperate
+49,4,defect
 Generation: 34
-43,87,cooperate
-35,89,cooperate
+12,4,defect
+40,4,defect
 Generation: 34
-20,74,cooperate
-24,88,defect
+24,4,defect
+36,4,defect
 Generation: 34
-42,88,defect
-26,69,defect
+30,4,defect
+37,4,defect
 Generation: 34
-34,83,defect
-30,74,cooperate
+1,4,defect
+21,4,cooperate
 Generation: 34
-16,80,cooperate
-32,83,cooperate
+9,4,cooperate
+27,4,defect
 Generation: 34
-0,76,cooperate
-11,81,cooperate
+26,4,defect
+29,4,defect
 Generation: 34
-3,81,cooperate
-45,86,cooperate
+44,4,defect
+38,4,defect
 Generation: 34
-12,81,defect
-22,79,cooperate
+19,4,defect
+41,4,defect
 Generation: 34
-15,93,cooperate
-49,79,cooperate
+11,4,defect
+7,4,cooperate
 Generation: 34
-38,94,cooperate
-27,90,cooperate
+28,4,defect
+6,4,defect
 Generation: 34
-41,89,defect
-36,72,defect
+17,4,defect
+23,4,defect
 Generation: 34
-31,87,defect
-10,85,defect
+15,4,defect
+18,4,defect
 Generation: 34
-18,78,cooperate
-37,87,cooperate
+3,4,defect
+22,4,defect
 Generation: 34
-48,87,cooperate
-8,72,defect
+33,4,defect
+45,4,defect
 Generation: 34
-19,94,cooperate
-23,89,defect
+16,4,defect
+46,4,defect
 Generation: 34
-39,78,defect
-7,84,defect
+5,4,defect
+10,4,defect
 Generation: 34
-21,81,defect
-1,86,defect
+25,4,defect
+47,4,defect
 Generation: 34
-46,86,defect
-5,89,defect
+48,4,defect
+35,4,defect
 Generation: 34
-6,67,defect
-33,96,defect
+4,4,defect
+14,4,defect
 Generation: 34
-47,86,defect
-44,73,cooperate
+31,4,defect
+42,4,defect
 Generation: 34
-2,63,defect
-40,79,cooperate
+20,4,defect
+8,4,defect
 Generation: 35
-25,98,defect
-30,74,cooperate
+44,4,defect
+37,4,defect
 Generation: 35
-28,79,cooperate
-39,80,defect
+15,4,defect
+17,4,defect
 Generation: 35
-33,98,defect
-41,91,defect
+10,4,defect
+1,4,defect
 Generation: 35
-10,87,defect
-19,94,cooperate
+11,4,defect
+36,4,defect
 Generation: 35
-3,84,cooperate
-24,93,cooperate
+9,4,defect
+19,4,defect
 Generation: 35
-0,79,cooperate
-23,94,defect
+20,4,defect
+18,4,defect
 Generation: 35
-45,89,defect
-26,71,defect
+23,4,cooperate
+39,4,cooperate
 Generation: 35
-4,68,defect
-40,79,defect
+38,4,cooperate
+0,4,cooperate
 Generation: 35
-44,73,defect
-46,88,defect
+25,4,defect
+33,4,defect
 Generation: 35
-36,74,defect
-48,87,defect
+8,4,defect
+22,4,defect
 Generation: 35
-32,86,defect
-37,90,cooperate
+26,4,defect
+2,4,defect
 Generation: 35
-35,92,cooperate
-15,96,cooperate
+7,4,defect
+12,4,defect
 Generation: 35
-5,91,cooperate
-6,69,defect
+5,4,defect
+45,4,defect
 Generation: 35
-21,83,defect
-12,86,defect
+48,4,defect
+28,4,defect
 Generation: 35
-27,93,defect
-38,97,defect
+24,4,defect
+14,4,defect
 Generation: 35
-43,90,defect
-42,90,cooperate
+13,4,cooperate
+27,4,defect
 Generation: 35
-17,94,cooperate
-14,74,cooperate
+3,4,defect
+35,4,defect
 Generation: 35
-29,105,defect
-11,84,defect
+29,4,defect
+6,4,defect
 Generation: 35
-18,81,cooperate
-31,89,cooperate
+30,4,defect
+21,4,cooperate
 Generation: 35
-16,83,cooperate
-8,77,cooperate
+4,4,cooperate
+16,4,defect
 Generation: 35
-20,74,cooperate
-9,85,cooperate
+49,4,cooperate
+47,4,defect
 Generation: 35
-47,91,cooperate
-7,86,cooperate
+32,4,defect
+43,4,defect
 Generation: 35
-49,82,cooperate
-2,68,defect
+41,4,defect
+34,4,defect
 Generation: 35
-34,88,defect
-22,79,cooperate
+40,4,defect
+46,4,defect
 Generation: 35
-13,93,cooperate
-1,88,cooperate
+31,4,defect
+42,4,defect
 Generation: 36
-11,86,defect
-22,79,cooperate
+49,4,defect
+24,4,defect
 Generation: 36
-6,74,defect
-31,92,defect
+43,4,defect
+27,4,defect
 Generation: 36
-46,90,defect
-39,85,cooperate
+47,4,defect
+20,4,defect
 Generation: 36
-36,76,cooperate
-10,92,cooperate
+38,4,defect
+44,4,defect
 Generation: 36
-0,79,cooperate
-16,86,cooperate
+32,4,defect
+37,4,defect
 Generation: 36
-24,96,cooperate
-35,95,cooperate
+35,4,defect
+16,4,defect
 Generation: 36
-45,91,cooperate
-33,100,defect
+23,4,defect
+4,4,defect
 Generation: 36
-40,81,defect
-8,80,defect
+46,4,cooperate
+0,4,cooperate
 Generation: 36
-48,89,defect
-21,85,defect
+40,4,cooperate
+5,4,cooperate
 Generation: 36
-7,89,defect
-19,94,cooperate
+36,4,cooperate
+7,4,defect
 Generation: 36
-3,87,cooperate
-34,93,cooperate
+8,4,defect
+28,4,cooperate
 Generation: 36
-23,99,defect
-30,74,cooperate
+10,4,cooperate
+11,4,cooperate
 Generation: 36
-25,103,defect
-14,77,defect
+31,4,cooperate
+26,4,defect
 Generation: 36
-5,91,defect
-42,90,defect
+19,4,defect
+15,4,defect
 Generation: 36
-1,91,defect
-43,95,defect
+45,4,defect
+13,4,defect
 Generation: 36
-49,82,defect
-27,95,defect
+29,4,defect
+9,4,defect
 Generation: 36
-15,99,defect
-47,94,defect
+33,4,defect
+48,4,defect
 Generation: 36
-13,96,defect
-9,88,defect
+21,4,cooperate
+18,4,cooperate
 Generation: 36
-2,73,defect
-20,77,defect
+1,4,defect
+25,4,defect
 Generation: 36
-32,91,defect
-17,97,defect
+41,4,defect
+17,4,defect
 Generation: 36
-4,70,defect
-29,107,defect
+3,4,defect
+22,4,defect
 Generation: 36
-44,75,cooperate
-37,90,cooperate
+34,4,defect
+14,4,defect
 Generation: 36
-28,79,cooperate
-12,88,defect
+42,4,defect
+2,4,defect
 Generation: 36
-26,73,defect
-18,84,cooperate
+6,4,defect
+39,4,defect
 Generation: 36
-38,99,cooperate
-41,93,defect
+30,4,defect
+12,4,defect
 Generation: 37
-13,98,defect
-36,79,defect
+4,4,defect
+28,4,defect
 Generation: 37
-4,72,defect
-45,91,defect
+11,4,defect
+27,4,defect
 Generation: 37
-30,74,defect
-16,89,defect
+5,4,defect
+33,4,defect
 Generation: 37
-5,93,defect
-17,99,cooperate
+32,4,defect
+18,4,defect
 Generation: 37
-22,79,defect
-35,98,defect
+7,4,defect
+0,4,defect
 Generation: 37
-46,95,defect
-34,96,defect
+44,4,defect
+34,4,defect
 Generation: 37
-25,105,defect
-18,84,defect
+3,4,defect
+9,4,defect
 Generation: 37
-12,93,defect
-21,87,defect
+40,4,defect
+36,4,defect
 Generation: 37
-40,83,defect
-49,84,defect
+39,4,defect
+22,4,defect
 Generation: 37
-9,90,defect
-28,79,defect
+16,4,defect
+12,4,defect
 Generation: 37
-7,94,defect
-26,78,defect
+48,4,cooperate
+24,4,cooperate
 Generation: 37
-27,97,defect
-23,104,defect
+8,4,cooperate
+42,4,defect
 Generation: 37
-20,79,defect
-8,82,defect
+15,4,defect
+35,4,defect
 Generation: 37
-32,93,defect
-6,76,defect
+46,4,defect
+49,4,defect
 Generation: 37
-31,94,defect
-37,93,cooperate
+26,4,defect
+13,4,cooperate
 Generation: 37
-29,109,defect
-11,91,cooperate
+17,4,cooperate
+21,4,defect
 Generation: 37
-41,98,defect
-47,96,defect
+23,4,defect
+1,4,defect
 Generation: 37
-15,101,defect
-1,93,defect
+37,4,defect
+38,4,defect
 Generation: 37
-24,99,cooperate
-42,92,defect
+25,4,cooperate
+45,4,cooperate
 Generation: 37
-19,94,cooperate
-2,75,defect
+30,4,defect
+29,4,cooperate
 Generation: 37
-48,91,defect
-39,85,defect
+47,4,defect
+14,4,defect
 Generation: 37
-33,105,defect
-3,90,defect
+41,4,defect
+2,4,defect
 Generation: 37
-14,79,defect
-0,82,defect
+43,4,defect
+19,4,defect
 Generation: 37
-38,99,defect
-10,95,defect
+31,4,cooperate
+6,4,cooperate
 Generation: 37
-43,97,defect
-44,78,defect
+10,4,cooperate
+20,4,cooperate
 Generation: 38
-40,85,cooperate
-22,81,defect
+35,4,cooperate
+44,4,cooperate
 Generation: 38
-6,78,defect
-30,76,defect
+2,4,defect
+14,4,defect
 Generation: 38
-37,93,defect
-13,100,defect
+0,4,defect
+28,4,defect
 Generation: 38
-2,80,defect
-35,100,defect
+16,4,defect
+42,4,defect
 Generation: 38
-49,86,defect
-34,98,defect
+25,4,defect
+4,4,defect
 Generation: 38
-14,81,defect
-19,94,cooperate
+21,4,cooperate
+36,4,cooperate
 Generation: 38
-20,81,cooperate
-16,91,cooperate
+38,4,cooperate
+39,4,cooperate
 Generation: 38
-38,101,cooperate
-18,86,cooperate
+17,4,cooperate
+19,4,cooperate
 Generation: 38
-42,97,defect
-9,92,defect
+49,4,defect
+41,4,defect
 Generation: 38
-0,84,defect
-17,99,defect
+31,4,cooperate
+1,4,defect
 Generation: 38
-32,95,defect
-44,80,cooperate
+23,4,defect
+7,4,cooperate
 Generation: 38
-28,81,cooperate
-46,97,cooperate
+11,4,cooperate
+48,4,defect
 Generation: 38
-41,100,defect
-25,107,defect
+40,4,defect
+34,4,defect
 Generation: 38
-27,99,defect
-39,87,cooperate
+47,4,defect
+29,4,defect
 Generation: 38
-23,106,defect
-36,81,defect
+10,4,defect
+30,4,defect
 Generation: 38
-3,92,defect
-48,93,defect
+6,4,defect
+46,4,defect
 Generation: 38
-5,98,defect
-26,80,defect
+5,4,defect
+18,4,defect
 Generation: 38
-10,97,defect
-1,95,defect
+43,4,defect
+13,4,defect
 Generation: 38
-7,96,defect
-29,114,defect
+9,4,defect
+8,4,defect
 Generation: 38
-21,89,cooperate
-11,91,cooperate
+22,4,defect
+12,4,defect
 Generation: 38
-33,107,cooperate
-31,99,cooperate
+24,4,defect
+37,4,defect
 Generation: 38
-4,74,defect
-24,99,defect
+3,4,defect
+32,4,defect
 Generation: 38
-47,98,defect
-15,103,defect
+15,4,defect
+20,4,defect
 Generation: 38
-8,84,defect
-12,95,defect
+33,4,defect
+27,4,defect
 Generation: 38
-43,99,defect
-45,93,defect
+45,4,defect
+26,4,cooperate
 Generation: 39
-37,95,defect
-10,99,defect
+18,4,defect
+49,4,defect
 Generation: 39
-40,85,cooperate
-39,87,cooperate
+34,4,defect
+23,4,defect
 Generation: 39
-9,94,cooperate
-33,110,defect
+19,4,defect
+41,4,defect
 Generation: 39
-15,105,defect
-32,100,defect
+15,4,defect
+2,4,cooperate
 Generation: 39
-28,84,defect
-48,95,defect
+16,4,cooperate
+20,4,cooperate
 Generation: 39
-23,108,defect
-13,102,defect
+28,4,defect
+35,4,defect
 Generation: 39
-34,100,defect
-19,94,defect
+29,4,defect
+6,4,defect
 Generation: 39
-42,99,defect
-25,109,defect
+47,4,defect
+17,4,defect
 Generation: 39
-38,104,defect
-8,86,defect
+43,4,defect
+3,4,defect
 Generation: 39
-44,80,cooperate
-12,97,cooperate
+31,4,cooperate
+21,4,defect
 Generation: 39
-45,95,cooperate
-17,101,cooperate
+40,4,defect
+22,4,defect
 Generation: 39
-27,104,cooperate
-49,88,cooperate
+9,4,defect
+12,4,defect
 Generation: 39
-14,86,cooperate
-18,89,cooperate
+39,4,defect
+10,4,defect
 Generation: 39
-2,82,defect
-5,100,defect
+8,4,defect
+26,4,defect
 Generation: 39
-30,78,defect
-41,102,defect
+48,4,cooperate
+36,4,cooperate
 Generation: 39
-11,94,cooperate
-20,84,cooperate
+38,4,cooperate
+0,4,cooperate
 Generation: 39
-24,101,defect
-16,94,defect
+14,4,cooperate
+24,4,cooperate
 Generation: 39
-47,100,defect
-6,80,defect
+4,4,cooperate
+30,4,defect
 Generation: 39
-26,82,cooperate
-4,76,defect
+46,4,defect
+42,4,defect
 Generation: 39
-22,86,defect
-21,92,cooperate
+25,4,defect
+1,4,defect
 Generation: 39
-0,86,cooperate
-46,100,cooperate
+44,4,defect
+5,4,defect
 Generation: 39
-36,83,cooperate
-3,94,cooperate
+37,4,defect
+13,4,cooperate
 Generation: 39
-35,102,cooperate
-7,98,cooperate
+11,4,cooperate
+45,4,cooperate
 Generation: 39
-43,101,defect
-31,102,defect
+7,4,cooperate
+33,4,cooperate
 Generation: 39
-29,116,cooperate
-1,97,defect
+32,4,cooperate
+27,4,defect
 Generation: 40
-31,104,defect
-7,101,defect
+48,4,defect
+1,4,defect
 Generation: 40
-33,115,defect
-48,97,defect
+18,4,defect
+34,4,defect
 Generation: 40
-37,97,defect
-49,91,defect
+47,4,defect
+40,4,defect
 Generation: 40
-32,102,defect
-14,89,defect
+13,4,cooperate
+31,4,defect
 Generation: 40
-43,103,defect
-9,94,defect
+24,4,defect
+19,4,defect
 Generation: 40
-24,103,defect
-10,101,defect
+4,4,defect
+7,4,defect
 Generation: 40
-18,92,defect
-36,86,defect
+15,4,defect
+9,4,defect
 Generation: 40
-8,88,defect
-28,86,defect
+27,4,defect
+21,4,defect
 Generation: 40
-2,84,cooperate
-41,104,defect
+44,4,defect
+41,4,defect
 Generation: 40
-34,102,defect
-38,106,defect
+25,4,cooperate
+49,4,defect
 Generation: 40
-22,91,defect
-17,104,defect
+42,4,defect
+22,4,defect
 Generation: 40
-0,89,defect
-6,82,cooperate
+3,4,defect
+36,4,defect
 Generation: 40
-44,83,cooperate
-23,110,defect
+6,4,defect
+0,4,defect
 Generation: 40
-40,88,cooperate
-4,81,defect
+14,4,defect
+23,4,defect
 Generation: 40
-42,101,defect
-39,90,cooperate
+17,4,defect
+10,4,defect
 Generation: 40
-26,82,defect
-16,96,defect
+11,4,defect
+12,4,defect
 Generation: 40
-21,92,cooperate
-5,102,cooperate
+33,4,defect
+16,4,defect
 Generation: 40
-3,97,cooperate
-19,96,defect
+39,4,defect
+5,4,defect
 Generation: 40
-35,105,defect
-47,102,defect
+32,4,defect
+35,4,defect
 Generation: 40
-13,104,defect
-30,80,cooperate
+28,4,cooperate
+43,4,cooperate
 Generation: 40
-11,97,cooperate
-20,87,cooperate
+38,4,cooperate
+8,4,cooperate
 Generation: 40
-29,116,cooperate
-46,103,cooperate
+46,4,defect
+37,4,defect
 Generation: 40
-27,107,cooperate
-15,107,cooperate
+45,4,defect
+29,4,defect
 Generation: 40
-12,100,defect
-45,98,defect
+26,4,cooperate
+2,4,defect
 Generation: 40
-25,111,defect
-1,102,defect
+20,4,defect
+30,4,cooperate
 Generation: 41
-43,105,defect
-25,113,cooperate
+0,4,cooperate
+44,4,cooperate
 Generation: 41
-36,88,cooperate
-31,106,cooperate
+10,4,cooperate
+27,4,cooperate
 Generation: 41
-42,106,defect
-1,104,cooperate
+8,4,cooperate
+28,4,defect
 Generation: 41
-16,98,cooperate
-5,105,cooperate
+48,4,cooperate
+21,4,defect
 Generation: 41
-8,90,defect
-46,106,defect
+39,4,defect
+4,4,defect
 Generation: 41
-11,100,cooperate
-27,110,cooperate
+24,4,defect
+37,4,defect
 Generation: 41
-29,119,cooperate
-14,91,cooperate
+6,4,defect
+45,4,defect
 Generation: 41
-20,90,cooperate
-49,93,cooperate
+30,4,cooperate
+14,4,cooperate
 Generation: 41
-37,99,defect
-39,90,cooperate
+42,4,defect
+9,4,defect
 Generation: 41
-34,104,cooperate
-7,103,cooperate
+26,4,cooperate
+31,4,defect
 Generation: 41
-28,88,cooperate
-21,95,cooperate
+13,4,defect
+35,4,defect
 Generation: 41
-9,96,cooperate
-47,104,cooperate
+34,4,defect
+25,4,defect
 Generation: 41
-35,107,cooperate
-15,110,cooperate
+18,4,defect
+12,4,defect
 Generation: 41
-24,105,defect
-17,106,cooperate
+29,4,defect
+43,4,defect
 Generation: 41
-2,84,cooperate
-32,104,cooperate
+33,4,defect
+17,4,defect
 Generation: 41
-41,109,defect
-22,93,defect
+5,4,defect
+22,4,defect
 Generation: 41
-18,94,defect
-45,100,defect
+11,4,defect
+19,4,defect
 Generation: 41
-48,99,defect
-0,94,defect
+49,4,defect
+40,4,defect
 Generation: 41
-3,97,defect
-38,108,defect
+16,4,defect
+20,4,defect
 Generation: 41
-13,109,defect
-4,86,defect
+15,4,defect
+7,4,defect
 Generation: 41
-33,117,defect
-12,102,cooperate
+2,4,cooperate
+1,4,defect
 Generation: 41
-44,83,cooperate
-6,82,defect
+38,4,defect
+3,4,defect
 Generation: 41
-30,80,defect
-23,115,defect
+32,4,defect
+23,4,defect
 Generation: 41
-10,103,defect
-40,88,defect
+46,4,defect
+41,4,defect
 Generation: 41
-19,101,defect
-26,84,defect
+36,4,defect
+47,4,cooperate
 Generation: 42
-14,94,defect
-6,87,defect
+20,4,cooperate
+5,4,cooperate
 Generation: 42
-45,102,defect
-11,103,defect
+39,4,cooperate
+48,4,defect
 Generation: 42
-32,107,defect
-13,111,defect
+10,4,defect
+14,4,defect
 Generation: 42
-48,101,defect
-7,106,defect
+0,4,defect
+15,4,defect
 Generation: 42
-12,102,defect
-24,110,defect
+1,4,cooperate
+44,4,cooperate
 Generation: 42
-29,122,defect
-41,111,defect
+19,4,cooperate
+22,4,cooperate
 Generation: 42
-10,105,defect
-4,88,defect
+40,4,cooperate
+49,4,cooperate
 Generation: 42
-40,90,defect
-30,82,defect
+26,4,defect
+38,4,defect
 Generation: 42
-31,109,defect
-33,122,defect
+7,4,defect
+33,4,defect
 Generation: 42
-18,96,defect
-43,110,defect
+27,4,defect
+46,4,defect
 Generation: 42
-42,111,cooperate
-2,87,defect
+43,4,defect
+8,4,defect
 Generation: 42
-26,86,defect
-1,104,defect
+2,4,cooperate
+13,4,defect
 Generation: 42
-25,113,defect
-22,95,cooperate
+6,4,defect
+41,4,defect
 Generation: 42
-37,104,cooperate
-8,92,defect
+29,4,cooperate
+3,4,cooperate
 Generation: 42
-38,110,defect
-49,96,defect
+47,4,cooperate
+23,4,defect
 Generation: 42
-36,91,defect
-19,103,defect
+37,4,defect
+12,4,defect
 Generation: 42
-23,117,defect
-44,83,defect
+17,4,defect
+35,4,defect
 Generation: 42
-39,90,defect
-16,101,defect
+42,4,defect
+11,4,defect
 Generation: 42
-35,110,defect
-47,107,defect
+28,4,defect
+18,4,cooperate
 Generation: 42
-20,93,defect
-34,107,defect
+30,4,cooperate
+25,4,cooperate
 Generation: 42
-28,91,defect
-17,106,defect
+24,4,cooperate
+36,4,cooperate
 Generation: 42
-27,113,defect
-9,99,defect
+9,4,cooperate
+16,4,defect
 Generation: 42
-46,108,defect
-3,99,defect
+45,4,defect
+34,4,defect
 Generation: 42
-21,98,cooperate
-5,108,cooperate
+21,4,cooperate
+31,4,defect
 Generation: 42
-0,96,cooperate
-15,113,cooperate
+4,4,defect
+32,4,defect
 Generation: 43
-46,110,cooperate
-11,105,defect
+35,4,defect
+16,4,defect
 Generation: 43
-17,108,cooperate
-44,85,defect
+30,4,defect
+41,4,cooperate
 Generation: 43
-38,112,defect
-43,112,defect
+20,4,cooperate
+18,4,cooperate
 Generation: 43
-0,99,defect
-34,109,defect
+11,4,cooperate
+43,4,cooperate
 Generation: 43
-12,104,defect
-31,111,defect
+32,4,cooperate
+39,4,cooperate
 Generation: 43
-29,124,defect
-27,115,defect
+48,4,cooperate
+24,4,cooperate
 Generation: 43
-18,98,defect
-36,93,defect
+5,4,cooperate
+14,4,cooperate
 Generation: 43
-30,84,cooperate
-5,111,cooperate
+1,4,cooperate
+42,4,defect
 Generation: 43
-24,112,cooperate
-3,101,cooperate
+23,4,defect
+26,4,cooperate
 Generation: 43
-47,109,cooperate
-20,95,cooperate
+47,4,cooperate
+8,4,cooperate
 Generation: 43
-10,107,cooperate
-25,118,cooperate
+12,4,cooperate
+25,4,defect
 Generation: 43
-15,116,cooperate
-26,88,cooperate
+27,4,cooperate
+21,4,cooperate
 Generation: 43
-16,103,cooperate
-28,93,cooperate
+34,4,cooperate
+9,4,cooperate
 Generation: 43
-2,92,defect
-19,105,defect
+0,4,cooperate
+38,4,cooperate
 Generation: 43
-35,112,defect
-39,92,defect
+6,4,cooperate
+10,4,cooperate
 Generation: 43
-48,103,defect
-22,95,defect
+46,4,defect
+49,4,cooperate
 Generation: 43
-4,90,defect
-1,106,defect
+17,4,cooperate
+4,4,cooperate
 Generation: 43
-37,104,cooperate
-42,111,defect
+15,4,cooperate
+13,4,cooperate
 Generation: 43
-33,124,defect
-13,113,defect
+36,4,cooperate
+28,4,defect
 Generation: 43
-14,96,defect
-7,108,defect
+3,4,defect
+40,4,defect
 Generation: 43
-6,89,defect
-8,97,cooperate
+7,4,defect
+45,4,defect
 Generation: 43
-41,113,defect
-40,92,defect
+29,4,cooperate
+2,4,cooperate
 Generation: 43
-23,119,cooperate
-49,98,cooperate
+44,4,cooperate
+22,4,cooperate
 Generation: 43
-45,104,cooperate
-21,101,cooperate
+33,4,cooperate
+19,4,cooperate
 Generation: 43
-9,101,cooperate
-32,109,cooperate
+31,4,defect
+37,4,defect
 Generation: 44
-43,114,defect
-36,95,defect
+12,4,defect
+28,4,defect
 Generation: 44
-48,105,defect
-11,110,defect
+13,4,cooperate
+49,4,defect
 Generation: 44
-37,104,defect
-20,98,defect
+45,4,defect
+35,4,defect
 Generation: 44
-40,94,defect
-18,100,defect
+37,4,defect
+8,4,defect
 Generation: 44
-21,104,cooperate
-29,126,defect
+47,4,defect
+11,4,defect
 Generation: 44
-34,111,defect
-23,122,cooperate
+18,4,cooperate
+23,4,cooperate
 Generation: 44
-35,114,cooperate
-25,121,defect
+46,4,cooperate
+29,4,cooperate
 Generation: 44
-15,119,defect
-17,108,defect
+19,4,cooperate
+24,4,cooperate
 Generation: 44
-4,92,defect
-39,94,cooperate
+41,4,defect
+44,4,defect
 Generation: 44
-12,106,defect
-9,104,defect
+43,4,defect
+36,4,defect
 Generation: 44
-33,126,defect
-42,116,defect
+22,4,defect
+3,4,defect
 Generation: 44
-7,110,defect
-41,115,cooperate
+32,4,defect
+2,4,cooperate
 Generation: 44
-31,113,cooperate
-38,114,cooperate
+42,4,defect
+0,4,defect
 Generation: 44
-30,87,defect
-13,115,defect
+20,4,defect
+7,4,cooperate
 Generation: 44
-19,107,defect
-3,104,defect
+33,4,cooperate
+40,4,cooperate
 Generation: 44
-0,101,defect
-16,106,defect
+38,4,cooperate
+25,4,cooperate
 Generation: 44
-44,90,cooperate
-49,101,cooperate
+4,4,cooperate
+48,4,cooperate
 Generation: 44
-22,97,defect
-32,112,defect
+16,4,defect
+17,4,defect
 Generation: 44
-47,112,defect
-1,108,defect
+39,4,defect
+9,4,defect
 Generation: 44
-26,91,defect
-28,96,defect
+15,4,defect
+31,4,defect
 Generation: 44
-27,117,defect
-5,114,defect
+5,4,defect
+14,4,defect
 Generation: 44
-45,107,defect
-46,110,defect
+26,4,cooperate
+21,4,defect
 Generation: 44
-14,98,defect
-10,110,defect
+30,4,defect
+6,4,defect
 Generation: 44
-2,94,defect
-8,97,cooperate
+27,4,defect
+10,4,defect
 Generation: 44
-24,115,defect
-6,94,defect
+1,4,defect
+34,4,defect
 Generation: 45
-34,116,defect
-25,126,defect
+34,4,defect
+6,4,defect
 Generation: 45
-10,112,defect
-4,97,defect
+10,4,defect
+4,4,defect
 Generation: 45
-35,114,defect
-30,89,defect
+11,4,defect
+20,4,defect
 Generation: 45
-23,122,cooperate
-39,94,defect
+16,4,defect
+7,4,defect
 Generation: 45
-2,99,defect
-21,104,defect
+42,4,cooperate
+29,4,cooperate
 Generation: 45
-27,119,defect
-14,100,defect
+12,4,cooperate
+46,4,defect
 Generation: 45
-28,98,defect
-13,117,defect
+33,4,defect
+3,4,defect
 Generation: 45
-33,128,defect
-41,115,cooperate
+2,4,defect
+24,4,defect
 Generation: 45
-40,96,defect
-19,109,defect
+43,4,defect
+27,4,cooperate
 Generation: 45
-20,100,defect
-15,121,defect
+25,4,cooperate
+38,4,cooperate
 Generation: 45
-32,114,defect
-18,102,defect
+18,4,cooperate
+35,4,cooperate
 Generation: 45
-43,116,defect
-26,93,defect
+44,4,cooperate
+40,4,cooperate
 Generation: 45
-5,116,defect
-11,112,defect
+17,4,cooperate
+48,4,defect
 Generation: 45
-6,96,defect
-7,115,defect
+5,4,defect
+21,4,defect
 Generation: 45
-0,103,defect
-16,108,defect
+49,4,defect
+37,4,defect
 Generation: 45
-45,109,defect
-22,99,defect
+32,4,defect
+28,4,defect
 Generation: 45
-49,104,defect
-31,116,defect
+26,4,cooperate
+31,4,cooperate
 Generation: 45
-1,110,defect
-3,106,defect
+19,4,cooperate
+47,4,defect
 Generation: 45
-8,97,defect
-38,117,defect
+9,4,defect
+39,4,defect
 Generation: 45
-9,106,defect
-12,108,defect
+13,4,defect
+45,4,defect
 Generation: 45
-46,112,defect
-37,106,defect
+1,4,defect
+8,4,defect
 Generation: 45
-29,131,defect
-17,110,defect
+0,4,defect
+36,4,defect
 Generation: 45
-44,93,cooperate
-42,118,cooperate
+23,4,defect
+41,4,defect
 Generation: 45
-48,107,defect
-24,117,cooperate
+30,4,defect
+15,4,defect
 Generation: 45
-36,97,cooperate
-47,114,cooperate
+22,4,defect
+14,4,defect
 Generation: 46
-11,114,cooperate
-38,119,cooperate
+44,4,defect
+42,4,cooperate
 Generation: 46
-3,108,cooperate
-23,122,defect
+26,4,defect
+6,4,defect
 Generation: 46
-48,112,defect
-47,117,defect
+21,4,cooperate
+34,4,cooperate
 Generation: 46
-8,99,defect
-41,115,defect
+38,4,cooperate
+47,4,defect
 Generation: 46
-27,121,defect
-30,91,defect
+17,4,defect
+11,4,defect
 Generation: 46
-7,117,defect
-20,102,defect
+29,4,defect
+37,4,defect
 Generation: 46
-39,99,defect
-15,123,defect
+49,4,cooperate
+3,4,cooperate
 Generation: 46
-46,114,defect
-43,118,defect
+46,4,cooperate
+48,4,defect
 Generation: 46
-24,117,cooperate
-35,116,cooperate
+43,4,defect
+31,4,defect
 Generation: 46
-31,118,cooperate
-42,121,defect
+40,4,defect
+16,4,defect
 Generation: 46
-37,108,defect
-16,110,defect
+14,4,defect
+36,4,defect
 Generation: 46
-29,133,cooperate
-36,100,cooperate
+30,4,defect
+20,4,defect
 Generation: 46
-26,95,defect
-45,111,defect
+4,4,defect
+10,4,defect
 Generation: 46
-34,118,defect
-19,111,cooperate
+5,4,defect
+33,4,defect
 Generation: 46
-1,112,defect
-28,100,defect
+8,4,defect
+35,4,defect
 Generation: 46
-5,118,defect
-33,133,defect
+23,4,defect
+39,4,defect
 Generation: 46
-44,96,defect
-22,101,defect
+27,4,cooperate
+25,4,defect
 Generation: 46
-4,99,cooperate
-6,98,defect
+2,4,defect
+18,4,defect
 Generation: 46
-10,114,defect
-9,108,defect
+7,4,defect
+32,4,defect
 Generation: 46
-0,105,defect
-25,128,defect
+24,4,defect
+45,4,defect
 Generation: 46
-12,110,defect
-14,102,defect
+19,4,defect
+13,4,defect
 Generation: 46
-32,116,defect
-13,119,defect
+22,4,defect
+1,4,defect
 Generation: 46
-21,106,defect
-49,106,defect
+28,4,cooperate
+0,4,cooperate
 Generation: 46
-17,112,defect
-2,101,defect
+15,4,cooperate
+41,4,defect
 Generation: 46
-40,98,defect
-18,104,defect
+12,4,defect
+9,4,defect
 Generation: 47
-20,104,defect
-21,108,defect
+28,4,cooperate
+2,4,defect
 Generation: 47
-29,136,cooperate
-45,113,cooperate
+25,4,defect
+21,4,cooperate
 Generation: 47
-30,93,defect
-11,117,defect
+12,4,cooperate
+9,4,cooperate
 Generation: 47
-27,123,defect
-37,110,defect
+17,4,cooperate
+22,4,cooperate
 Generation: 47
-18,106,defect
-42,126,defect
+18,4,defect
+33,4,defect
 Generation: 47
-15,125,defect
-35,119,defect
+10,4,defect
+40,4,defect
 Generation: 47
-44,98,cooperate
-10,116,cooperate
+31,4,cooperate
+32,4,cooperate
 Generation: 47
-16,112,cooperate
-41,117,defect
+16,4,defect
+1,4,defect
 Generation: 47
-9,110,defect
-17,114,defect
+4,4,defect
+48,4,cooperate
 Generation: 47
-5,120,defect
-1,114,defect
+19,4,cooperate
+37,4,cooperate
 Generation: 47
-39,101,defect
-14,104,defect
+26,4,defect
+30,4,defect
 Generation: 47
-8,101,defect
-22,103,defect
+11,4,defect
+20,4,defect
 Generation: 47
-25,130,cooperate
-36,103,cooperate
+5,4,defect
+49,4,defect
 Generation: 47
-43,120,defect
-33,135,defect
+24,4,defect
+36,4,defect
 Generation: 47
-48,114,cooperate
-3,108,cooperate
+46,4,cooperate
+13,4,defect
 Generation: 47
-26,97,defect
-2,103,cooperate
+38,4,defect
+14,4,defect
 Generation: 47
-6,103,defect
-12,112,defect
+15,4,defect
+6,4,defect
 Generation: 47
-38,122,defect
-34,123,defect
+35,4,defect
+29,4,defect
 Generation: 47
-47,119,defect
-19,111,cooperate
+8,4,defect
+41,4,cooperate
 Generation: 47
-28,102,cooperate
-24,120,defect
+23,4,defect
+3,4,defect
 Generation: 47
-49,108,defect
-7,119,defect
+7,4,defect
+47,4,defect
 Generation: 47
-4,99,cooperate
-23,127,cooperate
+42,4,defect
+0,4,defect
 Generation: 47
-40,100,defect
-0,107,defect
+44,4,defect
+43,4,defect
 Generation: 47
-31,118,defect
-32,118,defect
+39,4,defect
+27,4,defect
 Generation: 47
-13,121,defect
-46,116,defect
+45,4,defect
+34,4,defect
 Generation: 48
-33,137,cooperate
-8,103,cooperate
+18,4,defect
+42,4,defect
 Generation: 48
-48,117,cooperate
-5,122,cooperate
+47,4,cooperate
+0,4,cooperate
 Generation: 48
-36,106,cooperate
-46,118,cooperate
+23,4,defect
+40,4,defect
 Generation: 48
-32,120,cooperate
-49,110,cooperate
+34,4,defect
+12,4,defect
 Generation: 48
-28,102,cooperate
-4,102,cooperate
+33,4,defect
+8,4,defect
 Generation: 48
-17,116,cooperate
-21,110,cooperate
+22,4,defect
+48,4,cooperate
 Generation: 48
-12,114,defect
-39,103,defect
+49,4,defect
+20,4,defect
 Generation: 48
-37,112,defect
-18,108,cooperate
+11,4,defect
+38,4,defect
 Generation: 48
-42,128,defect
-23,130,defect
+39,4,defect
+41,4,defect
 Generation: 48
-27,125,defect
-11,119,defect
+17,4,defect
+19,4,defect
 Generation: 48
-0,109,defect
-25,133,cooperate
+31,4,cooperate
+7,4,defect
 Generation: 48
-40,102,defect
-16,112,defect
+37,4,defect
+13,4,defect
 Generation: 48
-6,105,defect
-14,106,defect
+43,4,defect
+26,4,defect
 Generation: 48
-34,125,defect
-44,101,cooperate
+32,4,defect
+3,4,defect
 Generation: 48
-20,106,cooperate
-43,122,defect
+14,4,defect
+10,4,defect
 Generation: 48
-22,105,defect
-41,122,defect
+35,4,defect
+5,4,defect
 Generation: 48
-26,102,defect
-29,139,defect
+28,4,defect
+2,4,cooperate
 Generation: 48
-1,116,defect
-10,119,defect
+27,4,defect
+44,4,defect
 Generation: 48
-15,127,defect
-7,121,defect
+24,4,defect
+6,4,defect
 Generation: 48
-9,112,defect
-19,111,defect
+25,4,cooperate
+9,4,cooperate
 Generation: 48
-30,95,cooperate
-13,123,cooperate
+4,4,cooperate
+29,4,defect
 Generation: 48
-35,121,cooperate
-31,120,cooperate
+16,4,defect
+36,4,defect
 Generation: 48
-2,103,cooperate
-38,124,cooperate
+15,4,defect
+46,4,defect
 Generation: 48
-47,124,cooperate
-24,125,defect
+45,4,defect
+30,4,defect
 Generation: 48
-45,116,defect
-3,111,defect
+21,4,cooperate
+1,4,defect
 Generation: 49
-49,113,defect
-25,133,defect
+6,4,defect
+36,4,defect
 Generation: 49
-43,127,defect
-24,130,cooperate
+39,4,defect
+21,4,cooperate
 Generation: 49
-44,101,cooperate
-30,98,cooperate
+18,4,cooperate
+24,4,cooperate
 Generation: 49
-13,126,cooperate
-40,104,defect
+16,4,cooperate
+48,4,defect
 Generation: 49
-3,113,defect
-1,118,cooperate
+5,4,defect
+33,4,defect
 Generation: 49
-2,106,defect
-17,119,cooperate
+22,4,defect
+29,4,defect
 Generation: 49
-33,140,cooperate
-35,124,cooperate
+45,4,defect
+0,4,defect
 Generation: 49
-11,121,cooperate
-41,124,defect
+27,4,defect
+35,4,defect
 Generation: 49
-28,105,defect
-21,113,cooperate
+43,4,defect
+7,4,defect
 Generation: 49
-39,105,cooperate
-6,107,defect
+40,4,defect
+17,4,defect
 Generation: 49
-22,107,cooperate
-19,113,defect
+38,4,defect
+30,4,defect
 Generation: 49
-23,132,defect
-16,114,defect
+8,4,defect
+9,4,defect
 Generation: 49
-14,108,defect
-10,121,defect
+13,4,cooperate
+44,4,cooperate
 Generation: 49
-32,123,defect
-46,121,defect
+3,4,cooperate
+15,4,cooperate
 Generation: 49
-5,125,defect
-38,127,defect
+4,4,cooperate
+1,4,defect
 Generation: 49
-45,118,defect
-4,105,cooperate
+37,4,defect
+20,4,defect
 Generation: 49
-9,114,cooperate
-7,123,cooperate
+34,4,defect
+12,4,defect
 Generation: 49
-12,116,cooperate
-29,141,defect
+46,4,cooperate
+42,4,cooperate
 Generation: 49
-18,108,defect
-34,130,defect
+41,4,defect
+2,4,defect
 Generation: 49
-27,127,defect
-8,106,defect
+19,4,defect
+10,4,defect
 Generation: 49
-47,124,defect
-15,129,defect
+25,4,cooperate
+31,4,cooperate
 Generation: 49
-0,114,defect
-42,130,cooperate
+23,4,defect
+14,4,defect
 Generation: 49
-36,109,cooperate
-48,120,cooperate
+47,4,cooperate
+26,4,defect
 Generation: 49
-37,117,defect
-26,104,defect
+28,4,defect
+32,4,defect
 Generation: 49
-20,106,defect
-31,123,defect
+49,4,cooperate
+11,4,cooperate
