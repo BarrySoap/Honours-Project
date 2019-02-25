@@ -77,6 +77,23 @@ class Prisoner(object):
     def random_strategy(self):
         return random.random() < 0.5
         
+def compare_machines_fitness(list, object):
+    
+    fitness_is_lower = 0
+    fitness_is_higher = 0
+    fitness_is_same = 0
+    
+    for x in range(0, len(list)):
+        if (object.fitness < list[x].fitness):
+            fitness_is_lower += 1
+        elif (object.fitness > list[x].fitness):
+            fitness_is_higher += 1
+        elif (object.fitness == list[x].fitness):
+            fitness_is_same += 1
+    
+    #print("Lower fitness: " + str(fitness_is_lower) + ", Higher fitness: " + str(fitness_is_higher) + ", Same fitness: " + str(fitness_is_same))
+    return fitness_is_lower, fitness_is_higher, fitness_is_same
+    
 def populate_machines():
     
     for x in range(0, 50):
@@ -142,6 +159,7 @@ def evo_alg(machines):
                     output_file.close()
             
             machines[agentOne].fitness += calc_payoff(machines[agentOne].move, machines[agentTwo].move)
+            machines[agentTwo].fitness += calc_payoff(machines[agentTwo].move, machines[agentOne].move)
             
             #print(str(machines[agentOne].fitness))
             
@@ -155,9 +173,23 @@ def evo_alg(machines):
             machines.pop(agentOne)
             machines.pop(agentTwo)
     
+        for a in range(0, 50):
+            machines[a] = played_machines[a]
+        
         for z in range(0, 50):
-            machines[z] = played_machines[z]
+            add_state = random.random()
+            delete_state = random.random()
             ids.append(z)
+            
+            if add_state < 0.15:
+                comparitive_fitness = compare_machines_fitness(machines, machines[z])
+                if comparitive_fitness[0] < 25:
+                    machines[z].states.append('cooperate')
+                elif comparitive_fitness[0] > 25:
+                    machines[z].states.append('defect')
+                
+            elif delete_state < 0.15 and len(machines[z].states) is not 1:
+                machines[z].states.pop(random.randrange(1, len(machines[z].states)))
         
 populate_machines()
 evo_alg(machines)
