@@ -1,3 +1,5 @@
+# CURRENT ISSUE: Rounds are single-shot, but agents only play against one opponent. They should play against every other agent in the population. #
+
 from transitions import Machine
 import random
 import csv
