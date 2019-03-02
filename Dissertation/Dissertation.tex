@@ -279,6 +279,27 @@ Integrated development environments (IDE) are software applications which aid pr
 \subsection{Terminology}
 When discussing the program in following sections, a range of different technical terms will be used - some of which have been used but not explained in previous sections.
 
+\subsubsection{Neural Network}
+Initially pitched by Warren McCullough and Walter Pitts in 1944, artificial neural networks are computational models which are modeled loosely on the human brain, with interlinked 'nodes', which behave similar to that of neurons/perceptrons in a human brain. Neural networks can have differing types, such as recurrent or feed-forward, which will be explained shortly. While a neural network can have millions of nodes, it can also have a large amount of layers - varying in size between input, hidden, and output. Simply put, the input layer(s) will be fed information from other sources, or the user. The hidden layer(s) will attempt to filter and refine that input to output. The output layer(s) give out the information which was previously fed in.
+
+\subsubsection{Neural Network Types}
+There exists two types of neural networks which can be used in the context of this project - recurrent and feedforward. The difference between the two networks discerns their applicability; feedforward networks strictly allow signals to only travel one way, from input to output. Feedforward networks are useful and extensively used in speech and pattern recognition. Recurrent networks, in contrast, allow signals to travel in both directions - introducing loops to the network. A loop means that the output of any layer cannot affect that same layer. Recurrent networks are specifically useful for identifying how the input variable(s) can affect the output variable - this relates to the project as there has to be multiple moves from the agents/prisoners (inputs) and the resulting payoff will be the output variable.
+
+\subsubsection{Weights}
+For each incoming connection, a node/neuron will assign a number known as a weight, which represents the strength of connections between nodes. When the neural network is active, each node receives a number for each of it's connectons, which is then multiplied by the associated weight. By summing the resulting products together, this creates a single weighted number. If this number is below a specific threshold value, no data is passed onto the next layer. If above the threshold value, the node is activated, which sends the corresponding number (the sum of weighted inputs) to the next layer. Assuming a node A, has a strong weight to node B, this means that A has a stronger influence over B - strengthening or weakening the level of activation.
+
+\subsubsection{Activation Functions}
+In the context of neural networks, an activation function is the deciding factor in whether a neuron should be activated or not. It does this by calculating a weighted sum of it's input, and adding a bias value to it. By doing this, the output of said can be seen as non-linear. Non-linearity means that the output cannot be reproduced from a linear combination of the inputs. Without a non-linear activation function in the network, a neural network would behave just like a single-layer perceptron regardless of the amount of layers.
+
+\subsubsection{Bias}
+When using activation functions, a bias value is added for the function to better fit the data. The bias value can range from 0 to 1, and can offset the sigmoid curve between the input and output values. The bias only interacts with the output values, and thus, determines how easy/likely it is for a node to be activated. If the bias value is high, the output of the network will tend to be higher, even if the weights and inputs have smaller values. If the bias is smaller, or 0, the output value will be decided solely by the weights and inputs.
+
+\subsubsection{Aggregation}
+When collating the input and weight values to filter into input, there needs to be a way to gather input from the previous neurons. This process is called an aggregation function, and is used in almost every instance of a neural network. In this project, the aggregation function used is called 'sum of product', which sums the weights and the input values, in addition to the bias.
+
+\subsubsection{Elitism}
+When a population is moving into the next generation, elitism is a value which copies a certain amount of individuals into the next generation without any changes. Meaning, if a genetic algorithm uses an elitism value of two, then two individuals will pass into the next generation with no changes to their attributes - this is usually determined by the individuals with the highest fitness values.
+
 \subsubsection{Agents}
 According to Stuart Russell and Peter Norvig in their textbook, "Artificial Intelligence: A Mordern Approach", an agent is, "An agent is anything that can be viewed as perceiving its environment through sensors and acting upon that environment through actuators". This means that a software agent may utilise keystrokes, file contents or network packets as sensory inputs and acts on the environment by displaying on the screen, writing files, and sending network packets. In the prisoner's dilemma scenario used within this project, an agent will represent each prisoner, in the effort to emulate a real world scenario in which the agents play against each other. Each agent/prisoner will have a fitness, which could be compared to a real-world aptitude or ability. As seen in section 2.4, the resulting agents from a repeated prisoner's dilemma can very much vary - Robert Axelrod detailed four different characteristics in order to be successful in a repeated prisoner's dilemma:
 
@@ -301,23 +322,11 @@ Where F is the fitness of an agent, and P1/P2 is the payoff for the agent and op
 \subsubsection{Computational Power}
 A myriad of computing journals, papers and academic reports mention computational power in the context of their research, including this report. Computational power can have multiple definitions in other contexts, but within this context, it refers to the amount of generations required to evolve an agent successfully. This is tied to the general definition of the term, which is, "the amount of useful work a computer system accomplishes (i.e. instructions it executes)".
 
-\subsubsection{Neural Network Types}
-There exists two types of neural networks which can be used in the context of this project - recurrent and feedforward. The difference between the two networks discerns their applicability; feedforward networks strictly allow signals to only travel one way, from input to output. Feedforward networks are useful and extensively used in speech and pattern recognition. Recurrent networks, in contrast, allow signals to travel in both directions - introducing loops to the network. A loop means that the output of any layer cannot affect that same layer. Recurrent networks are specifically useful for identifying how the input variable(s) can affect the output variable - this relates to the project as there has to be multiple moves from the agents/prisoners (inputs) and the resulting payoff will be the output variable.
-
-\subsubsection{Activation Functions}
-In the context of neural networks, an activation function is the deciding factor in whether a neuron should be activated or not. It does this by calculating a weighted sum of it's input, and adding a bias value to it. By doing this, the output of said can be seen as non-linear. Non-linearity means that the output cannot be reproduced from a linear combination of the inputs. Without a non-linear activation function in the network, a neural network would behave just like a single-layer perceptron regardless of the amount of layers.
-
-\subsubsection{Bias}
-When using activation functions, a bias value is added for the function to better fit the data. The bias value can range from 0 to 1, and can offset the sigmoid curve between the input and output values. The bias only interacts with the output values, and thus, determines how easy/likely it is for a node to be activated. If the bias value is high, the output of the network will tend to be higher, even if the weights and inputs have smaller values. If the bias is smaller, or 0, the output value will be decided solely by the weights and inputs.
-
-\subsubsection{Aggregation}
-When collating the input and weight values to filter into input, there needs to be a way to gather input from the previous neurons. This process is called an aggregation function, and is used in almost every instance of a neural network. In this project, the aggregation function used is called 'sum of product', which sums the weights and the input values, in addition to the bias.
-
-\subsubsection{Elitism}
-When a population is moving into the next generation, elitism is a value which copies a certain amount of individuals into the next generation without any changes. Meaning, if a genetic algorithm uses an elitism value of two, then two individuals will pass into the next generation with no changes to their attributes - this is usually determined by the individuals with the highest fitness values.
-
 \subsubsection{Speciation}
+According to Timothy Nodine in his paper, "Speciation in NEAT",\cite{42} speciation is the set of processes by which NEAT creates, maintains and uses several disjoint groups of similar genomes for guiding reproduction. This means that given a species, A,  of an initial population, NEAT will create new subspecies, B, C, D, etc. each generation based on the similar attributes of the agents/genomes. This is useful for examining the internal behaviour between agents, as well as refining the eventual output of the prisoner's dilemma simulation. \\
 
+\subsection{Experimentation}
+Upon implementing the program (both the neural networks and finite state machine versions), some form of experimentation must be conducted in order to validate the correctness/robustness of the program. In order to do this, the following section will include details on how to test the program, such as:
 
 \newpage
 
@@ -336,7 +345,8 @@ The first attempt at creating a prisoner's dilemma was created using neural netw
   \item Concept of dilemma, being able to select a move (Cooperate/Defect) and receive a payoff.
   \item Basic evolutionary algorithm capable of initialising a population and handling multiple generations.
   \item Interaction between agents.
-  \item Extending the dilemma to facilitate play between two agents, as well as giving payoffs accordingly.
+  \item Extending the dilemma to facilitate play between two agents, as well as giving payoffs accordingly This includes each agent being able to independently select a move, receive a payoff
+	and adapt their strategy accordingly for the next round/generation.
   \item Output and plot the attributes of each generation. \\
 \end{itemize}
 
