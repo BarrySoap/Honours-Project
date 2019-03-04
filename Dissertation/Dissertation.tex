@@ -428,7 +428,31 @@ As with the neural networks method of agent representation, the finite state mac
   \item Output and plot the attributes of each generation. \\
 \end{itemize}
 
-These requirements are somewhat more complex than that of the neural networks method, which will subsequently be elaborated on. \\
+These requirements are somewhat more complex than that of the neural networks method, which will subsequently be elaborated on. Something to keep in mind is that the finite state machines method utilises the \textbf{transitions} package, which was explained in the previous section.
+
+\subsubsection{Initialisation of Agents}
+Creating and managing agents for this method was very different than that of neural networks - in order to attach various attributes to a finite state machine, the prisoners had to be made as objects. Thankfully, the transitons package allows states, attributes, state transitions and functions to all be contained within objects. The attributes range from fitness, ID, the chosen move of the agent, their history of moves and the strategy they have adopted. The states are simply: \textit{Thinking}, \textit{Cooperate} and \textit{Defect}. The transitions part of the package allows the user to move from one state to another by simply using a trigger. The triggers are function calls from other places in the program, and the function calls within the object scope will handle the necessary logic. This encompasses all of the facets of an agent object.
+
+\subsubsection{Agent Strategies}
+Unlike the neural networks implementation where strategies are extracted from the fitness and activation functions, strategies for finite state machines have to be explicitly stated and refined. A basic tit-for-tat state diagram would look as follows:
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.75\textwidth]{TitForTatStates}
+		\caption{Tit-For-Tat State Diagram}
+\end{figure}
+
+In the program, this simply comes down to:
+
+\begin{itemize}
+  \item Check the current state of the agent.
+  \item Check the opponent's previous move.
+  \item Use that move as the agent's current move - i.e if the opponent's last move was defective, defect this round.
+  \item Update the current state of agent.
+\end{itemize}
+
+Another explicitly-coded strategy is the random strategy, which is self explanatory. But how do strategies evolve? In reference to van Veelen's paper, "In and out of equilibrium: evolution of strategies in repeated games with discounting"\cite{46}, strategies evolve after the end of each generation using mutation operators. This means that there is a small random chance for each agent of the population at the end of the generation to be mutated - this could be either adding or removing a state. Based on the games they play and moves they pick, adding and removing states will make one choice more prominent in their list of states, and becomes the more likely state to be picked.
+
 
 \newpage
 

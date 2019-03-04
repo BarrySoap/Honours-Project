@@ -158,6 +158,11 @@ Nash, J. (1950b).
 \newblock Two-person cooperative games.
 \newblock Report, Air Force Project RAND.
 
+\bibitem[Neumann, ]{45}
+Neumann, A.
+\newblock transitions.
+\newblock https://github.com/pytransitions/transitions.
+
 \bibitem[Nodine, 2010]{42}
 Nodine, T. (2010).
 \newblock Speciation in neat.
@@ -220,6 +225,12 @@ Teknomo, K.
 Tiwari, S.
 \newblock Activation functions in neural networks.
 \newblock https://www.geeksforgeeks.org/activation-functions-neural-networks/.
+
+\bibitem[Veelen and García, 2016]{46}
+Veelen, M. and García, J. (2016).
+\newblock In and out of equilibrium: evolution of strategies in repeated games
+  with discounting.
+\newblock 161:161 -- 189.
 
 \bibitem[Veelen et~al., 2012]{34}
 Veelen, M., García, J., Rand, D., and Nowak, M. (2012).
