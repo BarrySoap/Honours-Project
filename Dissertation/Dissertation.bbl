@@ -41,10 +41,16 @@ Chen, J., Lu, S., and Vekhter, D. (1998).
 \newblock Game theory.
 \newblock Report, Stanford University.
 
-\bibitem[CodeReclaimers, ]{35}
+\bibitem[CodeReclaimers, a]{35}
 CodeReclaimers.
 \newblock Neat overview.
 \newblock $https://neat-python.readthedocs.io/en/latest/neat_overview.html$.
+
+\bibitem[CodeReclaimers, b]{43}
+CodeReclaimers.
+\newblock Source code for statistics.
+\newblock
+  $https://neat-python.readthedocs.io/en/latest/_modules/statistics.html$.
 
 \bibitem[Collis, ]{40}
 Collis, J.
@@ -86,6 +92,11 @@ Harrald, P.~G. and Fogel, D.~B. (1996).
 Herdt, T. (2003).
 \newblock Cooperation and fairness: the flood–dresher experiment.
 \newblock {\em Review of Social Economy}, 61:184–191.
+
+\bibitem[Hunter et~al., ]{44}
+Hunter, J., D., D., Firing, E., and Droettboom, M.
+\newblock matplotlib.
+\newblock https://matplotlib.org/.
 
 \bibitem[Jong et~al., 1997]{14}
 Jong, K., Fogel, D., and Schwefel, H.-P. (1997).
@@ -147,6 +158,12 @@ Nash, J. (1950b).
 \newblock Two-person cooperative games.
 \newblock Report, Air Force Project RAND.
 
+\bibitem[Nodine, 2010]{42}
+Nodine, T. (2010).
+\newblock Speciation in neat.
+\newblock Undergraduate Honors Thesis HR-10-06, Department of Computer Science,
+  The University of Texas at Austin.
+
 \bibitem[Paci, ]{37}
 Paci, G.
 \newblock What is an agent.
@@ -192,6 +209,12 @@ Smith, J. (1982).
 Stergiou, Christos.~Siganos, D. (n.d.).
 \newblock Neural networks.
 \newblock Report, Imperial College London.
+
+\bibitem[Teknomo, ]{41}
+Teknomo, K.
+\newblock Aggregation function.
+\newblock
+  https://people.revoledu.com/kardi/tutorial/NeuralNetwork/AggregationFunctions.html.
 
 \bibitem[Tiwari, ]{39}
 Tiwari, S.

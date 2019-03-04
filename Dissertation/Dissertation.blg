@@ -3,9 +3,11 @@ The style file: apalike.bst
 Database file #1: bib.bib
 Warning--empty year in 32
 Warning--empty year in 35
+Warning--empty year in 43
 Warning--empty year in 40
 Warning--empty year in 8
 Warning--empty year in 12
+Warning--empty year in 44
 Warning--empty institution in 14
 Warning--empty year in 16
 Warning--empty year in 17
@@ -15,6 +17,7 @@ Warning--empty year in 36
 Warning--empty year in 37
 Warning--empty year in 26
 Warning--empty year in 28
+Warning--empty year in 41
 Warning--empty year in 39
 Warning--empty journal in 34
-(There were 16 warnings)
+(There were 19 warnings)
