@@ -516,6 +516,22 @@ On page 139 of Harrald's\cite{25} paper, it is stated that the fitness for a giv
 
 Where $\alpha$ and $\beta$ are the moves of players A and B respectively. This subsection will examine the results of the program using the same parameters, but with this fitness function instead.
 
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.75\textwidth]{ContinuousFitnessSpeciationOff}
+		\caption{Neural Networks Continuous Fitness With No Speciation}
+\end{figure}
+
+Firstly, with speciation off, the continuous fitness function seems to encourage a long-term play strategy from the very start of the simulation. In comparison to the fixed fitness function, where the results seemed to be somewhat random and no preferred strategy arose. However, in figure 9, cooperation has a much higher rate of play, and may present a dominant strategy of mutual cooperation. Let's compare this to a simulation with speciation:
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.75\textwidth]{ContinuousFitnessSpeciationOn}
+		\caption{Neural Networks Continuous Fitness With No Speciation}
+\end{figure}
+
+This figure yields far more interesting results. While similar to that of the fixed fitness graph, figure 8, the agents progress to a complete state of cooperation. When the number of generations is increased to a larger number, the number of defective moves goes down, and will eventually reach either none, or close to none.
+
 \newpage
 
 \chapter
