@@ -56,7 +56,7 @@ def add_def_move():
     
 def count_generations():
     global geneation_count
-    for x in range (0, 50):
+    for x in range (0, 100):
         generation_count.append(x)
 
 # Calculate payoff for round, returns number of years in the dilemma scenario
@@ -115,7 +115,7 @@ def evo_alg(agents, config):
         for f in range(len(agents)):
             
             # Change the second range value to however many round are to be played.
-            for x in range (0, 25):
+            for x in range (0, 50):
                 # Initialise opposing agent
                 opponent_id, opponent = agents[f]
                 # Get history of agent's moves
@@ -133,8 +133,8 @@ def evo_alg(agents, config):
                 history[str(opponent_id)].append(opponent_move)
                 
                 # Calculate new fitness
-                agent.fitness += Calculate_Payoff(move, opponent_move) 
-                opponent.fitness += Calculate_Payoff(opponent_move, move)
+                agent.fitness += ( (-0.75 * Calculate_Payoff(move, opponent_move)) + (1.75 * Calculate_Payoff(opponent_move, move)) + 2.25 )
+                opponent.fitness += ( (-0.75 * Calculate_Payoff(move, opponent_move)) + (1.75 * Calculate_Payoff(opponent_move, move)) + 2.25 )
                 
                 round_count.append("round")
                 
@@ -166,7 +166,7 @@ def run():
     p.add_reporter(neat.Checkpointer(5))
 
     # Run for 50 generations
-    winner = p.run(evo_alg, 50)
+    winner = p.run(evo_alg, 100)
 
     fittest_agent = stats.best_genome()
     # Print fittest agent of last round
@@ -180,7 +180,7 @@ def run():
     plt.plot(generation_count, total_count_coop, label='Proportion of Cooperative Moves')
     plt.ylabel('Ratio of Moves')
     plt.xlabel('Generations')
-    plt.title('Proportion of Moves - Speciation On')
+    plt.title('Proportion of Moves - Speciation Off')
     plt.plot(generation_count, total_count_def, label='Proportion of Defective Moves')
     plt.legend(loc='best')
     plt.show()
