@@ -1,4 +1,4 @@
-# CURRENT ISSUE: Rounds are single-shot, but agents only play against one opponent. They should play against every other agent in the population. #
+# CURRENT ISSUE: "Can't trigger event choose_move from state defect!" #
 
 from transitions import Machine
 import random
@@ -56,6 +56,7 @@ class Prisoner(object):
                                     after='update_move_def')
         
         strategy = random.random()
+        numOfStartingStates = random.randint(1, 10)
         
         if (strategy < 0.5):
             self.machine.add_transition(trigger='choose_move', source='cooperate', dest='defect', 
@@ -67,10 +68,21 @@ class Prisoner(object):
             self.machine.add_transition(trigger='choose_move', source='defect', dest='defect', 
                                         conditions = ['opponent_defected'], after='update_move_def')
         else:
-            self.machine.add_transition(trigger='choose_move', source='*', dest='defect', 
-                                        conditions = ['random_strategy'], after='update_move_def')
-            self.machine.add_transition(trigger='choose_move', source='*', dest='cooperate', 
-                                        conditions = ['random_strategy'], after='update_move_coop')
+            for x in range(0, numOfStartingStates):
+                randomState = random.random()
+                
+                if randomState >= 0 and randomState <= 0.25:
+                    self.machine.add_transition(trigger='choose_move', source='cooperate', dest='cooperate',
+                                                conditions = ['random_strategy'], after='update_move_coop')
+                elif randomState >= 0.25 and randomState <= 0.50:
+                    self.machine.add_transition(trigger='choose_move', source='cooperate', dest='defect',
+                                                conditions = ['random_strategy'], after='update_move_def')
+                elif randomState >= 0.50 and randomState <= 0.75:
+                    self.machine.add_transition(trigger='choose_move', source='defect', dest='cooperate',
+                                                conditions = ['random_strategy'], after='update_move_coop')
+                elif randomState >= 0.75 and randomState <= 1:
+                    self.machine.add_transition(trigger='choose_move', source='defect', dest='defect',
+                                                conditions = ['random_strategy'], after='update_move_def')
         
         
     def update_move_coop(self):
@@ -209,14 +221,14 @@ def evo_alg(machines):
             delete_state = random.random()
             ids.append(z)
             
-            if add_state < 0.15:
+            if add_state < 0.05:
                 comparitive_fitness = compare_machines_fitness(machines, machines[z])
                 if comparitive_fitness[0] < 25:
                     machines[z].states.append('cooperate')
                 elif comparitive_fitness[0] > 25:
                     machines[z].states.append('defect')
                 
-            elif delete_state < 0.15 and len(machines[z].states) is not 1:
+            elif delete_state < 0.05 and len(machines[z].states) is not 1:
                 machines[z].states.pop(random.randrange(1, len(machines[z].states)))
         
 populate_machines()
