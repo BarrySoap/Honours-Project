@@ -1,43 +1,28 @@
 Agent,Fitness,Move
 Generation: 1
-39,4,defect
-6,4,defect
+11,4,defect
+3,4,defect
 Generation: 1
-17,4,cooperate
-22,4,cooperate
-Generation: 1
-32,4,defect
-21,4,defect
-Generation: 1
-0,4,cooperate
-4,4,cooperate
-Generation: 1
-26,4,cooperate
-44,4,cooperate
-Generation: 1
-30,4,cooperate
-12,4,cooperate
-Generation: 1
-13,4,cooperate
-40,4,cooperate
-Generation: 1
-15,4,cooperate
-43,4,cooperate
-Generation: 1
-25,4,cooperate
 49,4,cooperate
+8,4,cooperate
 Generation: 1
-45,4,defect
+1,4,cooperate
+27,4,defect
+Generation: 1
+24,4,defect
+0,4,defect
+Generation: 1
+25,4,defect
+39,4,cooperate
+Generation: 1
+23,4,cooperate
+15,4,defect
+Generation: 1
+35,4,defect
 10,4,defect
 Generation: 1
-20,4,defect
 36,4,defect
+38,4,cooperate
 Generation: 1
-1,4,defect
-41,4,defect
-Generation: 1
-11,4,defect
-2,4,defect
-Generation: 1
-8,4,defect
-23,4,defect
+26,4,cooperate
+13,4,cooperate

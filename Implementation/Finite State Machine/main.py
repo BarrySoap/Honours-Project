@@ -56,7 +56,7 @@ class Prisoner(object):
                                     after='update_move_def')
         
         strategy = random.random()
-        numOfStartingStates = random.randint(1, 10)
+        numOfStartingStates = random.randint(2, 10)
         
         if (strategy < 0.5):
             self.machine.add_transition(trigger='choose_move', source='cooperate', dest='defect', 
