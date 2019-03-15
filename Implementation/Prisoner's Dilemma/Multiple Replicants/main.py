@@ -38,15 +38,16 @@ total_count_coop = []
 total_count_def = []
 total_move_count = []
 
+numberOfGenerations = 100
 generation_count = []
 
 average_generation_fitness = []
 average_replicant_fitness = []
 
-with open('history.csv', mode = 'w') as output_file:
-    writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-    writer.writerow(['Game/Replicant #', 'Average Fitness', 'Fitness Standard Deviation'])
-    output_file.close()
+#with open('history.csv', mode = 'w') as output_file:
+#    writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+#    writer.writerow(['Game/Replicant #', 'Average Fitness', 'Fitness Standard Deviation'])
+#    output_file.close()
     
 def add_coop_move():
     global coop_move_count
@@ -58,7 +59,7 @@ def add_def_move():
     
 def count_generations():
     global geneation_count
-    for x in range (0, 50):
+    for x in range (0, numberOfGenerations):
         generation_count.append(x)
 
 # Calculate payoff for round, returns number of years in the dilemma scenario
@@ -90,9 +91,16 @@ def evo_alg(agents, config):
     agent_ids.clear()
     networks.clear()
     
-    total_count_coop.append(coop_move_count)
-    total_count_def.append(def_move_count)
-    total_move_count.append(coop_move_count + def_move_count)
+    global total_count_coop
+    global total_count_def
+    global total_move_count
+    
+    if (len(total_move_count) != numberOfGenerations):
+        total_count_coop.append(coop_move_count)
+        total_count_def.append(def_move_count)
+        total_move_count.append(coop_move_count + def_move_count)
+    else:
+        total_move_count = [total_count_coop[i] + total_count_def[i] for i in range(len(total_count_coop))]
     
     for agent_id, agent in agents:
         # Reset agent fitness
@@ -133,15 +141,15 @@ def evo_alg(agents, config):
                 history[str(opponent_id)].append(opponent_move)
                 
                 # Calculate new fitness
-                agent.fitness += Calculate_Payoff(move, opponent_move) 
-                opponent.fitness += Calculate_Payoff(opponent_move, move)
+                agent.fitness += ( (-0.75 * Calculate_Payoff(move, opponent_move)) + (1.75 * Calculate_Payoff(opponent_move, move)) + 2.25 )
+                opponent.fitness += ( (-0.75 * Calculate_Payoff(move, opponent_move)) + (1.75 * Calculate_Payoff(opponent_move, move)) + 2.25 )
 
 def run():
     global average_generation_fitness
     global sd_generation_fitness
     global average_replicant_fitness
     
-    if (len(generation_count) != 50):
+    if (len(generation_count) != numberOfGenerations):
         count_generations()
     
     # load network config
@@ -160,7 +168,7 @@ def run():
     p.add_reporter(stats)
     p.add_reporter(neat.Checkpointer(5))
     # Run for 50 generations
-    winner = p.run(evo_alg, 50)
+    winner = p.run(evo_alg, numberOfGenerations)
     
     fittest_agent = stats.best_genome()
     if (len(average_generation_fitness) == 0):
@@ -171,14 +179,25 @@ def run():
     
     # Print fittest agent of last round
     print('\nFittest Agent:\n{!s}'.format(fittest_agent))
+    
+    for p in range(len(total_move_count)):
+        if (p != 0):
+            total_count_coop[p] = Fraction(total_count_coop[p] / total_move_count[p]).limit_denominator()
+            total_count_def[p] = Fraction(total_count_def[p] / total_move_count[p]).limit_denominator()
+            
+    plt.plot(generation_count, total_count_coop, label='Proportion of Cooperative Moves')
+    plt.ylabel('Ratio of Moves')
+    plt.xlabel('Generations')
+    plt.title('Proportion of Moves - Speciation On')
+    plt.plot(generation_count, total_count_def, label='Proportion of Defective Moves')
+    plt.legend(loc='best')
+    plt.show()
  
 for x in range(0, 2):    
     run()
 
-print(average_replicant_fitness)
 for x in range(0, len(average_replicant_fitness)):
     average_replicant_fitness[x] /= 2
-print(average_replicant_fitness)
     
 plt.plot(generation_count, average_replicant_fitness)
 plt.ylabel('Fitness')
