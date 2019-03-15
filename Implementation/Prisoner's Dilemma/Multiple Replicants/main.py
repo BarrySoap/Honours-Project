@@ -15,7 +15,6 @@ import visualise as visualise
 import csv
 import matplotlib.pyplot as plt
 from fractions import Fraction
-import statistics
 
 # Iterator used to move down the move history
 hist_iterator = 3
@@ -41,14 +40,12 @@ total_move_count = []
 
 generation_count = []
 
-generation_number = 0
-replicant_number = 0
-
-replicant_fitnesses = []
+average_generation_fitness = []
+average_replicant_fitness = []
 
 with open('history.csv', mode = 'w') as output_file:
     writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-    writer.writerow(['Average Fitness', 'Fitness Standard Deviation'])
+    writer.writerow(['Game/Replicant #', 'Average Fitness', 'Fitness Standard Deviation'])
     output_file.close()
     
 def add_coop_move():
@@ -60,7 +57,7 @@ def add_def_move():
     def_move_count += 1
     
 def count_generations():
-    global generation_count
+    global geneation_count
     for x in range (0, 50):
         generation_count.append(x)
 
@@ -90,12 +87,8 @@ def Calculate_Payoff(agent_one_move, agent_two_action):
 # Play agents against each other
 def evo_alg(agents, config):
 
-    global generation_number
-    global replicant_number
     agent_ids.clear()
     networks.clear()
-    
-    generation_number += 1
     
     total_count_coop.append(coop_move_count)
     total_count_def.append(def_move_count)
@@ -142,35 +135,12 @@ def evo_alg(agents, config):
                 # Calculate new fitness
                 agent.fitness += Calculate_Payoff(move, opponent_move) 
                 opponent.fitness += Calculate_Payoff(opponent_move, move)
-    
-    average_generation_fitness = 0
-    generation_fitnesses = []
-    stdev_generation_fitness = 0
-    
-    for agent_id, agent in agents:
-        average_generation_fitness += agent.fitness
-        generation_fitnesses.append(agent.fitness)
-    
-    average_generation_fitness /= len(networks)
-    stdev_generation_fitness = statistics.stdev(generation_fitnesses)
-    
-    if (len(replicant_fitnesses) != 0):
-        for x in range(0, len(generation_fitnesses)):
-            if (x < len(generation_count)):
-                replicant_fitnesses[x] = replicant_fitnesses[x] + generation_fitnesses[x]
-    else:
-        for x in range(0, len(generation_fitnesses)):
-            if (x < len(generation_count)):
-                replicant_fitnesses.append(generation_fitnesses[x])
-    
-    with open('history.csv', mode = 'a') as output_file:
-        writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-        writer.writerow(["Generation: " + repr(generation_number) + " (Replicant " + repr(replicant_number) + ")"])
-        writer.writerow([average_generation_fitness, stdev_generation_fitness])
-        output_file.close()
-        
-def run():
 
+def run():
+    global average_generation_fitness
+    global sd_generation_fitness
+    global average_replicant_fitness
+    
     if (len(generation_count) != 50):
         count_generations()
     
@@ -189,25 +159,29 @@ def run():
     stats = neat.StatisticsReporter()
     p.add_reporter(stats)
     p.add_reporter(neat.Checkpointer(5))
-    
     # Run for 50 generations
     winner = p.run(evo_alg, 50)
     
     fittest_agent = stats.best_genome()
+    if (len(average_generation_fitness) == 0):
+        average_generation_fitness = stats.get_fitness_mean()
+    else:
+        new_generation_fitness = stats.get_fitness_mean()
+        average_replicant_fitness = [average_generation_fitness[i] + new_generation_fitness[i] for i in range(len(average_generation_fitness))]
     
     # Print fittest agent of last round
     print('\nFittest Agent:\n{!s}'.format(fittest_agent))
  
-for x in range(0, 2): 
-    generation_number = 0
-    replicant_number = x + 1
+for x in range(0, 2):    
     run()
-    for x in range(0, len(replicant_fitnesses)):
-        replicant_fitnesses[x] /= 50
 
-plt.plot(generation_count, replicant_fitnesses)
+print(average_replicant_fitness)
+for x in range(0, len(average_replicant_fitness)):
+    average_replicant_fitness[x] /= 2
+print(average_replicant_fitness)
+    
+plt.plot(generation_count, average_replicant_fitness)
 plt.ylabel('Fitness')
 plt.xlabel('Generations')
-plt.title('Average Fitness of Replicants')
-plt.legend(loc='best')
+plt.title('Average Replicants Fitness')
 plt.show()
