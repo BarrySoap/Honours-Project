@@ -39,10 +39,12 @@ total_count_def = []
 total_move_count = []
 
 numberOfGenerations = 100
+numberOfReplicants = 2
 generation_count = []
 
 average_generation_fitness = []
 average_replicant_fitness = []
+replicant_fitnesses = []
 
 #with open('history.csv', mode = 'w') as output_file:
 #    writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
@@ -173,8 +175,10 @@ def run():
     fittest_agent = stats.best_genome()
     if (len(average_generation_fitness) == 0):
         average_generation_fitness = stats.get_fitness_mean()
+        replicant_fitnesses.append(stats.get_fitness_mean())
     else:
         new_generation_fitness = stats.get_fitness_mean()
+        replicant_fitnesses.append(stats.get_fitness_mean())
         average_replicant_fitness = [average_generation_fitness[i] + new_generation_fitness[i] for i in range(len(average_generation_fitness))]
     
     # Print fittest agent of last round
@@ -193,13 +197,15 @@ def run():
     plt.legend(loc='best')
     plt.show()
  
-for x in range(0, 2):    
+for x in range(0, numberOfReplicants):    
     run()
 
 for x in range(0, len(average_replicant_fitness)):
-    average_replicant_fitness[x] /= 2
+    average_replicant_fitness[x] /= numberOfReplicants
     
 plt.plot(generation_count, average_replicant_fitness)
+yer = 0.5 + 0.7*np.sqrt(average_replicant_fitness)
+plt.errorbar(generation_count, average_replicant_fitness, yerr=yer, linestyle="None")
 plt.ylabel('Fitness')
 plt.xlabel('Generations')
 plt.title('Average Replicants Fitness')
