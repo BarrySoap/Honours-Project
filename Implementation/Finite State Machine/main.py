@@ -208,7 +208,7 @@ def evo_alg(machines):
             
         fitnesses = []                                                  # Reset the agent fitnesses for the current generation,
     
-        for a in range(0, len(played_machines)):
+        for a in range(0, 50):
             machines[a] = played_machines[a]                            # Move the agents back to the original machines list,
             
         for b in range(0, len(machines)):
@@ -216,7 +216,7 @@ def evo_alg(machines):
             
         agent_fitnesses.append(sum(fitnesses) / float(len(fitnesses)))  # Finally, calculate the mean fitness for the current generation.
         
-        for z in range(0, len(machines)):                               # For each agent,
+        for z in range(0, 50):                                          # For each agent,
             add_state = random.random()                                 # initialise temporary randoms
             delete_state = random.random()                              # to check if a mutation happens.
             ids.append(z)
@@ -224,9 +224,15 @@ def evo_alg(machines):
             if add_state < 0.10:                                        # There is a 10% chance that an agent will be mutated.
                 temp_random = random.random()
                 if (temp_random <= 0.5):                                # Either add a cooperate transition or a defect transition (50% chance).
-                    machines[z].states.append('cooperate')
+                    machines[z].machine.add_transition(trigger='choose_move', source='*', dest='cooperate', 
+                            conditions = ['opponent_defected'], after='update_move_coop')
+                    machines[z].machine.add_transition(trigger='choose_move', source='*', dest='cooperate', 
+                            conditions = ['opponent_cooperated'], after='update_move_coop')
                 else:
-                    machines[z].states.append('defect')
+                    machines[z].machine.add_transition(trigger='choose_move', source='*', dest='defect', 
+                            conditions = ['opponent_defected'], after='update_move_def')
+                    machines[z].machine.add_transition(trigger='choose_move', source='*', dest='defect', 
+                            conditions = ['opponent_cooperated'], after='update_move_def')
                 
             elif delete_state < 0.10 and len(machines[z].states) is not 1:  # The other mutation that can happen is a transition being deleted.
                 machines[z].states.pop(random.randrange(1, len(machines[z].states)))
