@@ -39,7 +39,7 @@ total_count_def = []
 total_move_count = []
 
 numberOfGenerations = 100
-numberOfReplicants = 2
+numberOfReplicants = 30
 generation_count = []
 
 average_generation_fitness = []
@@ -204,9 +204,9 @@ for x in range(0, len(average_replicant_fitness)):
     average_replicant_fitness[x] /= numberOfReplicants
     
 plt.plot(generation_count, average_replicant_fitness)
-yer = 0.5 + 0.7*np.sqrt(average_replicant_fitness)
+yer = 0.2 + 0.3*np.sqrt(average_replicant_fitness)
 plt.errorbar(generation_count, average_replicant_fitness, yerr=yer, linestyle="None")
 plt.ylabel('Fitness')
 plt.xlabel('Generations')
-plt.title('Average Replicants Fitness')
+plt.title('Average Agent Fitness Over 30 Replicants')
 plt.show()
