@@ -148,8 +148,8 @@ def calc_payoff(agent_one_move, agent_two_move):
     
 def evo_alg(machines):
     
-    for x in range(0, generations):                             # Repeat simulation for set amount of generations
-        print('\n' + 'Generation ' + str(x) + ':' + '\n')       # Output current generation number
+    for generation in range(0, generations):                             # Repeat simulation for set amount of generations
+        print('\n' + 'Generation ' + str(generation) + ':' + '\n')       # Output current generation number
         for y in range(len(machines)):                          # For each agent in the machines list,
             if (len(machines) == 0):                            # Check if there are agents left still to play a round.
                 break                                           # if not, end the current generation.
@@ -162,11 +162,17 @@ def evo_alg(machines):
             machines[agentTwo].fitness = 4
             ids.remove(agentTwo)
             
-            if (x == 0):                                                # If this is the starting generation,
+            if (generation == 0):                                                # If this is the starting generation,
                 machines[agentOne].choose_initial_move()                # Have agents play specific moves
-                machines[agentTwo].move_history.append('cooperate')     # and append that move to their move history list.
+                if (machines[agentOne].move == 'cooperate'):
+                    machines[agentTwo].move_history.append('cooperate') # Update the move history lists accordingly.
+                else:
+                    machines[agentTwo].move_history.append('defect')
                 machines[agentTwo].choose_initial_move()
-                machines[agentOne].move_history.append('defect')
+                if (machines[agentTwo].move == 'cooperate'):
+                    machines[agentOne].move_history.append('cooperate') # Update the move history lists accordingly.
+                else:
+                    machines[agentOne].move_history.append('defect')
                 machines[agentOne].machine.remove_transition(trigger='choose_initial_move', source='*', dest='cooperate')   # After the starting
                 machines[agentOne].machine.remove_transition(trigger='choose_initial_move', source='*', dest='defect')      # generation, the
                 machines[agentTwo].machine.remove_transition(trigger='choose_initial_move', source='*', dest='cooperate')   # agents don't require
@@ -188,13 +194,13 @@ def evo_alg(machines):
                     
                 with open('history.csv', mode = 'a') as output_file:    # Serialisation functions. Outputs the agent IDs and moves to a CSV.
                     writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-                    writer.writerow(["Generation: " + repr(x)])
+                    writer.writerow(["Generation: " + repr(generation)])
                     writer.writerow([agentOne, machines[agentOne].fitness, machines[agentOne].move])
                     writer.writerow([agentTwo, machines[agentTwo].fitness, machines[agentTwo].move])
                     output_file.close()
             
-            machines[agentOne].fitness += calc_payoff(machines[agentOne].move, machines[agentTwo].move)     # Calculate the agents' new fitnesses
-            machines[agentTwo].fitness += calc_payoff(machines[agentTwo].move, machines[agentOne].move)     # based on their chsoen move and payoff.
+            machines[agentOne].fitness += ( (-0.75 * calc_payoff(machines[agentOne].move, machines[agentTwo].move)) + (1.75 * calc_payoff(machines[agentTwo].move, machines[agentOne].move)) + 2.25 )
+            machines[agentTwo].fitness += ( (-0.75 * calc_payoff(machines[agentTwo].move, machines[agentOne].move)) + (1.75 * calc_payoff(machines[agentOne].move, machines[agentTwo].move)) + 2.25 )
             
             if (len(played_machines) == 0):                             # After the round is finished,
                 played_machines[0] = machines[agentOne]                 # move the agents to a list of

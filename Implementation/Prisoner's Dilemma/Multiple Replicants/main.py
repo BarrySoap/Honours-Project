@@ -125,7 +125,7 @@ def evo_alg(agents, config):
         for f in range(len(agents)):
             
             # Change the second range value to however many round are to be played.
-            for x in range (0, 1):
+            for x in range (0, 5):
                 # Initialise opposing agent
                 opponent_id, opponent = agents[f]
                 # Get history of agent's moves
