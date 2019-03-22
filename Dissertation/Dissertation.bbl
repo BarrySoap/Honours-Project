@@ -31,6 +31,11 @@ Binmore, K. (2005).
 \newblock {\em Natural Justice}.
 \newblock Oxford University Press, Oxford.
 
+\bibitem[Britannica, ]{48}
+Britannica, E.
+\newblock Prisoner's dilemma.
+\newblock https://www.britannica.com/topic/prisoners-dilemma.
+
 \bibitem[Chen et~al., 1995]{6}
 Chen, D., Giles, C., Sun, G., Chen, H., Lee, Y., and Goudreau, M. (1995).
 \newblock Constructive learning of recurrent neural networks.
@@ -57,6 +62,12 @@ Collis, J.
 \newblock Glossary of deep learning: Bias.
 \newblock
   https://medium.com/deeper-learning/glossary-of-deep-learning-bias-cf49d9c895e2.
+
+\bibitem[Davis et~al., 2012]{49}
+Davis, L., De~Jong, K., Vose, M., and Whitley, L. (2012).
+\newblock {\em Evolutionary Algorithms}.
+\newblock The IMA Volumes in Mathematics and its Applications. Springer New
+  York.
 
 \bibitem[Duignan, ]{8}
 Duignan, B.
@@ -226,6 +237,12 @@ Tiwari, S.
 \newblock Activation functions in neural networks.
 \newblock https://www.geeksforgeeks.org/activation-functions-neural-networks/.
 
+\bibitem[Tomabechi, ]{50}
+Tomabechi, H.
+\newblock The recurrent cascade correlation learning architecture.
+\newblock
+  $https://www.researchgate.net/figure/The-Recurrent-Cascade-Correlation-Learning-Architecture-The-boxed-connections-as-well_fig3_2805206$.
+
 \bibitem[Veelen and García, 2016]{46}
 Veelen, M. and García, J. (2016).
 \newblock In and out of equilibrium: evolution of strategies in repeated games
@@ -236,5 +253,11 @@ Veelen, M. and García, J. (2016).
 Veelen, M., García, J., Rand, D., and Nowak, M. (2012).
 \newblock Direct reciprocity in structured populations.
 \newblock 109:9929–9934.
+
+\bibitem[von Neumann et~al., 1944]{47}
+von Neumann, J., Morgenstern, O., and Rubinstein, A. (1944).
+\newblock {\em Theory of Games and Economic Behavior (60th Anniversary
+  Commemorative Edition)}.
+\newblock Princeton University Press.
 
 \end{thebibliography}
