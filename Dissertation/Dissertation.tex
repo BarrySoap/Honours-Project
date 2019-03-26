@@ -16,6 +16,7 @@
 \usepackage{verbatim}
 \usepackage{subfig}
 \usepackage[toc,page]{appendix}
+\usepackage[nottoc,notlof,notlot, numbib]{tocbibind}
 \usepackage{soul}
 \usepackage{color}
 \usepackage{lscape}
@@ -483,14 +484,25 @@ After implementing the program, this section will hold discussions regarding the
 These discussions may be followed or preceded by visualisations of the results.
 \fi
 
-In this section, the results following the implementation of the program will be discussed. As with the forementioned section, this section will cover both neural networks and finite state machines separately, and then discuss them comparatively. In regards to the output of the program, there will be a handful of topical questions which must be asked and answered in order to determine if the results are correct.
+In this section, the results following the implementation of the program will be discussed. As with the forementioned section, this section will cover both neural networks and finite state machines separately, and then discuss them comparatively. In regards to the output of the program, there will be a handful of topical questions which must be asked and answered in order to determine if the results are correct. The results assume the prisoners are playing a prisoners' dilemma scenario with the following payoff matrix: \\
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{| l | l | l |}
+    \hline
+     & Cooperate & Defect  \\ \hline
+    Cooperate & 3 / 3 & 0 / 5 \\ \hline
+    Defect & 5 / 0 & 2 / 2 \\ \hline
+    \end{tabular}
+    \caption{Project Payoff Matrix}
+\end{table}
 
 \subsection{Neural Networks Results}
 In the previous section, the structure of the program was discussed, in terms of how it was built and how it executes. The first topical question to start with is as follows: \textbf{After the strategies of the networks are evolved, do the agents ever reach a point in which they always defect?} In order to effectively examine these results, the program must be examined in the form of a single-shot prisoner's dilemma, as well as a repeated game. Interestingly, speciation plays a large role in how the strategies are evolved; the ability to control speciation within the population yielded a decent range of results, as will now be discussed - starting with single-shot games.
 
 \subsubsection{Single-Shot Prisoner's Dilemma (Fixed Fitness)}
 
-Before the results are presented, an important note: as stated before in the methodology section, the fitness for the program is calculated as follows: F = F + (P1 $||$  P2). Where P1/P2 is the payoff from the move made by the first or second agent respectively. As a comparison, the following subsection will look at using Harrald's continuous fitness calculation\cite{25} found on page 139 of his paper. This fitness calculation will be explained in said subsection.
+Before the results are presented, an important note: as stated before in the methodology section, the fitness for the program is calculated as follows: F = F + (P1 $||$  P2). Where P1/P2 is the payoff from the move made by the first or second agent respectively. This will be defined as 'fixed' fitness.
 
 \begin{figure}[H]
 	\centering
@@ -506,40 +518,14 @@ As seen in figure 6, a large fraction of the population hit a preferred strategy
 		\caption{Neural Networks Proportion of Moves With Speciation}
 \end{figure}
 
-With speciation turned on, the results are vastly different - the fitness of the networks starts out very high as the mix of moves (one agent choosing cooperate and the other choosing defect) brigns the highest payoff. After testing this strategy for roughly 25 - 30 generations, the agents realise that constant mutual defection yields the best possible payoff in the long run. After generation 40, each agent in the population is choosing defect at an exponential rate, which proves indefinitely the existence of a Nash equilibrium within the population. Another interesting point worth bringing up is the comparison of results between figure 7 and the results from Harrald's\cite{25} paper in 1996. In this paper, Harrald has very similar results to that of figure 7, using networks with 20 hidden perceptrons as opposed to 2. But how well, or differently, does the program perform using Harrald's continuous fitness function?
-
-\subsubsection{Single-Shot Prisoner's Dilemma (Continuous Fitness)}
-
-On page 139 of Harrald's\cite{25} paper, it is stated that the fitness for a given player, A, is calculated as follows: \\
-
-\centerline{\textit{f}($\alpha, \beta$) = -0.75$\alpha + 1.75\beta$ + 2.25}
-\medspace
-
-Where $\alpha$ and $\beta$ are the moves of players A and B respectively. This subsection will examine the results of the program using the same parameters, but with this fitness function instead.
-
-\begin{figure}[H]
-	\centering
-		\includegraphics[width=0.75\textwidth]{ContinuousFitnessSpeciationOff}
-		\caption{Neural Networks Continuous Fitness With No Speciation}
-\end{figure}
-
-Firstly, with speciation off, the continuous fitness function seems to encourage a long-term play strategy from the very start of the simulation. In comparison to the fixed fitness function, where the results seemed to be somewhat random and no preferred strategy arose. However, in figure 9, cooperation has a much higher rate of play, and may present a dominant strategy of mutual cooperation. Let's compare this to a simulation with speciation:
-
-\begin{figure}[H]
-	\centering
-		\includegraphics[width=0.75\textwidth]{ContinuousFitnessSpeciationOn}
-		\caption{Neural Networks Continuous Fitness With No Speciation}
-\end{figure}
-
-This figure yields far more interesting results. While similar to that of the fixed fitness graph, figure 8, the agents progress to a complete state of cooperation. When the number of generations is increased to a larger number, the number of defective moves goes down, and will eventually reach either none, or close to none.
+With speciation turned on, the results are vastly different - the fitness of the networks starts out very high as the mix of moves (one agent choosing cooperate and the other choosing defect) brigns the highest payoff. After testing this strategy for roughly 25 - 30 generations, the agents realise that constant mutual defection yields the best possible payoff in the long run. After generation 40, each agent in the population is choosing defect at an exponential rate, which proves indefinitely the existence of a Nash equilibrium within the population. Another interesting point worth bringing up is the comparison of results between figure 7 and the results from Harrald's\cite{25} paper in 1996. In this paper, Harrald has very similar results to that of figure 7, using networks with 20 hidden perceptrons as opposed to 2. But how does this compare to a repeated game?
 
 \subsubsection{Repeated Prisoner's Dilemma (Fixed Fitness)}
 
-\subsubsection{Repeated Prisoner's Dilemma (Continuous Fitness)}
-
-\subsubsection{Multiple Replicants}
-
 \subsection{Finite State Machine Results}
+
+\subsection{Experimentation}
+Upon implementing the program (both the neural networks and finite state machine versions), some form of experimentation must be conducted in order to validate the correctness/robustness of the program. In order to do this, the following tests can be conducted on the program, such as ...
 
 On the other side of the implementation, the results for the finite state machine prisoners' dilemma came about in very different ways. As the finite state machines didn't have any speciation affecting the output, the results only came in one set, but looked similar to those of the neural networks. The first draft of the implementation produced an output as shown:
 
@@ -554,8 +540,10 @@ While this doesn't seem similar to the neural networks results, figure 11 shows 
 \newpage
 
 \chapter
-\section{Evaluation}
+\section{Evaluation and Conclusion}
 %In comparison to the original plans of the project, i.e implementation and testing, what would be done differently if the project were re-attempted? This section will cover the rigour of the approaches and how well they may/may not have paid off. This may involve comparisons of approaches at the end of the project vs. the start. In addition, there will be discussions on how the output of the program(s) compare to previous research from Harrald, Axelrod, etc.
+
+%After covering the previous sections, what can be taken away from this project? The research goals and questions must be revisited in order to answer whether or not they were achieved. There may also be possible discussions on further research.  
 
 Given the two facets of the project, neural networks and finite state machines, this section will evaluate the effectiveness and rigour of both approaches; this will involve comparing the original project schedule to the final project schedule, how the original approaches to the software were laid out versus how the software actually turned out, how the software compares to some of the literature and previous work and finally what could be done differently with more time or if the project was re-attempted. First, the initial and final project schedules must be examined. \\
 
@@ -604,7 +592,7 @@ As stated before, part of the project was comparing the implemented results to t
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=1.00\textwidth]{HarraldComparison}
-		\caption{Project Results vs. Harrald Results}
+		\caption{Project Results vs. Harrald Results\cite[p.~142]{25}}
 \end{figure}
 
 While the results appear similar, this project used different inputs to the Harrald paper - specifically, this project used a network topology of three input layers, six hidden layers and two output layers. The Harrald results assume six input layers, twenty hidden layers and one output layer. By changing the amount of layers to match, the results would most likely look close to identical, if the simulation was ran for 1600 generations and the fitnesses were clamped. \\
@@ -622,27 +610,18 @@ In the literature review, a handful of research questions were posed to eventual
 
 The first question has been researched and evaluated in parts of each section; in the previous section, the results were shown to prove the existence of a Nash equilibrium through complete defection, as well as being similar to the results of the Harrald paper. However, the results look slightly different, as the results in this project (specifically the neural networks side) seems to evolve a strategy much faster than that of the literature. It takes roughly 1250 generations for the strategy to be evolved in the literature, whereas the strategies in this project seem to evolve and trend towards complete defection/cooperation after 40 generations.
 
-The second question poses a slightly vague answer. Varying the payoff for the neural networks or finite state machines, by either making the payoff smaller or larger, doesn't have a particularly adverse effect - if the neural networks implementation used one output neuron which continuously output between -1 and 1, the payoff matrix would become redundant. Due to these reasons, it seems likely that changing the payoff in either payoff matrix won't evolve the strategies any faster or slower.
+As for the second question, the levels of cooperation for the neural networks representation is based largely on how the payoff matrix looks. For example, if mutual cooperation yields a payoff which is more favourable in the long term, agents will opt for mutual cooperation as the dominant strategy. However, in the short term mutual cooperation may be worse, and the agents will opt to defect. % finite state machines?
 
 In reference to the third question, feedforward networks are favoured. In the neural networks prisoners' dilemma, there is a very explicit flow of data from the input layers to the hidden layers, then from hidden to the output layers. Backpropagation is not applicable as the information is not required to travel back the way. Feedback is collected at the end of the simulation, and sending it backwards at any point during runtime is superfluous. A recurrent network isn't favoured as the nodes do not necessarily have to form a sequence.
 
-Unfortunately, the last research question could not be attempted in the time-frame of the project.
+For the last question, if the payoff matrix is changed to suit a scenario such as the stag hunt as opposed to the prisoners' dilemma, the networks will change respectively to suit the most favourable strategy.
 
 The main focus of this project was to examine the differences in effectiveness between using neural networks or finite state machines to represent agents in the prisoners' dilemma, using an evolutionary algorithm to advance and evolve the game. As stated before, it was undeniably easier to implement neural networks to achieve this, as proved by the updated project timeline. However, labelling it more 'effective' due to its ease of implementation is unjust. 
 
 % WHICH EVOLVES STRATEGIES FASTER?
 % WHICH HAD MORE CONTROL?
 
-\subsection{Experimentation}
-Upon implementing the program (both the neural networks and finite state machine versions), some form of experimentation must be conducted in order to validate the correctness/robustness of the program. In order to do this, the following tests can be conducted on the program, such as ...
-
-
-
 \newpage
-
-\chapter
-\section{Conclusion}
-After covering the previous sections, what can be taken away from this project? The research goals and questions must be revisited in order to answer whether or not they were achieved. There may also be possible discussions on further research.  
 
 \newpage
 \bibliographystyle{apalike}

@@ -6,17 +6,15 @@ import matplotlib.pyplot as plt
 machines = {}           # Container for finite state machines
 played_machines = {}    # Container for finite state machines which have played a round (during a generation)
 ids = []                # Container for the IDs of the finite state machines
+played_ids = []
+
+opponent_num = 1
 
 generations = 50        # Number of generations to cycle through
 
 generation_count = []   # List of generations (purely for visualisation purposes)
 
 agent_fitnesses = []    # Container for agent fitnesses across generations (visualisation purposes)
-
-with open('history.csv', mode = 'w') as output_file:
-    writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-    writer.writerow(['Agent', 'Fitness', 'Move'])
-    output_file.close()
     
 # This method is used to append the number of generations to the generation list
 def count_generations():
@@ -147,70 +145,95 @@ def calc_payoff(agent_one_move, agent_two_move):
         return 5
     
 def evo_alg(machines):
+    global opponent_num
     
     for generation in range(0, generations):                             # Repeat simulation for set amount of generations
         print('\n' + 'Generation ' + str(generation) + ':' + '\n')       # Output current generation number
-        for y in range(len(machines)):                          # For each agent in the machines list,
-            if (len(machines) == 0):                            # Check if there are agents left still to play a round.
-                break                                           # if not, end the current generation.
-            agentOne = random.choice(ids)                       # If there are agents still waiting to play, choose one randomly as agent one.
-            machines[agentOne].agent_id = agentOne              # Assign an applicable ID,
-            machines[agentOne].fitness = 4                      # Assign a starting (reset) fitness
-            ids.remove(agentOne)                                # Then remove the ID so that the agent doesn't play again this round.
-            agentTwo = random.choice(ids)
-            machines[agentTwo].agent_id = agentTwo              # Repeat for the second agent.
-            machines[agentTwo].fitness = 4
-            ids.remove(agentTwo)
+        for x in range(0, 50):                                   # For each agent in the machines list,
+            print('\n' + "Round " + str(x) + '\n')
+            if (len(ids) == 0):                                          # Check if there are agents left still to play a round.
+                break                                                    # if not, end the current generation.
+            agentOne = random.choice(ids)                                # If there are agents still waiting to play, choose one randomly as agent one.
+            machines[agentOne].agent_id = agentOne                       # Assign an applicable ID,
+            machines[agentOne].fitness = 4                               # Assign a starting (reset) fitness
+            ids.remove(agentOne)
             
-            if (generation == 0):                                                # If this is the starting generation,
-                machines[agentOne].choose_initial_move()                # Have agents play specific moves
-                if (machines[agentOne].move == 'cooperate'):
-                    machines[agentTwo].move_history.append('cooperate') # Update the move history lists accordingly.
-                else:
-                    machines[agentTwo].move_history.append('defect')
-                machines[agentTwo].choose_initial_move()
-                if (machines[agentTwo].move == 'cooperate'):
-                    machines[agentOne].move_history.append('cooperate') # Update the move history lists accordingly.
-                else:
-                    machines[agentOne].move_history.append('defect')
-                machines[agentOne].machine.remove_transition(trigger='choose_initial_move', source='*', dest='cooperate')   # After the starting
-                machines[agentOne].machine.remove_transition(trigger='choose_initial_move', source='*', dest='defect')      # generation, the
-                machines[agentTwo].machine.remove_transition(trigger='choose_initial_move', source='*', dest='cooperate')   # agents don't require
-                machines[agentTwo].machine.remove_transition(trigger='choose_initial_move', source='*', dest='defect')      # the default transitions.
-            else:                                                       # If this isn't the starting generation,
-                machines[agentOne].choose_move()                        # have the first agent play a move (depending on strategy).
+            for y in range(len(machines)):
+                if (len(ids) == 0):                                      # Check if there are agents left still to play a round.
+                    break
+                agentTwo = random.choice(ids)
+                machines[agentTwo].agent_id = agentTwo              # Repeat for the second agent.
+                machines[agentTwo].fitness = 4
+                ids.remove(agentTwo)
                 
-                if (machines[agentOne].move == 'cooperate'):
-                    machines[agentTwo].move_history.append('cooperate') # Update the move history lists accordingly.
-                else:
-                    machines[agentTwo].move_history.append('defect')
+                if (x == 0 and generation == 0 and agentOne is not agentTwo):                                                # If this is the starting generation,
+                    if (opponent_num == 1):
+                        machines[agentOne].choose_initial_move()                # Have agents play specific moves
+                        if (machines[agentOne].move == 'cooperate'):
+                            machines[agentTwo].move_history.append('cooperate') # Update the move history lists accordingly.
+                        else:
+                            machines[agentTwo].move_history.append('defect')
+                        machines[agentTwo].choose_initial_move()
+                        if (machines[agentTwo].move == 'cooperate'):
+                            machines[agentOne].move_history.append('cooperate') # Update the move history lists accordingly.
+                        else:
+                            machines[agentOne].move_history.append('defect')
+                        
+                        opponent_num += 1
+                    else:
+#                        print("machines: " + str(len(machines)))
+#                        print("agent one " + str(agentOne) + " agent two: " + str(agentTwo))
+                        machines[agentOne].choose_move()                # Have agents play specific moves
+                        if (machines[agentOne].move == 'cooperate'):
+                            machines[agentTwo].move_history.append('cooperate') # Update the move history lists accordingly.
+                        else:
+                            machines[agentTwo].move_history.append('defect')
+                        machines[agentTwo].choose_initial_move()
+                        if (machines[agentTwo].move == 'cooperate'):
+                            machines[agentOne].move_history.append('cooperate') # Update the move history lists accordingly.
+                        else:
+                            machines[agentOne].move_history.append('defect')
+                        machines[agentTwo].machine.remove_transition(trigger='choose_initial_move', source='*', dest='cooperate')   # agents don't require
+                        machines[agentTwo].machine.remove_transition(trigger='choose_initial_move', source='*', dest='defect')      # the default transitions.
+                        opponent_num += 1
+                else:                                                       # If this isn't the starting generation,
+                    machines[agentOne].choose_move()                        # have the first agent play a move (depending on strategy).
                     
-                machines[agentTwo].choose_move()                        # have the second agent play a move (depending on strategy).
+                    if (machines[agentOne].move == 'cooperate'):
+                        machines[agentTwo].move_history.append('cooperate') # Update the move history lists accordingly.
+                    else:
+                        machines[agentTwo].move_history.append('defect')
+                        
+                    machines[agentTwo].choose_move()                        # have the second agent play a move (depending on strategy).
+                    
+                    if (machines[agentTwo].move == 'cooperate'):
+                        machines[agentOne].move_history.append('cooperate') # Update the move history lists accordingly.
+                    else:
+                        machines[agentOne].move_history.append('defect')
+                        
+                    opponent_num += 1
                 
-                if (machines[agentTwo].move == 'cooperate'):
-                    machines[agentOne].move_history.append('cooperate') # Update the move history lists accordingly.
+                machines[agentOne].fitness += calc_payoff(machines[agentOne].move, machines[agentTwo].move) 
+                machines[agentTwo].fitness += calc_payoff(machines[agentTwo].move, machines[agentOne].move)
+                
+                if (len(played_machines) == 0):                             # After the round is finished,
+                    played_machines[0] = machines[agentTwo]                 # played agents.
                 else:
-                    machines[agentOne].move_history.append('defect')
-                    
-                with open('history.csv', mode = 'a') as output_file:    # Serialisation functions. Outputs the agent IDs and moves to a CSV.
-                    writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-                    writer.writerow(["Generation: " + repr(generation)])
-                    writer.writerow([agentOne, machines[agentOne].fitness, machines[agentOne].move])
-                    writer.writerow([agentTwo, machines[agentTwo].fitness, machines[agentTwo].move])
-                    output_file.close()
-            
-            machines[agentOne].fitness += ( (-0.75 * calc_payoff(machines[agentOne].move, machines[agentTwo].move)) + (1.75 * calc_payoff(machines[agentTwo].move, machines[agentOne].move)) + 2.25 )
-            machines[agentTwo].fitness += ( (-0.75 * calc_payoff(machines[agentTwo].move, machines[agentOne].move)) + (1.75 * calc_payoff(machines[agentOne].move, machines[agentTwo].move)) + 2.25 )
-            
-            if (len(played_machines) == 0):                             # After the round is finished,
-                played_machines[0] = machines[agentOne]                 # move the agents to a list of
-                played_machines[1] = machines[agentTwo]                 # played agents.
+                    played_machines[len(played_machines)] = machines[agentTwo]
+                
+                machines.pop(agentTwo)                                      # agents as they are an old copy.
+                
+            if (len(played_machines) == 1):                             # After the round is finished,
+                played_machines[1] = machines[agentOne]                 # played agents.
             else:
                 played_machines[len(played_machines)] = machines[agentOne]
-                played_machines[len(played_machines)] = machines[agentTwo]
+                
+            machines.pop(agentOne)     
             
-            machines.pop(agentOne)                                      # Then remove them from the list of
-            machines.pop(agentTwo)                                      # agents as they are an old copy.
+            for z in range(0, 50):
+                ids.append(z)
+                
+            machines = dict(played_machines)
             
         fitnesses = []                                                  # Reset the agent fitnesses for the current generation,
     
@@ -225,7 +248,6 @@ def evo_alg(machines):
         for z in range(0, 50):                                          # For each agent,
             add_state = random.random()                                 # initialise temporary randoms
             delete_state = random.random()                              # to check if a mutation happens.
-            ids.append(z)
             
             if add_state < 0.10:                                        # There is a 10% chance that an agent will be mutated.
                 temp_random = random.random()
