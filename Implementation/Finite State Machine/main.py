@@ -1,14 +1,23 @@
+# -*- coding: utf-8 -*-
+"""
+Class: Single-Shot Prisoner's Dilemma (Finite State Machines)
+Author: Glenn Wilkie-Sullivan
+Purpose: This program will run a prisoner's dilemma (https://en.wikipedia.org/wiki/Prisoner%27s_dilemma)
+         with single-shot rounds (only one round played between agents). Agents are represented as finite state machines.
+         This program DOES allow the agents to play against each other.
+"""
+
 from transitions import Machine
 import random
+import csv
 import matplotlib.pyplot as plt
 from fractions import Fraction
 
 machines = {}           # Container for finite state machines
 played_machines = {}    # Container for finite state machines which have played a round (during a generation)
 ids = []                # Container for the IDs of the finite state machines
-played_ids = []
 
-opponent_num = 1
+opponent_num = 1        # Temporary variable to track how many opponents an agent has played against
 
 generations = 15        # Number of generations to cycle through
 
@@ -16,12 +25,21 @@ generation_count = []   # List of generations (purely for visualisation purposes
 
 agent_fitnesses = []    # Container for agent fitnesses across generations (visualisation purposes)
 
-coop_move_count = 0
-def_move_count = 0
+coop_move_count = 0     # Tracks how many cooperative moves are made during the simulation
+def_move_count = 0      # Tracks how many defective moves are made during the simulation
 
 total_count_coop = []
-total_count_def = []
+total_count_def = []    # These lists contain the move_count variables, making it easier to plot on a graph
 total_move_count = []
+
+### UNCOMMENT THIS TO SERIALISE GAME LOG TO A CSV WITHIN ROOT FOLDER ###
+
+#with open('history.csv', mode = 'w') as output_file:
+#    writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+#    writer.writerow(['Agent', 'Fitness', 'Move'])
+#    output_file.close()
+
+########################################################################
     
 # This method is used to append the number of generations to the generation list
 def count_generations():
@@ -29,7 +47,7 @@ def count_generations():
     for x in range (0, generations):
         generation_count.append(x)
         
-# This method is used to visualise the performace of agents across generations
+# This method is used to visualise the performace of agents across generations using matplotlib
 def visualise_graph(generation_count, fitnesses):
     
     plt.plot(generation_count, fitnesses)
@@ -127,7 +145,6 @@ class Prisoner(object):
     # Boolean method to check if the opponent played defect
     # as their last move
     def opponent_defected(self):
-        #print(str(self.move_history[len(self.move_history) - 1]))
         if self.move_history[len(self.move_history) - 1] == 'defect':
             return True
         else:
@@ -135,7 +152,6 @@ class Prisoner(object):
         
     # Similarly, check if the opponent played cooperate
     def opponent_cooperated(self):
-        #print(str(self.move_history[len(self.move_history) - 1]))
         if self.move_history[len(self.move_history) - 1] == 'cooperate':
             return True
         else:
@@ -172,25 +188,25 @@ def evo_alg(machines):
     
     for generation in range(0, generations):                             # Repeat simulation for set amount of generations
         print('\n' + 'Generation ' + str(generation) + ':' + '\n')       # Output current generation number
-        for x in range(0, 50):                                   # For each agent in the machines list,
-            print('\n' + "Round " + str(x) + '\n')
+        for x in range(0, 50):                                           # For each agent in the machines list,
+            print('\n' + "Round " + str(x) + '\n')                       # Output current round number,
             if (len(ids) == 0):                                          # Check if there are agents left still to play a round.
                 break                                                    # if not, end the current generation.
             agentOne = random.choice(ids)                                # If there are agents still waiting to play, choose one randomly as agent one.
             machines[agentOne].agent_id = agentOne                       # Assign an applicable ID,
             machines[agentOne].fitness = 4                               # Assign a starting (reset) fitness
-            ids.remove(agentOne)
+            ids.remove(agentOne)                                         # Make sure the agent can't be chosen again
             
             for y in range(len(machines)):
                 if (len(ids) == 0):                                      # Check if there are agents left still to play a round.
                     break
                 agentTwo = random.choice(ids)
-                machines[agentTwo].agent_id = agentTwo              # Repeat for the second agent.
+                machines[agentTwo].agent_id = agentTwo                   # Repeat for the second agent.
                 machines[agentTwo].fitness = 4
                 ids.remove(agentTwo)
                 
-                if (x == 0 and generation == 0 and agentOne is not agentTwo):                                                # If this is the starting generation,
-                    if (opponent_num == 1):
+                if (x == 0 and generation == 0 and agentOne is not agentTwo):   # If this is the starting generation,
+                    if (opponent_num == 1):                                     # and this is the agents first opponent,
                         machines[agentOne].choose_initial_move()                # Have agents play specific moves
                         if (machines[agentOne].move == 'cooperate'):
                             machines[agentTwo].move_history.append('cooperate') # Update the move history lists accordingly.
@@ -204,9 +220,7 @@ def evo_alg(machines):
                         
                         opponent_num += 1
                     else:
-#                        print("machines: " + str(len(machines)))
-#                        print("agent one " + str(agentOne) + " agent two: " + str(agentTwo))
-                        machines[agentOne].choose_move()                # Have agents play specific moves
+                        machines[agentOne].choose_move()                        # Have agents choose their own move.
                         if (machines[agentOne].move == 'cooperate'):
                             machines[agentTwo].move_history.append('cooperate') # Update the move history lists accordingly.
                         else:
@@ -236,27 +250,38 @@ def evo_alg(machines):
                         
                     opponent_num += 1
                 
-                machines[agentOne].fitness += calc_payoff(machines[agentOne].move, machines[agentTwo].move) 
-                machines[agentTwo].fitness += calc_payoff(machines[agentTwo].move, machines[agentOne].move)
+                machines[agentOne].fitness += calc_payoff(machines[agentOne].move, machines[agentTwo].move)     # Calculate the payoffs of both
+                machines[agentTwo].fitness += calc_payoff(machines[agentTwo].move, machines[agentOne].move)     # moves and add it to the fitnesses.
+                
+### UNCOMMENT THIS TO SERIALISE GAME LOG TO A CSV WITHIN ROOT FOLDER ###
+                
+#                with open('history.csv', mode = 'a') as output_file:
+#                    writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+#                    writer.writerow(["Generation: " + repr(x)])
+#                    writer.writerow([agentOne, machines[agentOne].fitness, machines[agentOne].move])
+#                    writer.writerow([agentTwo, machines[agentTwo].fitness, machines[agentTwo].move])
+#                    output_file.close()
+                
+########################################################################
                 
                 if (len(played_machines) == 0):                             # After the round is finished,
-                    played_machines[0] = machines[agentTwo]                 # played agents.
+                    played_machines[0] = machines[agentTwo]                 # move the agents to another list.
                 else:
                     played_machines[len(played_machines)] = machines[agentTwo]
                 
-                machines.pop(agentTwo)                                      # agents as they are an old copy.
+                machines.pop(agentTwo)                                      # and make sure the current opponent can't play again.
                 
-            if (len(played_machines) == 1):                             # After the round is finished,
-                played_machines[1] = machines[agentOne]                 # played agents.
+            if (len(played_machines) == 1):
+                played_machines[1] = machines[agentOne]
             else:
                 played_machines[len(played_machines)] = machines[agentOne]
                 
-            machines.pop(agentOne)     
+            machines.pop(agentOne)                                          # Make sure the first agent can't play again.
             
-            for z in range(0, 50):
+            for z in range(0, 50):                                          # Reset the IDs
                 ids.append(z)
                 
-            machines = dict(played_machines)
+            machines = dict(played_machines)                                # Then move the agents back to the original list
             
         fitnesses = []                                                  # Reset the agent fitnesses for the current generation,
         

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Class: Single-Shot Prisoner's Dilemma (Neural Networks)
+Class: Single-Shot Prisoner's Dilemma (Neural Networks) (No Self-Play)
 Author: Glenn Wilkie-Sullivan
 Purpose: This program will run a prisoner's dilemma (https://en.wikipedia.org/wiki/Prisoner%27s_dilemma)
          with single-shot rounds (only one round played between agents). Agents are represented as neural networks.
@@ -15,53 +15,61 @@ import csv
 import matplotlib.pyplot as plt
 from fractions import Fraction
 
-# Iterator used to move down the move history
-hist_iterator = 3
+hist_iterator = 3       # Iterator used to move down the move history
 
-# Moves
-cooperate = 0
-defect = 1
+cooperate = 0           # Neurons for the agents to ping if they choose
+defect = 1              # a cooperate or defect move respectively
 
-# History of moves made by the agents
-history = {}
+history = {}            # History of moves made by the agents
 
-# Container to randomise play
-agent_ids = []
-# Container for agents
-networks = {}
+agent_ids = []          # Container for unique IDs attached to the agents
 
-round_count = []
+networks = {}           # Container for the agents
 
-coop_move_count = 0
-def_move_count = 0
+coop_move_count = 0     # Tracks how many cooperative moves are made during the simulation
+def_move_count = 0      # Tracks how many defective moves are made during the simulation
 
 total_count_coop = []
-total_count_def = []
+total_count_def = []    # These lists contain the move_count variables, making it easier to plot on a graph
 total_move_count = []
 
-generation_count = []
+round_count = []        # Container for the amount of rounds
+
+numberOfGenerations = 50       # Modify this to change the amount of generations the simulation runs for
+generation_count = []           # List of generations (purely for visualisation purposes)
+
+### UNCOMMENT THIS TO SERIALISE GAME LOG TO A CSV WITHIN ROOT FOLDER ###
 
 #with open('history.csv', mode = 'w') as output_file:
 #    writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-#    writer.writerow(['Agent', 'Fitness', 'Move'])
+#    writer.writerow(['Game/Replicant #', 'Average Fitness', 'Fitness Standard Deviation'])
 #    output_file.close()
     
+########################################################################
+
+# This method will increment the variable tracking 
+# how many cooperative moves are made
 def add_coop_move():
     global coop_move_count
     coop_move_count += 1
     
+# Conversely, this will increment the defect variable
 def add_def_move():
     global def_move_count
     def_move_count += 1
     
+# This method is used to append the number of generations to the generation list
 def count_generations():
     global geneation_count
-    for x in range (0, 50):
+    for x in range (0, numberOfGenerations):
         generation_count.append(x)
 
-# Calculate payoff for round, returns number of years in the dilemma scenario
+# Basic prisoner's dilemma payoff matrix method
 def Calculate_Payoff(agent_one_move, agent_two_action):
 
+    # Using the chosen moves of the two agents playing against each other,
+    # if agent one chooses to cooperate and agent two defects,
+    # agent one gets a payoff of 0
     if (agent_one_move == cooperate) and (agent_two_action == defect):
         add_coop_move()
         add_def_move()
@@ -85,13 +93,17 @@ def Calculate_Payoff(agent_one_move, agent_two_action):
 # Play agents against each other
 def evo_alg(agents, config):
 
+    # Reset the game
     agent_ids.clear()
     networks.clear()
     
+    # This section is purely for visualisation purposes #
     total_count_coop.append(coop_move_count)
     total_count_def.append(def_move_count)
     total_move_count.append(coop_move_count + def_move_count)
+    #####################################################
     
+    # Reset the agents and initialise them again
     for agent_id, agent in agents:
         # Reset agent fitness
         agent.fitness = 4.0
@@ -136,18 +148,24 @@ def evo_alg(agents, config):
                 agent.fitness += Calculate_Payoff(move, opponent_move) 
                 opponent.fitness += Calculate_Payoff(opponent_move, move)
                 
-                round_count.append("round")
+                ### UNCOMMENT THIS TO SERIALISE GAME LOG TO A CSV WITHIN ROOT FOLDER ###
                 
-                with open('history.csv', mode = 'a') as output_file:
-                    writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-                    writer.writerow(["Round: " + repr(len(round_count))])
-                    writer.writerow([agent.key, agent.fitness, move])
-                    writer.writerow([opponent.key, opponent.fitness, opponent_move])
-                    output_file.close()
+#                round_count.append("round")
+#                
+#                with open('history.csv', mode = 'a') as output_file:
+#                    writer = csv.writer(output_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+#                    writer.writerow(["Round: " + repr(len(round_count))])
+#                    writer.writerow([agent.key, agent.fitness, move])
+#                    writer.writerow([opponent.key, opponent.fitness, opponent_move])
+#                    output_file.close()
+                    
+                ########################################################################
 
 def run():
     
-    count_generations()
+    # Count the amount of generations
+    if (len(generation_count) != numberOfGenerations):
+        count_generations()
     
     # load network config
     config = neat.Config(neat.DefaultGenome, 
@@ -166,12 +184,13 @@ def run():
     p.add_reporter(neat.Checkpointer(5))
 
     # Run for 50 generations
-    winner = p.run(evo_alg, 50)
+    winner = p.run(evo_alg, numberOfGenerations)
 
     fittest_agent = stats.best_genome()
     # Print fittest agent of last round
     print('\nFittest Agent:\n{!s}'.format(fittest_agent))
     
+    # This section is purely for visualisation purposes #
     for p in range(len(total_move_count)):
         if (p != 0):
             total_count_coop[p] = Fraction(total_count_coop[p] / total_move_count[p]).limit_denominator()
@@ -184,18 +203,10 @@ def run():
     plt.plot(generation_count, total_count_def, label='Proportion of Defective Moves')
     plt.legend(loc='best')
     plt.show()
+    #####################################################
     
+    # Visualise game log
     visualise.plot_stats(stats, ylog=False, view=True)
     #visualise.plot_species(stats, view=True)
-    
-#    print(len(total_count_coop))
-#    print(len(total_count_def))
-#    print(len(generation_count))
-#    print(*total_count_coop, sep = ", ")
-#    print(*total_move_count, sep = ", ")
-    
-    for p in range(len(total_move_count)):
-        if (p != 0):
-            print("Generation: " + str(p) + " cooperate move count = " + str(total_count_coop[p]))
 
 run()
