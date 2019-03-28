@@ -20,6 +20,14 @@
 \usepackage{soul}
 \usepackage{color}
 \usepackage{lscape}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
 \graphicspath{ {./Images/} }
 
 % “”
@@ -538,20 +546,26 @@ In comparison to the single-shot game shown in figure 7, the obvious difference 
 		\caption{Average Fitness of a Repeated Game with Speciation}
 \end{figure}
 
-\subsection{Finite State Machine Results}
+Figure 10 looks far more optimal as a representative simulation - over 30 replicants, the average fitnesses don't waver between a large range. Instead, the average fitness stays almost the same for each run, meaning the results will reliably look similar, or the same, over a large amount of runs. In this simulation, the agents trend towards mutual cooperation as the preferred strategy, and will eventually opt for complete cooperation given more generations.
 
-\subsection{Experimentation}
-Upon implementing the program (both the neural networks and finite state machine versions), some form of experimentation must be conducted in order to validate the correctness/robustness of the program. In order to do this, the following tests can be conducted on the program, such as ...
+\subsection{Finite State Machine Results}
 
 On the other side of the implementation, the results for the finite state machine prisoners' dilemma came about in very different ways. As the finite state machines didn't have any speciation affecting the output, the results only came in one set, but looked similar to those of the neural networks. The first draft of the implementation produced an output as shown:
 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.75\textwidth]{FSMFitnesses}
-		\caption{Finite State Machines Continuous Fitness}
+		\caption{Finite State Machines Average Fitness}
 \end{figure}
 
-While this doesn't seem similar to the neural networks results, figure 11 shows a fitness trend that is not unlike the trend of figure 10. The previous neural network simulations with no speciation produced very random, erratic results with no causality; these results show the fitness starting high, then dropping down to a lower figure, dipping between roughly 6.25 and 6.45 fitness (using single shot rounds).
+While this doesn't seem similar to the neural networks results, figure 11 shows a fitness trend that is not unlike the trend of figure 10. The previous neural network simulations with no speciation produced very random, erratic results with no causality; these results show the fitness starting high, then dropping down to a lower figure, dipping between roughly 6.25 and 6.45 fitness (using single shot rounds). However, these results are not the correct results for this project, so more work had to be done to the simulation.
+
+Using Matthijs van Veelen and Julián García's paper, “In and out of Equilibrium: Evolution of Strategies in Repeated Games with Discounting”\cite[p.~14]{46} as a reference, the authors talk about how they conducted various experiments in repeated games using finite state machines - the modus operandi here is applicable to this project, especially the mutation and selection operators. With this in mind, the program was modified to model these simulations slightly while still staying within the scope of the project; the next draft of results looked as follows:
+
+
+
+\subsection{Experimentation}
+Upon implementing the program (both the neural networks and finite state machine versions), some form of experimentation must be conducted in order to validate the correctness/robustness of the program. In order to do this, the following tests can be conducted on the program, such as ...
 
 \newpage
 

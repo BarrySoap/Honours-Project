@@ -10,7 +10,7 @@ played_ids = []
 
 opponent_num = 1
 
-generations = 100        # Number of generations to cycle through
+generations = 150        # Number of generations to cycle through
 
 generation_count = []   # List of generations (purely for visualisation purposes)
 

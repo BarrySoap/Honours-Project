@@ -1,8 +1,0 @@
-Is generalisation applicable to the project?
-If the training reaches a point where no significant changes can be made to the weights, is this applicable for control tasks?
-Are control tasks the same as control applications?
-genome = [0, 1
-	  1, 0] ?
-or
-
-genome = [0, 1] ?
