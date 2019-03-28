@@ -1,7 +1,7 @@
 from transitions import Machine
 import random
-import csv
 import matplotlib.pyplot as plt
+from fractions import Fraction
 
 machines = {}           # Container for finite state machines
 played_machines = {}    # Container for finite state machines which have played a round (during a generation)
@@ -10,16 +10,23 @@ played_ids = []
 
 opponent_num = 1
 
-generations = 50        # Number of generations to cycle through
+generations = 100        # Number of generations to cycle through
 
 generation_count = []   # List of generations (purely for visualisation purposes)
 
 agent_fitnesses = []    # Container for agent fitnesses across generations (visualisation purposes)
+
+coop_move_count = 0
+def_move_count = 0
+
+total_count_coop = []
+total_count_def = []
+total_move_count = []
     
 # This method is used to append the number of generations to the generation list
 def count_generations():
     global geneation_count
-    for x in range (0, 50):
+    for x in range (0, generations):
         generation_count.append(x)
         
 # This method is used to visualise the performace of agents across generations
@@ -31,9 +38,21 @@ def visualise_graph(generation_count, fitnesses):
     plt.title('Agent Fitnesses Across Generations')
     plt.legend(loc='best')
     plt.show()
+    
+    for p in range(len(total_move_count)):
+        total_count_coop[p] = Fraction(total_count_coop[p] / total_move_count[p]).limit_denominator()
+        total_count_def[p] = Fraction(total_count_def[p] / total_move_count[p]).limit_denominator()
+            
+    plt.plot(generation_count, total_count_coop, label='Proportion of Cooperative Moves')
+    plt.ylabel('Ratio of Moves')
+    plt.xlabel('Generations')
+    plt.title('Proportion of Moves')
+    plt.plot(generation_count, total_count_def, label='Proportion of Defective Moves')
+    plt.legend(loc='best')
+    plt.show()
 
 class Prisoner(object):
-
+    
     fitness = 4             # Agent starting fitness
     agent_id = 0            # ID of the agent
     move = ''               # Currently chosen move of the agent
@@ -93,12 +112,16 @@ class Prisoner(object):
     # Method purpose - if an agent cooperates, choose cooperate
     # as the current move
     def update_move_coop(self):
-        print(str(self.agent_id) + ' cooperated')
+        global coop_move_count
+        coop_move_count += 1
+        #print(str(self.agent_id) + ' cooperated')
         self.move = 'cooperate'
         
     # Conversely, update the move if the agent plays defect
     def update_move_def(self):
-        print(str(self.agent_id) + ' defected')
+        global def_move_count
+        def_move_count += 1
+        #print(str(self.agent_id) + ' defected')
         self.move = 'defect'
         
     # Boolean method to check if the opponent played defect
@@ -236,6 +259,10 @@ def evo_alg(machines):
             machines = dict(played_machines)
             
         fitnesses = []                                                  # Reset the agent fitnesses for the current generation,
+        
+        total_count_coop.append(coop_move_count)
+        total_count_def.append(def_move_count)
+        total_move_count.append(coop_move_count + def_move_count)
     
         for a in range(0, 50):
             machines[a] = played_machines[a]                            # Move the agents back to the original machines list,
@@ -249,7 +276,7 @@ def evo_alg(machines):
             add_state = random.random()                                 # initialise temporary randoms
             delete_state = random.random()                              # to check if a mutation happens.
             
-            if add_state < 0.10:                                        # There is a 10% chance that an agent will be mutated.
+            if add_state < 0.05:                                        # There is a 10% chance that an agent will be mutated.
                 temp_random = random.random()
                 if (temp_random <= 0.5):                                # Either add a cooperate transition or a defect transition (50% chance).
                     machines[z].machine.add_transition(trigger='choose_move', source='*', dest='cooperate', 
@@ -262,7 +289,7 @@ def evo_alg(machines):
                     machines[z].machine.add_transition(trigger='choose_move', source='*', dest='defect', 
                             conditions = ['opponent_cooperated'], after='update_move_def')
                 
-            elif delete_state < 0.10 and len(machines[z].states) is not 1:  # The other mutation that can happen is a transition being deleted.
+            elif delete_state < 0.05 and len(machines[z].states) is not 1:  # The other mutation that can happen is a transition being deleted.
                 machines[z].states.pop(random.randrange(1, len(machines[z].states)))
         
 populate_machines()

@@ -125,7 +125,7 @@ def evo_alg(agents, config):
         for f in range(len(agents)):
             
             # Change the second range value to however many round are to be played.
-            for x in range (0, 5):
+            for x in range (0, 10):
                 # Initialise opposing agent
                 opponent_id, opponent = agents[f]
                 # Get history of agent's moves
@@ -145,6 +145,9 @@ def evo_alg(agents, config):
                 # Calculate new fitness
                 agent.fitness += ( (-0.75 * Calculate_Payoff(move, opponent_move)) + (1.75 * Calculate_Payoff(opponent_move, move)) + 2.25 )
                 opponent.fitness += ( (-0.75 * Calculate_Payoff(move, opponent_move)) + (1.75 * Calculate_Payoff(opponent_move, move)) + 2.25 )
+                
+#                agent.fitness += Calculate_Payoff(move, opponent_move) 
+#                opponent.fitness += Calculate_Payoff(opponent_move, move)
 
 def run():
     global average_generation_fitness
@@ -190,7 +193,7 @@ def run():
             total_count_def[p] = Fraction(total_count_def[p] / total_move_count[p]).limit_denominator()
             
     plt.plot(generation_count, total_count_coop, label='Proportion of Cooperative Moves')
-    plt.ylabel('Ratio of Moves')
+    plt.ylabel('Proportion of Moves')
     plt.xlabel('Generations')
     plt.title('Proportion of Moves - Speciation On')
     plt.plot(generation_count, total_count_def, label='Proportion of Defective Moves')

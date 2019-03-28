@@ -484,7 +484,7 @@ After implementing the program, this section will hold discussions regarding the
 These discussions may be followed or preceded by visualisations of the results.
 \fi
 
-In this section, the results following the implementation of the program will be discussed. As with the forementioned section, this section will cover both neural networks and finite state machines separately, and then discuss them comparatively. In regards to the output of the program, there will be a handful of topical questions which must be asked and answered in order to determine if the results are correct. The results assume the prisoners are playing a prisoners' dilemma scenario with the following payoff matrix: \\
+In this section, the results following the implementation of the program will be discussed. As with the forementioned section, this section will cover both neural networks and finite state machines separately, and then discuss them comparatively. In regards to the output of the program, there will be a handful of topical questions which must be asked and answered in order to determine if the results are correct. The results assume the agents are playing a prisoners' dilemma scenario with the following payoff matrix: \\
 
 \begin{table}[H]
     \centering
@@ -502,25 +502,41 @@ In the previous section, the structure of the program was discussed, in terms of
 
 \subsubsection{Single-Shot Prisoner's Dilemma (Fixed Fitness)}
 
-Before the results are presented, an important note: as stated before in the methodology section, the fitness for the program is calculated as follows: F = F + (P1 $||$  P2). Where P1/P2 is the payoff from the move made by the first or second agent respectively. This will be defined as 'fixed' fitness.
+Before the results are presented, an important note: as stated before in the methodology section, the fitness for the program is calculated as follows: F = F + (P1 $||$  P2). Where P1/P2 is the payoff from the move made by the first or second agent respectively. This will be defined as 'fixed' fitness. To start with, a single-shot game with speciation turned off will be examined, in order to have a comparitive sample simulation.
 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.75\textwidth]{RatioSpeciationOff}
-		\caption{Neural Networks Proportion of Moves With No Speciation}
+		\caption{Average Fitness of a Single-Shot Game with No Speciation}
 \end{figure}
 
-As seen in figure 6, a large fraction of the population hit a preferred strategy after roughly 15 - 20 generations. In the program, the agents are playing against themselves and each other agent in the population \textbf{only once}. With this in mind, their strategies will yield better payoffs each generation, regardless of the opposing strategy. In regards to the forementioned question which was posed, there very obviously seems to be a point in which defecting becomes the preferred strategy, but does this prove the existence of a Nash equilibrium?
+The results presented as well as the following results are all simulations over 30 replicants - this means that the simulation was ran 30 times, and the average fitness of the agents is shown within the graph as a blue line over the amount of generations. The orange lines are error bars showing the lower and upper bounds of other simulations known as the standard error. As seen in figure 6, a large fraction of the population hit a preferred strategy after roughly 15 - 20 generations. In the program, the agents are playing against themselves and each other agent in the population \textbf{only once}. With this in mind, their strategies will yield better payoffs each generation, regardless of the opposing strategy. The predominant strategy seems to be a defective majority, which is expected within this simulation as defection yields the best payoff in the short term. In regards to the forementioned question which was posed, there very obviously seems to be a point in which defecting becomes the preferred strategy, but does this prove the existence of a Nash equilibrium?
 
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.75\textwidth]{RatioSpeciationOn}
-		\caption{Neural Networks Proportion of Moves With Speciation}
+		\caption{Average Fitness of a Single-Shot Game with Speciation}
 \end{figure}
 
-With speciation turned on, the results are vastly different - the fitness of the networks starts out very high as the mix of moves (one agent choosing cooperate and the other choosing defect) brigns the highest payoff. After testing this strategy for roughly 25 - 30 generations, the agents realise that constant mutual defection yields the best possible payoff in the long run. After generation 40, each agent in the population is choosing defect at an exponential rate, which proves indefinitely the existence of a Nash equilibrium within the population. Another interesting point worth bringing up is the comparison of results between figure 7 and the results from Harrald's\cite{25} paper in 1996. In this paper, Harrald has very similar results to that of figure 7, using networks with 20 hidden perceptrons as opposed to 2. But how does this compare to a repeated game?
+With speciation turned on, the results are vastly different - the fitness of the networks starts out very high as the mix of moves (one agent choosing cooperate and the other choosing defect) yields the highest payoff. After testing this strategy for roughly 25 - 30 generations, the agents realise that constant mutual defection yields the best possible payoff in the long run. After generation 40, each agent in the population is choosing defect at an exponential rate, which proves indefinitely the existence of a Nash equilibrium within the population. As the proportion of moves is slowly curving towards complete defection, it seems likely that this will be the trend after roughly 1,000 - 2,000 generations. Another interesting point worth bringing up is the comparison of results between figure 7 and the results from Harrald's\cite{25} paper in 1996. In this paper, Harrald has very similar results to that of figure 7, using networks with 20 hidden perceptrons as opposed to 2. This point will be expanded on in the following section. But how do these results compare to that of a repeated game?
 
 \subsubsection{Repeated Prisoner's Dilemma (Fixed Fitness)}
+
+The singular difference between a repeated game and a single-shot game is that agents will play against each other for more than one round; in these simulations, the agents play against each other 30 times, and the program is run over 30 replicants (as with the previous results). Like the single-shot games, the simulation results will be examined with speciation turned off first:
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.80\textwidth]{RepeatedFixedFitnessOff}
+		\caption{Average Fitness of a Repeated Game with No Speciation}
+\end{figure}
+
+In comparison to the single-shot game shown in figure 7, the obvious difference is that the agents opt for cooperation over defection. The average fitness also trends toward a higher level after the first 20 generations, even though it stayed somewhat average in the single-shot game. The reasoning for the proportion of moves and the average fitness to be like this is because cooperation, and mutual cooperation especially, is a much more favourable strategy in the long term of a repeated game. Compare this to a graph of a repeated game with speciation turned on instead, which looks as follows:
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.80\textwidth]{RepeatedFixedFitnessOn}
+		\caption{Average Fitness of a Repeated Game with Speciation}
+\end{figure}
 
 \subsection{Finite State Machine Results}
 

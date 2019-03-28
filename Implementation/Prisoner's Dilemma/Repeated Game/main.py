@@ -115,7 +115,7 @@ def evo_alg(agents, config):
         for f in range(len(agents)):
             
             # Change the second range value to however many round are to be played.
-            for x in range (0, 50):
+            for x in range (0, 20):
                 # Initialise opposing agent
                 opponent_id, opponent = agents[f]
                 # Get history of agent's moves
@@ -133,8 +133,8 @@ def evo_alg(agents, config):
                 history[str(opponent_id)].append(opponent_move)
                 
                 # Calculate new fitness
-                agent.fitness += ( (-0.75 * Calculate_Payoff(move, opponent_move)) + (1.75 * Calculate_Payoff(opponent_move, move)) + 2.25 )
-                opponent.fitness += ( (-0.75 * Calculate_Payoff(move, opponent_move)) + (1.75 * Calculate_Payoff(opponent_move, move)) + 2.25 )
+                agent.fitness += Calculate_Payoff(move, opponent_move) 
+                opponent.fitness += Calculate_Payoff(opponent_move, move)
                 
                 round_count.append("round")
                 
