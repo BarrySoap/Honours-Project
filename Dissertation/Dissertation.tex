@@ -555,17 +555,33 @@ On the other side of the implementation, the results for the finite state machin
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=0.75\textwidth]{FSMFitnesses}
-		\caption{Finite State Machines Average Fitness}
+		\caption{Finite State Machines First Draft Fitnesses}
 \end{figure}
 
 While this doesn't seem similar to the neural networks results, figure 11 shows a fitness trend that is not unlike the trend of figure 10. The previous neural network simulations with no speciation produced very random, erratic results with no causality; these results show the fitness starting high, then dropping down to a lower figure, dipping between roughly 6.25 and 6.45 fitness (using single shot rounds). However, these results are not the correct results for this project, so more work had to be done to the simulation.
 
 Using Matthijs van Veelen and Julián García's paper, “In and out of Equilibrium: Evolution of Strategies in Repeated Games with Discounting”\cite[p.~14]{46} as a reference, the authors talk about how they conducted various experiments in repeated games using finite state machines - the modus operandi here is applicable to this project, especially the mutation and selection operators. With this in mind, the program was modified to model these simulations slightly while still staying within the scope of the project; the next draft of results looked as follows:
 
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=1.0\textwidth]{NewFSMFitnesses}
+		\caption{Finite State Machines Second Draft Fitnesses}
+\end{figure}
 
+Figure 12 shows somewhat more promising results - the proportion of moves shows an evolution of the machines into a preferred strategy - while it isn't dominant, defection is preferred in the short term, similar to that of the neural networks. This isn't reflected well within the average fitnesses of the agents, but this is due to the way the values are being reset and calculated. With more time, it would be worthwhile investigating a repeated game within the finite state machine simulation, to see if the agents prefer a trend of cooperation. \\
 
 \subsection{Experimentation}
-Upon implementing the program (both the neural networks and finite state machine versions), some form of experimentation must be conducted in order to validate the correctness/robustness of the program. In order to do this, the following tests can be conducted on the program, such as ...
+Upon implementing the program (both the neural networks and finite state machine versions), some form of experimentation must be conducted in order to validate the correctness/robustness of the program. In order to do this, the variables of the program were adjusted to compare with previous results.
+
+The first facet of the neural networks simulation which could be changed is the ability for the networks to have recurrent connections - meaning the agents are feedforward networks. In the simulation the agents are feedforward networks, which was justified previously. However, if the agents are allowed to have recurrent connections, the results look as shown:
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=0.75\textwidth]{FeedforwardOff}
+		\caption{Neural Networks Results with No Recurrent Connections}
+\end{figure}
+
+For this simulation, speciation is enabled, with a population size of 50 in a single-shot game. The results are very similar for a repeated game. From the start of the simulation, the agents opt for complete cooperation, and at generation 21, speciation reduces the size of the population by almost half based on similar attributes. With speciation turned off, the agents opt for complete cooperation but the population size is never changed. As the neurons can send feedback to each other based on the decisions of the agents, it is possible that complete cooperation is always  the preferred strategy, with no incentive to change.
 
 \newpage
 
@@ -625,7 +641,9 @@ As stated before, part of the project was comparing the implemented results to t
 		\caption{Project Results vs. Harrald Results\cite[p.~142]{25}}
 \end{figure}
 
-While the results appear similar, this project used different inputs to the Harrald paper - specifically, this project used a network topology of three input layers, six hidden layers and two output layers. The Harrald results assume six input layers, twenty hidden layers and one output layer. By changing the amount of layers to match, the results would most likely look close to identical, if the simulation was ran for 1600 generations and the fitnesses were clamped. \\
+While the results appear similar, this project used different inputs to the Harrald paper - specifically, this project used a network topology of three input layers, six hidden layers and two output layers. The Harrald results assume six input layers, twenty hidden layers and one output layer. By changing the amount of layers to match, the results would most likely look close to identical, if the simulation was ran for 1600 generations and the fitnesses were clamped. 
+
+The van Veelen paper\cite{46} doesn't include results of the fitnesses or proportion of moves - rather, the paper shows the average payoff over the amount of generations. \\
 
 \subsection{Comparison of Effectiveness Between Representations}
 
@@ -640,13 +658,15 @@ In the literature review, a handful of research questions were posed to eventual
 
 The first question has been researched and evaluated in parts of each section; in the previous section, the results were shown to prove the existence of a Nash equilibrium through complete defection, as well as being similar to the results of the Harrald paper. However, the results look slightly different, as the results in this project (specifically the neural networks side) seems to evolve a strategy much faster than that of the literature. It takes roughly 1250 generations for the strategy to be evolved in the literature, whereas the strategies in this project seem to evolve and trend towards complete defection/cooperation after 40 generations.
 
-As for the second question, the levels of cooperation for the neural networks representation is based largely on how the payoff matrix looks. For example, if mutual cooperation yields a payoff which is more favourable in the long term, agents will opt for mutual cooperation as the dominant strategy. However, in the short term mutual cooperation may be worse, and the agents will opt to defect. % finite state machines?
+As for the second question, the levels of cooperation for the neural networks representation is based largely on how the payoff matrix looks. For example, if mutual cooperation yields a payoff which is more favourable in the long term, agents will opt for mutual cooperation as the dominant strategy. However, in the short term mutual cooperation may be worse, and the agents will opt to defect. As for the finite state machines, varying the payoff doesn't change the trend of results - the agents opt for what strategy is preferred in the long term, with a very balanced proportion of cooperative and defective moves.
 
 In reference to the third question, feedforward networks are favoured. In the neural networks prisoners' dilemma, there is a very explicit flow of data from the input layers to the hidden layers, then from hidden to the output layers. Backpropagation is not applicable as the information is not required to travel back the way. Feedback is collected at the end of the simulation, and sending it backwards at any point during runtime is superfluous. A recurrent network isn't favoured as the nodes do not necessarily have to form a sequence.
 
 For the last question, if the payoff matrix is changed to suit a scenario such as the stag hunt as opposed to the prisoners' dilemma, the networks will change respectively to suit the most favourable strategy.
 
-The main focus of this project was to examine the differences in effectiveness between using neural networks or finite state machines to represent agents in the prisoners' dilemma, using an evolutionary algorithm to advance and evolve the game. As stated before, it was undeniably easier to implement neural networks to achieve this, as proved by the updated project timeline. However, labelling it more 'effective' due to its ease of implementation is unjust. 
+The main focus of this project was to examine the differences in effectiveness between using neural networks or finite state machines to represent agents in the prisoners' dilemma, using an evolutionary algorithm to advance and evolve the game. As stated before, it was undeniably easier to implement neural networks to achieve this, as proved by the updated project timeline. However, labelling it more 'effective' due to its ease of implementation is unjust.
+
+In terms of the ease of use and general difficulty of implementation, it is recommended that anyone attempting to create a similar project uses NEAT instead of transitions. While both libraries offer a plethora of functionality which is robust, NEAT is overall more suitable for simulating game theory scenarios. With more work, the results of the neural networks could also be done with finite state machines, but the work involved would be far more detailed and comprehensive than that of neural networks. In the context of this project, 'effectiveness' is defined by which representation can find cooperative representations faster (by generation). Judging by the results, the finite state machine simulation preferred defection as the primary strategy, making its effectiveness far less credible. The neural networks representation shows very promising results as well as capability to show more, given the amount of control. With more time on the project, it would be worthwhile investigating different genetic operators in the finite state machine simulations, as well as speciation. In conclusion, neural networks are vastly more effective than finite state machines in the context of this project to represent agents within a prisoners' dilemma scenario.
 
 % WHICH EVOLVES STRATEGIES FASTER?
 % WHICH HAD MORE CONTROL?

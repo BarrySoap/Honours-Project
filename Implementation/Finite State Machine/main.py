@@ -10,7 +10,7 @@ played_ids = []
 
 opponent_num = 1
 
-generations = 150        # Number of generations to cycle through
+generations = 15        # Number of generations to cycle through
 
 generation_count = []   # List of generations (purely for visualisation purposes)
 
@@ -65,7 +65,7 @@ class Prisoner(object):
     def __init__(self):
         
         # Initialize the state machine
-        self.machine = Machine(model=self, states=Prisoner.states, initial=Prisoner.states[random.randrange(0, len(Prisoner.states))])
+        self.machine = Machine(model=self, states=self.states, initial=self.states[random.randrange(0, len(self.states))])
         self.machine.add_transition(trigger='choose_initial_move', source='*', dest='cooperate', 
                                     after='update_move_coop')
         self.machine.add_transition(trigger='choose_initial_move', source='*', dest='defect', 
