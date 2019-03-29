@@ -562,9 +562,9 @@ On the other side of the implementation, the results for the finite state machin
 		\caption{Finite State Machines First Draft Fitnesses}
 \end{figure}
 
-While this doesn't seem similar to the neural networks results, figure 11 shows a fitness trend that is not unlike the trend of figure 10. The previous neural network simulations with no speciation produced very random, erratic results with no causality; these results show the fitness starting high, then dropping down to a lower figure, dipping between roughly 6.25 and 6.45 fitness (using single shot rounds). However, these results are not the correct results for this project, so more work had to be done to the simulation.
+While this doesn't seem similar to the neural networks results, figure 11 shows a fitness trend that is not unlike the trend of figure 10. The previous neural network simulations with no speciation produced results where defective strategies were preferred - however, the fitness trend looked somewhat erratic. These results show the fitness starting high, then dropping down to a lower figure, dipping between roughly 6.25 and 6.45 fitness (using single shot rounds). These results are almost ideal - to solidify the correctness of figure 11, a graph detailing the proportion of moves is required.
 
-Using Matthijs van Veelen and Julián García's paper, “In and out of Equilibrium: Evolution of Strategies in Repeated Games with Discounting”\cite[p.~14]{46} as a reference, the authors talk about how they conducted various experiments in repeated games using finite state machines - the modus operandi here is applicable to this project, especially the mutation and selection operators. With this in mind, the program was modified to model these simulations slightly while still staying within the scope of the project; the next draft of results looked as follows:
+Using Matthijs van Veelen and Julián García's paper, “In and out of Equilibrium: Evolution of Strategies in Repeated Games with Discounting”\cite[p.~14]{46} as a reference, the authors talk about how they conducted various experiments in repeated games using finite state machines - the modus operandi here is applicable to this project, especially the mutation and selection operators. The first draft did not have mutation or selection operators, and the strategies of the population were split evenly, with 50\% using tit-for-tat and 50\% using the 'random' strategy. With this in mind, the program was modified to model these simulations slightly while still staying within the scope of the project; the next draft of results looked as follows:
 
 \begin{figure}[H]
 	\centering
@@ -585,7 +585,7 @@ The first facet of the neural networks simulation which could be changed is the 
 		\caption{Neural Networks Results with No Recurrent Connections}
 \end{figure}
 
-For this simulation, speciation is enabled, with a population size of 50 in a single-shot game. The results are very similar for a repeated game. From the start of the simulation, the agents opt for complete cooperation, and at generation 21, speciation reduces the size of the population by almost half based on similar attributes. With speciation turned off, the agents opt for complete cooperation but the population size is never changed. As the neurons can send feedback to each other based on the decisions of the agents, it is possible that complete cooperation is always  the preferred strategy, with no incentive to change.
+For this simulation, speciation is enabled, with a population size of 50 in a single-shot game. The results are very similar for a repeated game. From the start of the simulation, the agents opt for complete cooperation, and at generation 21, speciation reduces the size of the population by almost half based on similar attributes. With speciation turned off, the agents opt for complete cooperation but the population size is never changed. As the neurons can send feedback to each other based on the decisions of the agents, it is possible that complete cooperation is always  the preferred strategy, with no incentive to change. For further work, it would be worth investigating why recurrent connections decrease the selection pressure, causing this strange trend in fitness and preferred strategies.
 
 \newpage
 
@@ -595,7 +595,7 @@ For this simulation, speciation is enabled, with a population size of 50 in a si
 
 %After covering the previous sections, what can be taken away from this project? The research goals and questions must be revisited in order to answer whether or not they were achieved. There may also be possible discussions on further research.  
 
-Given the two facets of the project, neural networks and finite state machines, this section will evaluate the effectiveness and rigour of both approaches; this will involve comparing the original project schedule to the final project schedule, how the original approaches to the software were laid out versus how the software actually turned out, how the software compares to some of the literature and previous work and finally what could be done differently with more time or if the project was re-attempted. First, the initial and final project schedules must be examined. \\
+Given the two facets of the project, neural networks and finite state machines, this section will evaluate the effectiveness of both approaches; this will involve comparing the original project schedule to the final project schedule, how the original approaches to the software were laid out versus how the software actually turned out, how the software compares to some of the literature and previous work and finally what could be done differently with more time or if the project was re-attempted. First, the initial and final project schedules must be examined. \\
 
 \subsection{Project Timelines}
 
@@ -614,7 +614,7 @@ Appendix D shows the initial project timeline with the forementioned dates, crea
   \item Deliverable One (Initial Date - \textbf{October 10th 2018}) \\ (Completed Date - \textbf{October 9th 2018}).
   \item Deliverable Two (Initial Date - \textbf{November 9th 2018}) \\ (Completed Date - \textbf{November 15th 2018}))
   \item Deliverable Three (Initial Date - \textbf{December 7th 2018}) \\ (Completed Date - \textbf{November 23rd 2018}))
-  \item Deliverable Four (Initial Date - \textbf{February 28th 2019}) \\ (Completed Date - \textbf{? March 2019})) \\
+  \item Deliverable Four (Initial Date - \textbf{February 28th 2019}) \\ (Completed Date - \textbf{March 26th 2019})) \\
 \end{itemize}
 
 Now, each deliverable will be evaluated and the dates of completion justified.
@@ -645,9 +645,11 @@ As stated before, part of the project was comparing the implemented results to t
 		\caption{Project Results vs. Harrald Results\cite[p.~142]{25}}
 \end{figure}
 
-While the results appear similar, this project used different inputs to the Harrald paper - specifically, this project used a network topology of three input layers, six hidden layers and two output layers. The Harrald results assume six input layers, twenty hidden layers and one output layer. By changing the amount of layers to match, the results would most likely look close to identical, if the simulation was ran for 1600 generations and the fitnesses were clamped. 
+While the results appear similar, this project used different inputs to the Harrald paper - specifically, this project used a network topology of three input neuons, six hidden neurons and two output neurons. The Harrald results assume six input neurons, twenty hidden neurons and one output neuron. By changing the amount of neurons to match, the results would most likely look close to identical, if the simulation was ran for 1600 generations and the fitnesses were clamped. The simulation in this project evolved the networks quicker due to the amount of neurons in the hidden layer - as this project uses 6 and the Harrald paper utilises 20, the amount of computations is drastically lower.
 
-The van Veelen paper\cite{46} doesn't include results of the fitnesses or proportion of moves - rather, the paper shows the average payoff over the amount of generations. \\
+The van Veelen paper\cite{46} doesn't include results of the fitnesses or proportion of moves - rather, the paper shows the average payoff over the amount of generations.
+
+The results in general are in agreement with the mathematical principles of game theory, which assumes infinite computational power. The benefit of this project is that it is executable - results can be ran and examined, whereas theory (such as folk theorem) can only be imagined with a model of infinite power, whereas this power can implement it with a model of more realistic computational power. \\
 
 \subsection{Comparison of Effectiveness Between Representations}
 
