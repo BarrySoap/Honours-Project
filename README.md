@@ -1,26 +1,3 @@
 # Honours Project Repository
 
-Within this repository currently:
-* Classification and Regression files/models using supervised learning.
-* Game Theory Literature Review
-* Some Implementation
-
-What this repository aims to have:
-* Predictive Analytics with Ensemble Learning,
-* Pattern Detection with Unsupervised Learning,
-* Recommender Systems,
-* Heuristic Search Techniques,
-* Genetic Algorithms,
-* Natural Language Processing,
-* Probabilistic Reasoning for Sequential Data,
-* Speech Recognition Software,
-* Object Detection and Tracking,
-* Artificial Neural Networks,
-* Reinforcement Learning Techniques,
-* Deep Learning with Convolutional Neural Networks.
-
-These will contribute towards an Honours project starting in Sept 2018.
-
-THESE TITLES ARE SOMEWHAT UNOFFICIAL:
-Honours Title: "~~Learning to Play: Nash Equilibria in Repeated Games Using Machine Learning and Neural Networks~~" <br/>
-2nd Draft Title: "Learning to play: A comparison of effectiveness between different representations of agent cognitions using evolutionary algorithms and machine learning"
+This repo houses my honours project completed between September 2018 - May 2019. The title of the project is, "A Comparison of Effectiveness Between Different Representations of Agent Cognitions Using Evolutionary Algorithms". The purpose of the project was to find the most effective way of representing a prisoner in the classic 'Prisoner's Dilemma' (https://en.wikipedia.org/wiki/Prisoner%27s_dilemma), between finite state machines and neural networks. In the simulations, the computational models will play against each other in various ways, in an attempt to become fitter over the course of a number of generations. The dissertation explores topics such as how this was done, previous work attempted, what went right and what went wrong.
